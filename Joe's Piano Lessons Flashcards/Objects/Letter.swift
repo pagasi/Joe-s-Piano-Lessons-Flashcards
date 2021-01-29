@@ -12,9 +12,11 @@ class Letter {
     
    // var image: UIImage?
     var letterNickname: String
+    //var cardNumber: Int
     
-    init(letterNickname: String) {
+    init(letterNickname: String/*cardNumber: Int */) {
 
         self.letterNickname = letterNickname
+//      self.cardNumber = cardNumber
     }
 }
