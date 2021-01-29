@@ -1,0 +1,442 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6F16AE4425BEF54C005ADDFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE4325BEF54C005ADDFE /* AppDelegate.swift */; };
+		6F16AE4625BEF54C005ADDFE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE4525BEF54C005ADDFE /* SceneDelegate.swift */; };
+		6F16AE4B25BEF54C005ADDFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F16AE4925BEF54C005ADDFE /* Main.storyboard */; };
+		6F16AE4D25BEF54F005ADDFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F16AE4C25BEF54F005ADDFE /* Assets.xcassets */; };
+		6F16AE5025BEF54F005ADDFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F16AE4E25BEF54F005ADDFE /* LaunchScreen.storyboard */; };
+		6F16AE5925BEF574005ADDFE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE5825BEF574005ADDFE /* MainViewController.swift */; };
+		6F16AE5C25BEF5DF005ADDFE /* FlashCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE5B25BEF5DF005ADDFE /* FlashCardViewController.swift */; };
+		6F16AE6025BEF9D7005ADDFE /* CartoonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE5F25BEF9D7005ADDFE /* CartoonViewController.swift */; };
+		6F16AE6425BEF9EE005ADDFE /* NicknamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE6325BEF9EE005ADDFE /* NicknamesViewController.swift */; };
+		6F16AE6725BEFA01005ADDFE /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE6625BEFA01005ADDFE /* AboutViewController.swift */; };
+		6F16AE6A25BEFA17005ADDFE /* CustomizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE6925BEFA17005ADDFE /* CustomizeViewController.swift */; };
+		6F16AE6D25BEFAFF005ADDFE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE6C25BEFAFF005ADDFE /* SettingsViewController.swift */; };
+		6F16AE7425C06261005ADDFE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE7325C06261005ADDFE /* Constants.swift */; };
+		6F16AE7825C0689D005ADDFE /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE7725C0689D005ADDFE /* CacheManager.swift */; };
+		6F16AE7D25C09E95005ADDFE /* notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE7C25C09E95005ADDFE /* notes.swift */; };
+		6F16AE8125C1A227005ADDFE /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE8025C1A227005ADDFE /* CustomTableViewCell.swift */; };
+		6F16AE8525C1B285005ADDFE /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE8425C1B285005ADDFE /* Letter.swift */; };
+		6F16AE8925C1B9A3005ADDFE /* NicknamesArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE8825C1B9A3005ADDFE /* NicknamesArray.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6F16AE4025BEF54C005ADDFE /* Joe's Piano Lessons Flashcards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Joe's Piano Lessons Flashcards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F16AE4325BEF54C005ADDFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6F16AE4525BEF54C005ADDFE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6F16AE4A25BEF54C005ADDFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6F16AE4C25BEF54F005ADDFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6F16AE4F25BEF54F005ADDFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6F16AE5125BEF54F005ADDFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F16AE5825BEF574005ADDFE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		6F16AE5B25BEF5DF005ADDFE /* FlashCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardViewController.swift; sourceTree = "<group>"; };
+		6F16AE5F25BEF9D7005ADDFE /* CartoonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartoonViewController.swift; sourceTree = "<group>"; };
+		6F16AE6325BEF9EE005ADDFE /* NicknamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknamesViewController.swift; sourceTree = "<group>"; };
+		6F16AE6625BEFA01005ADDFE /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		6F16AE6925BEFA17005ADDFE /* CustomizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeViewController.swift; sourceTree = "<group>"; };
+		6F16AE6C25BEFAFF005ADDFE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		6F16AE7325C06261005ADDFE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6F16AE7725C0689D005ADDFE /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		6F16AE7C25C09E95005ADDFE /* notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notes.swift; sourceTree = "<group>"; };
+		6F16AE8025C1A227005ADDFE /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		6F16AE8425C1B285005ADDFE /* Letter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letter.swift; sourceTree = "<group>"; };
+		6F16AE8825C1B9A3005ADDFE /* NicknamesArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknamesArray.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6F16AE3D25BEF54C005ADDFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6F16AE3725BEF54C005ADDFE = {
+			isa = PBXGroup;
+			children = (
+				6F16AE4225BEF54C005ADDFE /* Joe's Piano Lessons Flashcards */,
+				6F16AE4125BEF54C005ADDFE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6F16AE4125BEF54C005ADDFE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6F16AE4025BEF54C005ADDFE /* Joe's Piano Lessons Flashcards.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6F16AE4225BEF54C005ADDFE /* Joe's Piano Lessons Flashcards */ = {
+			isa = PBXGroup;
+			children = (
+				6F16AE9025C1BA5B005ADDFE /* Data */,
+				6F16AE8E25C1BA0A005ADDFE /* Objects */,
+				6F16AE8D25C1B9E8005ADDFE /* CustomCells */,
+				6F16AE8C25C1B9BA005ADDFE /* StoryBoards */,
+				6F16AE5E25BEF99D005ADDFE /* VCs */,
+				6F16AE4325BEF54C005ADDFE /* AppDelegate.swift */,
+				6F16AE4525BEF54C005ADDFE /* SceneDelegate.swift */,
+				6F16AE4C25BEF54F005ADDFE /* Assets.xcassets */,
+				6F16AE5125BEF54F005ADDFE /* Info.plist */,
+				6F16AE7625C06883005ADDFE /* Helpers */,
+			);
+			path = "Joe's Piano Lessons Flashcards";
+			sourceTree = "<group>";
+		};
+		6F16AE5E25BEF99D005ADDFE /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				6F16AE5825BEF574005ADDFE /* MainViewController.swift */,
+				6F16AE5B25BEF5DF005ADDFE /* FlashCardViewController.swift */,
+				6F16AE5F25BEF9D7005ADDFE /* CartoonViewController.swift */,
+				6F16AE6325BEF9EE005ADDFE /* NicknamesViewController.swift */,
+				6F16AE6625BEFA01005ADDFE /* AboutViewController.swift */,
+				6F16AE6925BEFA17005ADDFE /* CustomizeViewController.swift */,
+				6F16AE6C25BEFAFF005ADDFE /* SettingsViewController.swift */,
+			);
+			path = VCs;
+			sourceTree = "<group>";
+		};
+		6F16AE7625C06883005ADDFE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6F16AE7C25C09E95005ADDFE /* notes.swift */,
+				6F16AE7325C06261005ADDFE /* Constants.swift */,
+				6F16AE7725C0689D005ADDFE /* CacheManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		6F16AE8C25C1B9BA005ADDFE /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				6F16AE4925BEF54C005ADDFE /* Main.storyboard */,
+				6F16AE4E25BEF54F005ADDFE /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		6F16AE8D25C1B9E8005ADDFE /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				6F16AE8025C1A227005ADDFE /* CustomTableViewCell.swift */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		6F16AE8E25C1BA0A005ADDFE /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				6F16AE8425C1B285005ADDFE /* Letter.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		6F16AE9025C1BA5B005ADDFE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				6F16AE8825C1B9A3005ADDFE /* NicknamesArray.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6F16AE3F25BEF54C005ADDFE /* Joe's Piano Lessons Flashcards */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F16AE5425BEF54F005ADDFE /* Build configuration list for PBXNativeTarget "Joe's Piano Lessons Flashcards" */;
+			buildPhases = (
+				6F16AE3C25BEF54C005ADDFE /* Sources */,
+				6F16AE3D25BEF54C005ADDFE /* Frameworks */,
+				6F16AE3E25BEF54C005ADDFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Joe's Piano Lessons Flashcards";
+			productName = "Joe's Piano Lessons Flashcards";
+			productReference = 6F16AE4025BEF54C005ADDFE /* Joe's Piano Lessons Flashcards.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6F16AE3825BEF54C005ADDFE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					6F16AE3F25BEF54C005ADDFE = {
+						CreatedOnToolsVersion = 12.3;
+					};
+				};
+			};
+			buildConfigurationList = 6F16AE3B25BEF54C005ADDFE /* Build configuration list for PBXProject "Joe's Piano Lessons Flashcards" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6F16AE3725BEF54C005ADDFE;
+			productRefGroup = 6F16AE4125BEF54C005ADDFE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6F16AE3F25BEF54C005ADDFE /* Joe's Piano Lessons Flashcards */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6F16AE3E25BEF54C005ADDFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F16AE5025BEF54F005ADDFE /* LaunchScreen.storyboard in Resources */,
+				6F16AE4D25BEF54F005ADDFE /* Assets.xcassets in Resources */,
+				6F16AE4B25BEF54C005ADDFE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6F16AE3C25BEF54C005ADDFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F16AE6025BEF9D7005ADDFE /* CartoonViewController.swift in Sources */,
+				6F16AE4425BEF54C005ADDFE /* AppDelegate.swift in Sources */,
+				6F16AE6D25BEFAFF005ADDFE /* SettingsViewController.swift in Sources */,
+				6F16AE7D25C09E95005ADDFE /* notes.swift in Sources */,
+				6F16AE6425BEF9EE005ADDFE /* NicknamesViewController.swift in Sources */,
+				6F16AE4625BEF54C005ADDFE /* SceneDelegate.swift in Sources */,
+				6F16AE7425C06261005ADDFE /* Constants.swift in Sources */,
+				6F16AE8525C1B285005ADDFE /* Letter.swift in Sources */,
+				6F16AE7825C0689D005ADDFE /* CacheManager.swift in Sources */,
+				6F16AE6A25BEFA17005ADDFE /* CustomizeViewController.swift in Sources */,
+				6F16AE5925BEF574005ADDFE /* MainViewController.swift in Sources */,
+				6F16AE6725BEFA01005ADDFE /* AboutViewController.swift in Sources */,
+				6F16AE8925C1B9A3005ADDFE /* NicknamesArray.swift in Sources */,
+				6F16AE5C25BEF5DF005ADDFE /* FlashCardViewController.swift in Sources */,
+				6F16AE8125C1A227005ADDFE /* CustomTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6F16AE4925BEF54C005ADDFE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6F16AE4A25BEF54C005ADDFE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6F16AE4E25BEF54F005ADDFE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6F16AE4F25BEF54F005ADDFE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6F16AE5225BEF54F005ADDFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6F16AE5325BEF54F005ADDFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6F16AE5525BEF54F005ADDFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z556G4CZ7S;
+				INFOPLIST_FILE = "Joe's Piano Lessons Flashcards/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joespianolessons.Joe-s-Piano-Lessons-Flashcards";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6F16AE5625BEF54F005ADDFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z556G4CZ7S;
+				INFOPLIST_FILE = "Joe's Piano Lessons Flashcards/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joespianolessons.Joe-s-Piano-Lessons-Flashcards";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6F16AE3B25BEF54C005ADDFE /* Build configuration list for PBXProject "Joe's Piano Lessons Flashcards" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F16AE5225BEF54F005ADDFE /* Debug */,
+				6F16AE5325BEF54F005ADDFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F16AE5425BEF54F005ADDFE /* Build configuration list for PBXNativeTarget "Joe's Piano Lessons Flashcards" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F16AE5525BEF54F005ADDFE /* Debug */,
+				6F16AE5625BEF54F005ADDFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6F16AE3825BEF54C005ADDFE /* Project object */;
+}
