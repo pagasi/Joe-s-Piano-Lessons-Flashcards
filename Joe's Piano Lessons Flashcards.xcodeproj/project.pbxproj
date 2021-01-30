@@ -17,7 +17,6 @@
 		6F16AE6025BEF9D7005ADDFE /* CartoonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE5F25BEF9D7005ADDFE /* CartoonViewController.swift */; };
 		6F16AE6425BEF9EE005ADDFE /* NicknamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE6325BEF9EE005ADDFE /* NicknamesViewController.swift */; };
 		6F16AE6725BEFA01005ADDFE /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE6625BEFA01005ADDFE /* AboutViewController.swift */; };
-		6F16AE6A25BEFA17005ADDFE /* CustomizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE6925BEFA17005ADDFE /* CustomizeViewController.swift */; };
 		6F16AE6D25BEFAFF005ADDFE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE6C25BEFAFF005ADDFE /* SettingsViewController.swift */; };
 		6F16AE7425C06261005ADDFE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE7325C06261005ADDFE /* Constants.swift */; };
 		6F16AE7825C0689D005ADDFE /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE7725C0689D005ADDFE /* CacheManager.swift */; };
@@ -40,7 +39,6 @@
 		6F16AE5F25BEF9D7005ADDFE /* CartoonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartoonViewController.swift; sourceTree = "<group>"; };
 		6F16AE6325BEF9EE005ADDFE /* NicknamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknamesViewController.swift; sourceTree = "<group>"; };
 		6F16AE6625BEFA01005ADDFE /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		6F16AE6925BEFA17005ADDFE /* CustomizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeViewController.swift; sourceTree = "<group>"; };
 		6F16AE6C25BEFAFF005ADDFE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		6F16AE7325C06261005ADDFE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6F16AE7725C0689D005ADDFE /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 				6F16AE5F25BEF9D7005ADDFE /* CartoonViewController.swift */,
 				6F16AE6325BEF9EE005ADDFE /* NicknamesViewController.swift */,
 				6F16AE6625BEFA01005ADDFE /* AboutViewController.swift */,
-				6F16AE6925BEFA17005ADDFE /* CustomizeViewController.swift */,
 				6F16AE6C25BEFAFF005ADDFE /* SettingsViewController.swift */,
 			);
 			path = VCs;
@@ -230,7 +227,6 @@
 				6F16AE7425C06261005ADDFE /* Constants.swift in Sources */,
 				6F16AE8525C1B285005ADDFE /* Letter.swift in Sources */,
 				6F16AE7825C0689D005ADDFE /* CacheManager.swift in Sources */,
-				6F16AE6A25BEFA17005ADDFE /* CustomizeViewController.swift in Sources */,
 				6F16AE5925BEF574005ADDFE /* MainViewController.swift in Sources */,
 				6F16AE6725BEFA01005ADDFE /* AboutViewController.swift in Sources */,
 				6F16AE8925C1B9A3005ADDFE /* NicknamesArray.swift in Sources */,
