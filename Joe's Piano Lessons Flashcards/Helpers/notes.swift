@@ -11,3 +11,4 @@ import Foundation
 //      let vc = storyboard?.instantiateViewController(withIdentifier: Constants.NICKNAMES_VC_IDENTIFIER) as! NicknamesViewController
 //        vc.modalPresentationStyle = .fullScreen
 //        self.present(vc, animated: true, completion: nil)
+let test = "testing"
