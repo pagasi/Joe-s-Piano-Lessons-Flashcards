@@ -255,6 +255,9 @@
                                                 <state key="normal" title="A">
                                                     <color key="titleShadowColor" systemColor="labelColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="AButtonPressed:" destination="sEZ-RO-UDU" eventType="touchUpInside" id="rjw-7F-Xf4"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zur-B2-Clf">
                                                 <rect key="frame" x="35" y="0.0" width="30" height="30"/>
@@ -267,6 +270,9 @@
                                                 <state key="normal" title="B">
                                                     <color key="titleShadowColor" systemColor="labelColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="BButtonPressed:" destination="sEZ-RO-UDU" eventType="touchUpInside" id="99H-mL-guX"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qe0-kD-lLb">
                                                 <rect key="frame" x="70" y="0.0" width="30" height="30"/>
@@ -279,6 +285,9 @@
                                                 <state key="normal" title="C">
                                                     <color key="titleShadowColor" systemColor="labelColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="CButtonPressed:" destination="sEZ-RO-UDU" eventType="touchUpInside" id="aIS-Gc-0ZB"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AvP-PC-3Hr">
                                                 <rect key="frame" x="105" y="0.0" width="30" height="30"/>
@@ -291,6 +300,9 @@
                                                 <state key="normal" title="D">
                                                     <color key="titleShadowColor" systemColor="labelColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="DButtonPressed:" destination="sEZ-RO-UDU" eventType="touchUpInside" id="eWo-6c-bjV"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b40-Rw-q9S">
                                                 <rect key="frame" x="140" y="0.0" width="30" height="30"/>
@@ -303,6 +315,9 @@
                                                 <state key="normal" title="E">
                                                     <color key="titleShadowColor" systemColor="labelColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="EButtonPressed:" destination="sEZ-RO-UDU" eventType="touchUpInside" id="wu7-nP-rj2"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kh7-Vu-pGw">
                                                 <rect key="frame" x="175" y="0.0" width="30" height="30"/>
@@ -315,6 +330,9 @@
                                                 <state key="normal" title="F">
                                                     <color key="titleShadowColor" systemColor="labelColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="FButtonPressed:" destination="sEZ-RO-UDU" eventType="touchUpInside" id="Lnk-Ec-meP"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2u-Oz-fir">
                                                 <rect key="frame" x="210" y="0.0" width="30" height="30"/>
@@ -327,6 +345,9 @@
                                                 <state key="normal" title="G">
                                                     <color key="titleShadowColor" systemColor="labelColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="GButtonPressed:" destination="sEZ-RO-UDU" eventType="touchUpInside" id="0tt-h2-qhc"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -364,6 +385,10 @@
                     <navigationItem key="navigationItem" title="Flash Cards" largeTitleDisplayMode="always" id="3yW-Ag-rFB">
                         <barButtonItem key="backBarButtonItem" title=" " id="Zzl-e2-yKj"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="countTimerLabel" destination="dIH-7g-hJY" id="Cky-6w-pHK"/>
+                        <outlet property="grandStaffUIImage" destination="1VB-Be-TYh" id="GCf-w4-aOp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uXs-0t-eYO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

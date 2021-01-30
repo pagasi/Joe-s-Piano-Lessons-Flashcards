@@ -8,11 +8,36 @@
 import UIKit
 
 class FlashCardViewController: UIViewController {
-
+    @IBOutlet weak var countTimerLabel: UILabel!
+    @IBOutlet weak var grandStaffUIImage: UIImageView!
+    
+    var selectedButton: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+    }
+    @IBAction func AButtonPressed(_ sender: Any) {
+        selectedButton = "A"
+    }
+    @IBAction func BButtonPressed(_ sender: Any) {
+        selectedButton = "B"
+    }
+    @IBAction func CButtonPressed(_ sender: Any) {
+        selectedButton = "C"
+    }
+    @IBAction func DButtonPressed(_ sender: Any) {
+        selectedButton = "D"
+    }
+    @IBAction func EButtonPressed(_ sender: Any) {
+        selectedButton = "E"
+    }
+    @IBAction func FButtonPressed(_ sender: Any) {
+        selectedButton = "F"
+    }
+    @IBAction func GButtonPressed(_ sender: Any) {
+        selectedButton = "G"
     }
     
 
