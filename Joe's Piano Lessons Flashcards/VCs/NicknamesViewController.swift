@@ -59,7 +59,14 @@ extension NicknamesViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.nicknamesLabel.text = letter.letterNickname
         
+        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        nicknamesImage.image = UIImage(named: letterArray[indexPath.row].letterNickname)
+        
+        
     }
     
     
