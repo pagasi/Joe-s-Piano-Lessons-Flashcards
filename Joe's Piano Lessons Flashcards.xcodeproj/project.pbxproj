@@ -24,6 +24,7 @@
 		6F16AE8125C1A227005ADDFE /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE8025C1A227005ADDFE /* CustomTableViewCell.swift */; };
 		6F16AE8525C1B285005ADDFE /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE8425C1B285005ADDFE /* Letter.swift */; };
 		6F16AE8925C1B9A3005ADDFE /* NicknamesArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE8825C1B9A3005ADDFE /* NicknamesArray.swift */; };
+		6F16AEBA25C8257D005ADDFE /* FlashCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AEB925C8257D005ADDFE /* FlashCardModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		6F16AE8025C1A227005ADDFE /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		6F16AE8425C1B285005ADDFE /* Letter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letter.swift; sourceTree = "<group>"; };
 		6F16AE8825C1B9A3005ADDFE /* NicknamesArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknamesArray.swift; sourceTree = "<group>"; };
+		6F16AEB925C8257D005ADDFE /* FlashCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +80,6 @@
 		6F16AE4225BEF54C005ADDFE /* Joe's Piano Lessons Flashcards */ = {
 			isa = PBXGroup;
 			children = (
-				6F16AE9025C1BA5B005ADDFE /* Data */,
 				6F16AE8E25C1BA0A005ADDFE /* Objects */,
 				6F16AE8D25C1B9E8005ADDFE /* CustomCells */,
 				6F16AE8C25C1B9BA005ADDFE /* StoryBoards */,
@@ -88,6 +89,7 @@
 				6F16AE4C25BEF54F005ADDFE /* Assets.xcassets */,
 				6F16AE5125BEF54F005ADDFE /* Info.plist */,
 				6F16AE7625C06883005ADDFE /* Helpers */,
+				6F16AEB925C8257D005ADDFE /* FlashCardModel.swift */,
 			);
 			path = "Joe's Piano Lessons Flashcards";
 			sourceTree = "<group>";
@@ -136,16 +138,9 @@
 			isa = PBXGroup;
 			children = (
 				6F16AE8425C1B285005ADDFE /* Letter.swift */,
-			);
-			path = Objects;
-			sourceTree = "<group>";
-		};
-		6F16AE9025C1BA5B005ADDFE /* Data */ = {
-			isa = PBXGroup;
-			children = (
 				6F16AE8825C1B9A3005ADDFE /* NicknamesArray.swift */,
 			);
-			path = Data;
+			path = Objects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +225,7 @@
 				6F16AE5925BEF574005ADDFE /* MainViewController.swift in Sources */,
 				6F16AE6725BEFA01005ADDFE /* AboutViewController.swift in Sources */,
 				6F16AE8925C1B9A3005ADDFE /* NicknamesArray.swift in Sources */,
+				6F16AEBA25C8257D005ADDFE /* FlashCardModel.swift in Sources */,
 				6F16AE5C25BEF5DF005ADDFE /* FlashCardViewController.swift in Sources */,
 				6F16AE8125C1A227005ADDFE /* CustomTableViewCell.swift in Sources */,
 			);

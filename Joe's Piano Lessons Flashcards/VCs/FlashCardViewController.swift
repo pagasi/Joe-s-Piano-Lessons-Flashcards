@@ -8,16 +8,27 @@
 import UIKit
 
 class FlashCardViewController: UIViewController {
+    
+    //MARK: init
+    
     @IBOutlet weak var countTimerLabel: UILabel!
     @IBOutlet weak var grandStaffUIImage: UIImageView!
     
     var selectedButton: String = ""
+    let flashCardVCInstanceOfNicknamesArray = NicknamesArray()
+    var finalArrayOfIndexes = [Int]()
+    var chosenCountDetailView = [Letter]()
+    
+    
+    //MARK: Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+        // create object with flashcard data
+        startUpFlashCards()
     }
+    //MARK: Button outlets
+    //what to do if buttons are pressed
     @IBAction func AButtonPressed(_ sender: Any) {
         selectedButton = "A"
     }
@@ -40,15 +51,32 @@ class FlashCardViewController: UIViewController {
         selectedButton = "G"
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: methods
+    
+    func startUpFlashCards() {
+        chosenCountDetailView = flashCardVCInstanceOfNicknamesArray.createArray()
     }
-    */
-
+    //MARK:  Model of flashcard math
+    func model() {
+    //check if all the cards have been displayed
+        if finalArrayOfIndexes.count < chosenCountDetailView.count + 1 {
+        
+            //get new random index
+            var randomNumber = Int.random(in: 0...chosenCountDetailView.count)
+                //
+                while finalArrayOfIndexes.contains(randomNumber) == true {
+                    print("duplicate")
+                    randomNumber = Int.random(in: 0...chosenCountDetailView.count)
+                    }
+            //MARK: to do
+            //TODO: apply nolan app code to this app
+                /*
+                    finalArrayOfIndexes.append(randomNumber)
+                    flashCard.text = flashCards[randomNumber]
+               wordsRemaining.text = "Words remaining: \(chosenCountDetailView - finalArrayOfIndexes.count + 1)"
+ */
+                }
+    }
+        
+    
 }

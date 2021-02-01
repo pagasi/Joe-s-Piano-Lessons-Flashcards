@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class Letter {
+struct Letter {
     
    // var image: UIImage?
     var letterNickname: String
