@@ -135,16 +135,42 @@ class FlashCardViewController: UIViewController {
         button.backgroundColor = .red
         if wrongAnswerCounter == 2 {
             
-            //MARK: TODO - PREPARE FOR SEGUE, add the proper image
+            //MARK: TODO -  add the proper image
+            
+                
+            
             performSegue(withIdentifier: Constants.LETTER_SEGUE_FLASHVC_TO_CARTOONVC_IDENTIFIER, sender: Any?.self)
         }
         
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //setup for the next flashcard apon return to flashcardVC
+        //remove any red backgrounds on buttons
+        AButton.backgroundColor = .lightGray
+        BButton.backgroundColor = .lightGray
+        CButton.backgroundColor = .lightGray
+        DButton.backgroundColor = .lightGray
+        EButton.backgroundColor = .lightGray
+        FButton.backgroundColor = .lightGray
+        GButton.backgroundColor = .lightGray
+        //reset the wrong answer counter to 0
+        wrongAnswerCounter = 0
+       //change the cartoonVC image to the missed card's image
+        let destinationVC = segue.destination as! CartoonViewController
+        destinationVC.passingVar = finalArrayOfIndexes.last!
+        //add the card that was not correctly answered back into the deck so it comes back up later
+        finalArrayOfIndexes.removeLast()
+        //run the model so that apon return to flashcard vc there is a new card showing and one index at 0 in the finalArrayOfIndexes
+        model()
+
     }
 }
 //MARK: to do
 //fix constraints on storyboard
 //add data and arrays for the letters when buttons pressed
 //set the flashcards to display proper quarternote/whole note etc images
-//configure the cartoon segue to reshuffle that last card back in the deck
+
 //program what to do when the finalArray is full
 //transfer model to another file???
+
+

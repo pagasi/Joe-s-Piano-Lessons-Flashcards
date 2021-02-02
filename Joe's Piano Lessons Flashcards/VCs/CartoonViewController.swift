@@ -9,20 +9,18 @@ import UIKit
 
 class CartoonViewController: UIViewController {
 
+    @IBOutlet weak var cartoonImage: UIImageView!
+    var passingVar: Int = 0
+    var cartoonVCInstanceOfNicknamesArray = NicknamesArray()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        //create the array of flashcards to use in the CartoonVC
+        let cartoonVCArray = cartoonVCInstanceOfNicknamesArray.createArray()
+        
+        //set the cartoonVC image to the missed card from FlashcardVC
+        cartoonImage.image = UIImage(named: cartoonVCArray[passingVar].letterNickname)
     }
     
-
-    // MARK: - Nothing to see here
-
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    
-
 }

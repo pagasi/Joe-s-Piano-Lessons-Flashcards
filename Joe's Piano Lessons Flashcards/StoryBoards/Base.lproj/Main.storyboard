@@ -445,6 +445,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Cartoon" id="PKd-8l-I9E"/>
+                    <connections>
+                        <outlet property="cartoonImage" destination="pk6-B4-L7v" id="T64-IP-4Dg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FvL-jI-gHo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
