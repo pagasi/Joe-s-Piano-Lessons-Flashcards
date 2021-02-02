@@ -21,3 +21,4 @@ class NicknamesArray {
         return tempArray
     }
 }
+//MARK: TODO make it so createArray accounts for the Switches activated in NicknamesVC

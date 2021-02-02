@@ -7,9 +7,9 @@
 
 import Foundation
 
-class FlashCardModel {
+struct FlashCardModel {
     
-    
-    var finalIndex = [Int]()
-    
+
+
+
 }
