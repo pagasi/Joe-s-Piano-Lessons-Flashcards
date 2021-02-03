@@ -375,7 +375,7 @@
                                         </constraints>
                                         <state key="normal" title="Cartoon"/>
                                         <connections>
-                                            <segue destination="LCk-fA-SoF" kind="show" identifier="segueFlashcardVCToCartoonVC" id="nK6-X4-X94"/>
+                                            <action selector="cartoonButtonPressed:" destination="sEZ-RO-UDU" eventType="touchUpInside" id="gtG-vf-sSF"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -485,9 +485,6 @@
             <point key="canvasLocation" x="32" y="-620"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="nK6-X4-X94"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Cat C" width="500" height="375"/>
         <image name="grand staff" width="375" height="280"/>

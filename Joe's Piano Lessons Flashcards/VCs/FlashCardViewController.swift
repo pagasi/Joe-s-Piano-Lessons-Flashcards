@@ -111,7 +111,13 @@ class FlashCardViewController: UIViewController {
             wrongAnswer(button: GButton)
         }
         }
+    } //end GButton
+    @IBAction func cartoonButtonPressed(_ sender: Any) {
+        if finished == false {
+        performSegue(withIdentifier: Constants.LETTER_SEGUE_FLASHVC_TO_CARTOONVC_IDENTIFIER, sender: Any?.self)
+        } else {return}
     }
+    
     
     //MARK: methods
     
