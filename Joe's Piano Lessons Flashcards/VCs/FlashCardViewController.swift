@@ -28,6 +28,7 @@ class FlashCardViewController: UIViewController {
     var finalArrayOfIndexes = [Int]()
     var chosenCountDetailView = [Letter]()
     var wrongAnswerCounter = 0
+    var finished = false
     
     //MARK: Life cycle
     
@@ -40,31 +41,38 @@ class FlashCardViewController: UIViewController {
     //MARK: Button outlets
     //what to do if buttons are pressed
     @IBAction func AButtonPressed(_ sender: Any) {
-        selectedButtonArrayOfAnswers = [3]
+        if finished == false {
+        selectedButtonArrayOfAnswers = [4]
+        
         if selectedButtonArrayOfAnswers!.contains(finalArrayOfIndexes.last!) {
             model()
         } else {
             wrongAnswer(button: AButton)
         }
+        }
     }
     @IBAction func BButtonPressed(_ sender: Any) {
-        selectedButtonArrayOfAnswers = [3]
+        if finished == false {
+        selectedButtonArrayOfAnswers = [9]
         if selectedButtonArrayOfAnswers!.contains(finalArrayOfIndexes.last!) {
             model()
         } else {
             wrongAnswer(button: BButton)
         }
+        }
     }
     @IBAction func CButtonPressed(_ sender: Any) {
+        if finished == false {
         selectedButtonArrayOfAnswers = [0]
         if selectedButtonArrayOfAnswers!.contains(finalArrayOfIndexes.last!) {
             model()
         } else {
             wrongAnswer(button: CButton)
         }
-        
+        }
     }
     @IBAction func DButtonPressed(_ sender: Any) {
+        if finished == false {
         selectedButtonArrayOfAnswers = [1]
         if selectedButtonArrayOfAnswers!.contains(finalArrayOfIndexes.last!) {
             model()
@@ -72,29 +80,36 @@ class FlashCardViewController: UIViewController {
             wrongAnswer(button: DButton)
         }
         }
+        }
     
     @IBAction func EButtonPressed(_ sender: Any) {
-        selectedButtonArrayOfAnswers = [3]
+        if finished == false {
+        selectedButtonArrayOfAnswers = [2]
         if selectedButtonArrayOfAnswers!.contains(finalArrayOfIndexes.last!) {
             model()
         } else {
             wrongAnswer(button: EButton)
         }
+        }
     }
     @IBAction func FButtonPressed(_ sender: Any) {
+        if finished == false {
         selectedButtonArrayOfAnswers = [3]
         if selectedButtonArrayOfAnswers!.contains(finalArrayOfIndexes.last!) {
             model()
         } else {
             wrongAnswer(button: FButton)
         }
+        }
     }
     @IBAction func GButtonPressed(_ sender: Any) {
-        selectedButtonArrayOfAnswers = [3]
+        if finished == false {
+        selectedButtonArrayOfAnswers = [9]
         if selectedButtonArrayOfAnswers!.contains(finalArrayOfIndexes.last!) {
             model()
         } else {
             wrongAnswer(button: GButton)
+        }
         }
     }
     
@@ -107,7 +122,7 @@ class FlashCardViewController: UIViewController {
     //MARK:  Model of flashcard math
     func model() {
         //check if all the cards have been displayed
-        if finalArrayOfIndexes.count < chosenCountDetailView.count + 1 {
+        if finalArrayOfIndexes.count < chosenCountDetailView.count {
             
             //get new random index
             var randomNumber = Int.random(in: 0...chosenCountDetailView.count - 1)
@@ -118,6 +133,7 @@ class FlashCardViewController: UIViewController {
             }
             //add this card to the list of used cards
             finalArrayOfIndexes.append(randomNumber)
+            //set the flashcard image
             grandStaffUIImage.image = UIImage(named: chosenCountDetailView[randomNumber].letterNickname)
             
             
@@ -126,7 +142,14 @@ class FlashCardViewController: UIViewController {
             
 
             
+        } else {
+            //clean up properties
+            selectedButtonArrayOfAnswers = nil
+            finalArrayOfIndexes = []
+            grandStaffUIImage.image = UIImage(named: "Done")
+            finished = true
         }
+        
     }
     
     func wrongAnswer(button: UIButton) {
@@ -143,6 +166,7 @@ class FlashCardViewController: UIViewController {
         }
         
     }
+    //MARK: prepare for segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //setup for the next flashcard apon return to flashcardVC
         //remove any red backgrounds on buttons
