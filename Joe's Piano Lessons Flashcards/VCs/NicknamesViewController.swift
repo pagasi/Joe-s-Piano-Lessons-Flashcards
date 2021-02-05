@@ -15,39 +15,58 @@ class NicknamesViewController: UIViewController  {
     @IBOutlet weak var nicknamesImage: UIImageView!
 
     var letterArray: [Letter] = []
+    var ArrayOfLettersSwitchedOff = [Int]()
     
     //MARK:  life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //assign NicknamesViewController as the delegate and data source for the table view
+        //assign NicknamesViewController as the delegate and data source for the table view in the NicknamesViewController
         nicknamesTableView.delegate = self
         nicknamesTableView.dataSource = self
         
-    }
+    } //end viewDidLoasd
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    @objc func switchDidChange(_ sender: UISwitch){
+        print("sender is \(sender.tag)")
         
-    }
-    
+    if sender.isOn == true && ArrayOfLettersSwitchedOff.contains(sender.tag) == true {
+        if let i = ArrayOfLettersSwitchedOff.firstIndex(of: sender.tag) {
+            ArrayOfLettersSwitchedOff.remove(at: i)
+        }
+    }// end if
+        if sender.isOn == false && ArrayOfLettersSwitchedOff.contains(sender.tag) == false {
+            ArrayOfLettersSwitchedOff.append(sender.tag)
+        } // end if
+    } // end objc
 
-
+    //MARK: prepare for segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //
+                let destinationVC = segue.destination as! FlashCardViewController
+        destinationVC.passingArrayOfLettersSwitchedOff = ArrayOfLettersSwitchedOff
 }
+    
+}// end class
 
-//MARK:  table view extensions and setup
+//MARK:  table view extensions
 
 extension NicknamesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //set initialized letterArray var to the data for the flashcards to use in other methods
         let NicknamesVCInstanceOfNicknamesArray = NicknamesArray()
         let letterArray = NicknamesVCInstanceOfNicknamesArray.createArray()
+        //set the class property letterArray so that it can be used in other methods
         self.letterArray = letterArray
         
         //tell tableview how many cells it will need based on the flashcard data
         return letterArray.count
-    }
+        }
+        
+        
+
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -59,6 +78,13 @@ extension NicknamesViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.nicknamesLabel.text = letter.letterNickname
         
+        //add switch programmatically so that i can track tag numbers
+        let switchView = UISwitch(frame: .zero)
+        switchView.setOn(true, animated: true)
+        switchView.tag = indexPath.row
+        switchView.addTarget(self, action: #selector(self.switchDidChange(_:)), for: .valueChanged)
+        cell.accessoryView = switchView
+        
         //apply to tableview
         return cell
     }
@@ -69,7 +95,8 @@ extension NicknamesViewController: UITableViewDelegate, UITableViewDataSource {
         nicknamesImage.image = UIImage(named: letterArray[indexPath.row].letterNickname)
         
         
-    }
     
     
+}
+
 }

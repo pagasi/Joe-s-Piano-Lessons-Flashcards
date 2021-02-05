@@ -12,3 +12,11 @@ import Foundation
 //        vc.modalPresentationStyle = .fullScreen
 //        self.present(vc, animated: true, completion: nil)
 
+
+
+// MARK: code to sift out the unwanted flashcards for the flashcardVC
+//for switchCheck in ArrayOfLettersSwitchedOff {
+//    let letterArrayPosition = ArrayOfLettersSwitchedOff[switchCheck]
+//    letterArray.remove(at: letterArrayPosition)
+//    }
+

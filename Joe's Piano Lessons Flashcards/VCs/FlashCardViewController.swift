@@ -29,6 +29,7 @@ class FlashCardViewController: UIViewController {
     var chosenCountDetailView = [Letter]()
     var wrongAnswerCounter = 0
     var finished = false
+    var passingArrayOfLettersSwitchedOff = [Int]()
     
     //MARK: Life cycle
     
@@ -123,10 +124,18 @@ class FlashCardViewController: UIViewController {
     
     func startUpFlashCards() {
         chosenCountDetailView = flashCardVCInstanceOfNicknamesArray.createArray()
-    }
+        
+        // MARK: code to sift out the unwanted flashcards for the flashcardVC
+        for index in 0...passingArrayOfLettersSwitchedOff.count - 1{
+            chosenCountDetailView.remove(at: passingArrayOfLettersSwitchedOff[index])
+            } // end loop
+            print(chosenCountDetailView)
+    } //end start up flashcards func
 
     //MARK:  Model of flashcard math
     func model() {
+        //clean up previous card
+        screenClean()
         //check if all the cards have been displayed
         if finalArrayOfIndexes.count < chosenCountDetailView.count {
             
@@ -172,8 +181,8 @@ class FlashCardViewController: UIViewController {
         }
         
     }
-    //MARK: prepare for segue
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+    func screenClean() {
         //setup for the next flashcard apon return to flashcardVC
         //remove any red backgrounds on buttons
         AButton.backgroundColor = .lightGray
@@ -185,6 +194,11 @@ class FlashCardViewController: UIViewController {
         GButton.backgroundColor = .lightGray
         //reset the wrong answer counter to 0
         wrongAnswerCounter = 0
+    }
+    //MARK: prepare for segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //clean the screen up
+        screenClean()
        //change the cartoonVC image to the missed card's image
         let destinationVC = segue.destination as! CartoonViewController
         destinationVC.passingVar = finalArrayOfIndexes.last!
