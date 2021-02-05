@@ -30,6 +30,7 @@ class FlashCardViewController: UIViewController {
     var wrongAnswerCounter = 0
     var finished = false
     var passingArrayOfLettersSwitchedOff = [Int]()
+    var selectedAnswer = ""
     
     //MARK: Life cycle
     
@@ -42,10 +43,11 @@ class FlashCardViewController: UIViewController {
     //MARK: Button outlets
     //what to do if buttons are pressed
     @IBAction func AButtonPressed(_ sender: Any) {
+        //check to see if all cards have already been answered
         if finished == false {
-        selectedButtonArrayOfAnswers = [4]
-        
-        if selectedButtonArrayOfAnswers!.contains(finalArrayOfIndexes.last!) {
+            //get the last letter in the name of the most recently displayed flashcard and see if it matches the chosen answer
+            let lastLetter = chosenCountDetailView[finalArrayOfIndexes.last!].letterNickname.last!
+        if lastLetter == "A" {
             model()
         } else {
             wrongAnswer(button: AButton)
@@ -54,8 +56,8 @@ class FlashCardViewController: UIViewController {
     }
     @IBAction func BButtonPressed(_ sender: Any) {
         if finished == false {
-        selectedButtonArrayOfAnswers = [9]
-        if selectedButtonArrayOfAnswers!.contains(finalArrayOfIndexes.last!) {
+            let lastLetter = chosenCountDetailView[finalArrayOfIndexes.last!].letterNickname.last!
+        if lastLetter == "B" {
             model()
         } else {
             wrongAnswer(button: BButton)
@@ -64,8 +66,8 @@ class FlashCardViewController: UIViewController {
     }
     @IBAction func CButtonPressed(_ sender: Any) {
         if finished == false {
-        selectedButtonArrayOfAnswers = [0]
-        if selectedButtonArrayOfAnswers!.contains(finalArrayOfIndexes.last!) {
+            let lastLetter = chosenCountDetailView[finalArrayOfIndexes.last!].letterNickname.last!
+        if lastLetter == "C" {
             model()
         } else {
             wrongAnswer(button: CButton)
@@ -74,8 +76,8 @@ class FlashCardViewController: UIViewController {
     }
     @IBAction func DButtonPressed(_ sender: Any) {
         if finished == false {
-        selectedButtonArrayOfAnswers = [1]
-        if selectedButtonArrayOfAnswers!.contains(finalArrayOfIndexes.last!) {
+            let lastLetter = chosenCountDetailView[finalArrayOfIndexes.last!].letterNickname.last!
+        if lastLetter == "D" {
             model()
         } else {
             wrongAnswer(button: DButton)
@@ -85,8 +87,8 @@ class FlashCardViewController: UIViewController {
     
     @IBAction func EButtonPressed(_ sender: Any) {
         if finished == false {
-        selectedButtonArrayOfAnswers = [2]
-        if selectedButtonArrayOfAnswers!.contains(finalArrayOfIndexes.last!) {
+            let lastLetter = chosenCountDetailView[finalArrayOfIndexes.last!].letterNickname.last!
+        if lastLetter == "E" {
             model()
         } else {
             wrongAnswer(button: EButton)
@@ -95,8 +97,8 @@ class FlashCardViewController: UIViewController {
     }
     @IBAction func FButtonPressed(_ sender: Any) {
         if finished == false {
-        selectedButtonArrayOfAnswers = [3]
-        if selectedButtonArrayOfAnswers!.contains(finalArrayOfIndexes.last!) {
+            let lastLetter = chosenCountDetailView[finalArrayOfIndexes.last!].letterNickname.last!
+        if lastLetter == "F" {
             model()
         } else {
             wrongAnswer(button: FButton)
@@ -105,8 +107,8 @@ class FlashCardViewController: UIViewController {
     }
     @IBAction func GButtonPressed(_ sender: Any) {
         if finished == false {
-        selectedButtonArrayOfAnswers = [9]
-        if selectedButtonArrayOfAnswers!.contains(finalArrayOfIndexes.last!) {
+            let lastLetter = chosenCountDetailView[finalArrayOfIndexes.last!].letterNickname.last!
+        if lastLetter == "G" {
             model()
         } else {
             wrongAnswer(button: GButton)
@@ -125,10 +127,12 @@ class FlashCardViewController: UIViewController {
     func startUpFlashCards() {
         chosenCountDetailView = flashCardVCInstanceOfNicknamesArray.createArray()
         
-        // MARK: code to sift out the unwanted flashcards for the flashcardVC
+        //code to sift out the unwanted flashcards for the flashcardVC
+        if passingArrayOfLettersSwitchedOff.count > 0 {
         for index in 0...passingArrayOfLettersSwitchedOff.count - 1{
             chosenCountDetailView.remove(at: passingArrayOfLettersSwitchedOff[index])
             } // end loop
+        }
             print(chosenCountDetailView)
     } //end start up flashcards func
 
@@ -201,7 +205,7 @@ class FlashCardViewController: UIViewController {
         screenClean()
        //change the cartoonVC image to the missed card's image
         let destinationVC = segue.destination as! CartoonViewController
-        destinationVC.passingVar = finalArrayOfIndexes.last!
+        destinationVC.passingVar = chosenCountDetailView[finalArrayOfIndexes.last!].letterNickname
         //add the card that was not correctly answered back into the deck so it comes back up later
         finalArrayOfIndexes.removeLast()
         //run the model so that apon return to flashcard vc there is a new card showing and one index at 0 in the finalArrayOfIndexes
@@ -211,10 +215,10 @@ class FlashCardViewController: UIViewController {
 }
 //MARK: to do
 //fix constraints on storyboard
-//add data and arrays for the letters when buttons pressed
+//add data
 //set the flashcards to display proper quarternote/whole note etc images
-
-//program what to do when the finalArray is full
 //transfer model to another file???
-
+//organize the tableview by section of treble, bass, ledger?
+//add 45 sec, 16 sec, full deck, custom buttons
+//save custom settings to UserDefaults
 

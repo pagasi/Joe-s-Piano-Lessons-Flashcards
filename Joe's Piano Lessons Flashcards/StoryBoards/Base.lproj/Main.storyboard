@@ -27,7 +27,7 @@
                                             <constraint firstAttribute="height" constant="100" id="xfo-2O-H3E"/>
                                         </constraints>
                                         <size key="titleShadowOffset" width="1" height="1"/>
-                                        <state key="normal" title="Nicknames">
+                                        <state key="normal" title="Flash Cards">
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -57,17 +57,25 @@
                                             <constraint firstAttribute="height" constant="100" id="oVL-Ur-Swf"/>
                                         </constraints>
                                         <size key="titleShadowOffset" width="1" height="-1"/>
-                                        <state key="normal" title="Flash Cards">
+                                        <state key="normal" title="Scales">
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="change flashcard to show actual flashcards" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Qm-wM-IRC">
+                                <rect key="frame" x="42.5" y="251.5" width="329" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="oxT-wy-6De" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4i9-uz-G9H"/>
+                            <constraint firstItem="oxT-wy-6De" firstAttribute="top" secondItem="1Qm-wM-IRC" secondAttribute="bottom" constant="126" id="OpX-zc-qEP"/>
+                            <constraint firstItem="1Qm-wM-IRC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="djI-UH-Q48"/>
                             <constraint firstItem="oxT-wy-6De" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kmL-TA-Zgq"/>
                         </constraints>
                     </view>
