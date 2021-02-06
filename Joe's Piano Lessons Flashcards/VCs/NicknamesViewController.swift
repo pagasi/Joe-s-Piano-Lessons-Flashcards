@@ -43,7 +43,7 @@ class NicknamesViewController: UIViewController  {
 
     //MARK: prepare for segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //
+        ArrayOfLettersSwitchedOff.sort(by: >)
                 let destinationVC = segue.destination as! FlashCardViewController
         destinationVC.passingArrayOfLettersSwitchedOff = ArrayOfLettersSwitchedOff
 }
