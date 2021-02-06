@@ -76,6 +76,7 @@ extension NicknamesViewController: UITableViewDelegate, UITableViewDataSource {
         //assign pulled data to the appropriate cell and its parts
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.NICKNAMES_CELL_REUSE_IDENTIFIER) as! CustomTableViewCell
         
+        cell.cellView.layer.cornerRadius = 20
         cell.nicknamesLabel.text = letter.letterNickname
         
         //add switch programmatically so that i can track tag numbers
@@ -94,7 +95,7 @@ extension NicknamesViewController: UITableViewDelegate, UITableViewDataSource {
         //when a cell is selected display the cartoon for that cell
         nicknamesImage.image = UIImage(named: letterArray[indexPath.row].letterNickname)
         
-        
+    
     
     
 }
