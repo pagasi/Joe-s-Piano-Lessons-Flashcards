@@ -12,11 +12,11 @@ struct Letter {
     
    // var image: UIImage?
     var letterNickname: String
-    //var cardNumber: Int
+    var letterSwitch: UISwitch
     
-    init(letterNickname: String/*cardNumber: Int */) {
+    init(letterNickname: String, letterSwitch: UISwitch) {
 
         self.letterNickname = letterNickname
-//      self.cardNumber = cardNumber
+        self.letterSwitch = letterSwitch
     }
 }

@@ -13,6 +13,10 @@ class NicknamesViewController: UIViewController  {
     
     @IBOutlet weak var nicknamesTableView: UITableView!
     @IBOutlet weak var nicknamesImage: UIImageView!
+    @IBOutlet weak var BeginnerButton: UIButton!
+    @IBOutlet weak var fortyFiveSecondButton: UIButton!
+    @IBOutlet weak var sixteenSecondButton: UIButton!
+    @IBOutlet weak var fullDeckButton: UIButton!
     
     var letterArray: [Letter] = []
     var ArrayOfLettersSwitchedOff = [Int]()
@@ -26,8 +30,36 @@ class NicknamesViewController: UIViewController  {
         nicknamesTableView.delegate = self
         nicknamesTableView.dataSource = self
         
+//        customize buttons
+        BeginnerButton.layer.cornerRadius = 20
+//        BeginnerButton.title.numberOfLines = 0
+        fortyFiveSecondButton.layer.cornerRadius = 20
+        sixteenSecondButton.layer.cornerRadius = 20
+        fullDeckButton.layer.cornerRadius = 20
+        
     } //end viewDidLoasd
     
+//    MARK: IBActions
+    
+    @IBAction func beginnerButtonPressed(_ sender: Any) {
+        ArrayOfLettersSwitchedOff = [4,3,2,1]
+        switchTheSwitches()
+    }
+    @IBAction func fortyFiveSecondButtonPressed(_ sender: Any) {
+        ArrayOfLettersSwitchedOff = [4,3,2,0]
+        switchTheSwitches()
+    }
+    @IBAction func sixteenSecondButtonPressed(_ sender: Any) {
+        ArrayOfLettersSwitchedOff = [4,3,1,0]
+        switchTheSwitches()
+    }
+    @IBAction func fullDeckButtonPressed(_ sender: Any) {
+        ArrayOfLettersSwitchedOff = [3,2,1,0]
+        switchTheSwitches()
+    }
+    
+    
+//    MARK: @objc funcs
     @objc func switchDidChange(_ sender: UISwitch){
         //track which switch is being flipped
         print("sender is \(sender.tag)")
@@ -55,6 +87,16 @@ class NicknamesViewController: UIViewController  {
         let destinationVC = segue.destination as! FlashCardViewController
         //set the arrays of unwanted cards equal in both view controllers
         destinationVC.passingArrayOfLettersSwitchedOff = ArrayOfLettersSwitchedOff
+    }
+    
+    func switchTheSwitches() {
+        for index in 0...letterArray.count - 1 {
+            if ArrayOfLettersSwitchedOff.contains(index) {
+            letterArray[index].letterSwitch.setOn(false, animated: true)
+            } else {
+                letterArray[index].letterSwitch.setOn(true, animated: true)
+            }
+        }
     }
     
 }// end class
@@ -102,7 +144,7 @@ extension NicknamesViewController: UITableViewDelegate, UITableViewDataSource {
         switchView.addTarget(self, action: #selector(self.switchDidChange(_:)), for: .valueChanged)
         //add the switch to the accessory view of each cell
         cell.accessoryView = switchView
-        
+        self.letterArray[indexPath.row].letterSwitch = switchView
         //apply to tableview
         return cell
     }

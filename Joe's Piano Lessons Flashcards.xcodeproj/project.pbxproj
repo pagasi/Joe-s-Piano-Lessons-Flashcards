@@ -25,6 +25,7 @@
 		6F16AE8525C1B285005ADDFE /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE8425C1B285005ADDFE /* Letter.swift */; };
 		6F16AE8925C1B9A3005ADDFE /* NicknamesArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE8825C1B9A3005ADDFE /* NicknamesArray.swift */; };
 		6F16AEC925C9129B005ADDFE /* FlashCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AEC825C9129B005ADDFE /* FlashCardModel.swift */; };
+		6FBBB7D625D2B6A40000DB0B /* SelectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBBB7D525D2B6A40000DB0B /* SelectionButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		6F16AE8425C1B285005ADDFE /* Letter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letter.swift; sourceTree = "<group>"; };
 		6F16AE8825C1B9A3005ADDFE /* NicknamesArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknamesArray.swift; sourceTree = "<group>"; };
 		6F16AEC825C9129B005ADDFE /* FlashCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardModel.swift; sourceTree = "<group>"; };
+		6FBBB7D525D2B6A40000DB0B /* SelectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +84,7 @@
 			children = (
 				6F16AEC425C91239005ADDFE /* Models */,
 				6F16AE8E25C1BA0A005ADDFE /* Objects */,
-				6F16AE8D25C1B9E8005ADDFE /* CustomCells */,
+				6F16AE8D25C1B9E8005ADDFE /* Custom Files */,
 				6F16AE8C25C1B9BA005ADDFE /* StoryBoards */,
 				6F16AE5E25BEF99D005ADDFE /* VCs */,
 				6F16AE4325BEF54C005ADDFE /* AppDelegate.swift */,
@@ -126,12 +128,13 @@
 			path = StoryBoards;
 			sourceTree = "<group>";
 		};
-		6F16AE8D25C1B9E8005ADDFE /* CustomCells */ = {
+		6F16AE8D25C1B9E8005ADDFE /* Custom Files */ = {
 			isa = PBXGroup;
 			children = (
 				6F16AE8025C1A227005ADDFE /* CustomTableViewCell.swift */,
+				6FBBB7D525D2B6A40000DB0B /* SelectionButton.swift */,
 			);
-			path = CustomCells;
+			path = "Custom Files";
 			sourceTree = "<group>";
 		};
 		6F16AE8E25C1BA0A005ADDFE /* Objects */ = {
@@ -223,6 +226,7 @@
 			files = (
 				6F16AE6025BEF9D7005ADDFE /* CartoonViewController.swift in Sources */,
 				6F16AE4425BEF54C005ADDFE /* AppDelegate.swift in Sources */,
+				6FBBB7D625D2B6A40000DB0B /* SelectionButton.swift in Sources */,
 				6F16AE6D25BEFAFF005ADDFE /* SettingsViewController.swift in Sources */,
 				6F16AE7D25C09E95005ADDFE /* notes.swift in Sources */,
 				6F16AE6425BEF9EE005ADDFE /* NicknamesViewController.swift in Sources */,

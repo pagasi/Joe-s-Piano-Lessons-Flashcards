@@ -38,7 +38,7 @@ class FlashCardViewController: UIViewController {
         startUpFlashCards()
         model()
     }
-    //MARK: Button outlets
+    //MARK: @IBActions
     //what to do if buttons are pressed
     @IBAction func AButtonPressed(_ sender: Any) {
         //check to see if all cards have already been answered
@@ -116,7 +116,7 @@ class FlashCardViewController: UIViewController {
         }
     } //end GButton
     
-    //MARK: @IBActions
+
     @IBAction func cartoonButtonPressed(_ sender: Any) {
         //check to see if the user has finished all cards.  If finished, don't do anything
         if finished == false {
@@ -168,7 +168,7 @@ class FlashCardViewController: UIViewController {
             //add this card to the list of used cards
             finalArrayOfIndexes.append(randomNumber)
             //MARK: set the flashcard image
-            grandStaffUIImage.image = UIImage(named: chosenCountDetailView[randomNumber].letterNickname)
+            grandStaffUIImage.image = UIImage(named: "Card \(chosenCountDetailView[randomNumber].letterNickname)")
             
             //update or set the cardsRemaining text
             cardsRemaining.text = "\(chosenCountDetailView.count - finalArrayOfIndexes.count) / \(chosenCountDetailView.count)"
