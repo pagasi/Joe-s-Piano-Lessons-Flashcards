@@ -15,65 +15,16 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oxT-wy-6De">
-                                <rect key="frame" x="20" y="398" width="374" height="100"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qS-Q9-Gzd">
-                                        <rect key="frame" x="0.0" y="0.0" width="118" height="100"/>
-                                        <color key="backgroundColor" red="0.21790876980000001" green="0.72393256429999997" blue="0.46271049980000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="FAi-32-hlt"/>
-                                            <constraint firstAttribute="height" constant="100" id="xfo-2O-H3E"/>
-                                        </constraints>
-                                        <size key="titleShadowOffset" width="1" height="1"/>
-                                        <state key="normal" title="Flash Cards">
-                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="V3l-H6-IXv" kind="show" id="nvX-xo-urU"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DyY-D5-bKY">
-                                        <rect key="frame" x="128" y="0.0" width="118" height="100"/>
-                                        <color key="backgroundColor" red="0.21790876980000001" green="0.72393256429999997" blue="0.46271049980000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="OG2-yQ-doA"/>
-                                            <constraint firstAttribute="width" constant="100" id="tfk-uu-JGa"/>
-                                        </constraints>
-                                        <size key="titleShadowOffset" width="1" height="1"/>
-                                        <state key="normal" title="About">
-                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="Gkj-qN-A1N" kind="show" id="3RV-2C-eDA"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HuO-Ct-MLh">
-                                        <rect key="frame" x="256" y="0.0" width="118" height="100"/>
-                                        <color key="backgroundColor" red="0.21790876980000001" green="0.72393256429999997" blue="0.46271049980000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="9Dr-in-5Ox"/>
-                                            <constraint firstAttribute="height" constant="100" id="oVL-Ur-Swf"/>
-                                        </constraints>
-                                        <size key="titleShadowOffset" width="1" height="-1"/>
-                                        <state key="normal" title="Scales">
-                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="oxT-wy-6De" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4i9-uz-G9H"/>
-                            <constraint firstItem="oxT-wy-6De" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8pB-2r-FnI"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oxT-wy-6De" secondAttribute="trailing" constant="20" id="eEe-fD-Vk0"/>
-                            <constraint firstItem="oxT-wy-6De" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kmL-TA-Zgq"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Joe's Piano Lessons Flash Cards" largeTitleDisplayMode="always" id="2Sw-MN-Szd"/>
+                    <connections>
+                        <segue destination="V3l-H6-IXv" kind="show" identifier="flashButtonToNicknamesVCSegue" id="pK4-2F-muv"/>
+                        <segue destination="gqh-uM-vAV" kind="show" identifier="settingsButtonToSettingsVC" id="y4Q-9s-XeR"/>
+                        <segue destination="Gkj-qN-A1N" kind="show" identifier="aboutButtontoAboutVC" id="EPV-i6-hzc"/>
+                        <segue destination="OJ2-Va-1G8" kind="show" identifier="scalesButtonToScalesVC" id="CGK-QO-UnX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -342,6 +293,34 @@
             </objects>
             <point key="canvasLocation" x="31.884057971014496" y="862.5"/>
         </scene>
+        <!--Scales View Controller-->
+        <scene sceneID="MND-mg-rgz">
+            <objects>
+                <viewController id="OJ2-Va-1G8" customClass="ScalesViewController" customModule="Joe_s_Piano_Lessons_Flashcards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="asT-gX-8cO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCALES! Moo Ha Ha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chw-fY-9Y2">
+                                <rect key="frame" x="129" y="437.5" width="156" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OjO-al-MS3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Chw-fY-9Y2" firstAttribute="centerY" secondItem="asT-gX-8cO" secondAttribute="centerY" id="TZe-q4-eyL"/>
+                            <constraint firstItem="Chw-fY-9Y2" firstAttribute="centerX" secondItem="asT-gX-8cO" secondAttribute="centerX" id="XDG-lo-clC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="JZn-LA-LeQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="veF-vp-gaC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="838" y="863"/>
+        </scene>
         <!--Settings View Controller-->
         <scene sceneID="1er-bp-rIo">
             <objects>
@@ -349,9 +328,22 @@
                     <view key="view" contentMode="scaleToFill" id="6gb-Iw-4sH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings! Moo Ha Ha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Raw-NF-7Sp">
+                                <rect key="frame" x="128.5" y="437.5" width="157" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Rgv-5O-OTa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Raw-NF-7Sp" firstAttribute="centerX" secondItem="6gb-Iw-4sH" secondAttribute="centerX" id="ftA-tC-jYH"/>
+                            <constraint firstItem="Raw-NF-7Sp" firstAttribute="centerY" secondItem="6gb-Iw-4sH" secondAttribute="centerY" id="r2h-5O-SHU"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="0BU-gA-84x"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lsa-7Y-9un" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
