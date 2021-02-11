@@ -17,6 +17,7 @@ class NicknamesViewController: UIViewController  {
     @IBOutlet weak var fortyFiveSecondButton: UIButton!
     @IBOutlet weak var sixteenSecondButton: UIButton!
     @IBOutlet weak var fullDeckButton: UIButton!
+    @IBOutlet weak var nicknamesViewLabel: UILabel!
     
     var letterArray: [Letter] = []
     var ArrayOfLettersSwitchedOff = [Int]()
@@ -30,16 +31,16 @@ class NicknamesViewController: UIViewController  {
         nicknamesTableView.delegate = self
         nicknamesTableView.dataSource = self
         
-//        customize buttons
+        //        customize buttons
         BeginnerButton.layer.cornerRadius = 20
-//        BeginnerButton.title.numberOfLines = 0
         fortyFiveSecondButton.layer.cornerRadius = 20
         sixteenSecondButton.layer.cornerRadius = 20
         fullDeckButton.layer.cornerRadius = 20
         
+        
     } //end viewDidLoasd
     
-//    MARK: IBActions
+    //    MARK: IBActions
     
     @IBAction func beginnerButtonPressed(_ sender: Any) {
         ArrayOfLettersSwitchedOff = [4,3,2,1]
@@ -59,7 +60,7 @@ class NicknamesViewController: UIViewController  {
     }
     
     
-//    MARK: @objc funcs
+    //    MARK: @objc funcs
     @objc func switchDidChange(_ sender: UISwitch){
         //track which switch is being flipped
         print("sender is \(sender.tag)")
@@ -92,7 +93,7 @@ class NicknamesViewController: UIViewController  {
     func switchTheSwitches() {
         for index in 0...letterArray.count - 1 {
             if ArrayOfLettersSwitchedOff.contains(index) {
-            letterArray[index].letterSwitch.setOn(false, animated: true)
+                letterArray[index].letterSwitch.setOn(false, animated: true)
             } else {
                 letterArray[index].letterSwitch.setOn(true, animated: true)
             }
@@ -153,7 +154,7 @@ extension NicknamesViewController: UITableViewDelegate, UITableViewDataSource {
         
         //when a cell is selected display the cartoon for that cell
         nicknamesImage.image = UIImage(named: letterArray[indexPath.row].letterNickname)
-        
+        nicknamesViewLabel.alpha = 0
         
         
         

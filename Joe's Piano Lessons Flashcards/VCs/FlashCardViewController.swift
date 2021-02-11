@@ -29,6 +29,11 @@ class FlashCardViewController: UIViewController {
     var wrongAnswerCounter = 0
     var finished = false
     var passingArrayOfLettersSwitchedOff = [Int]()
+    var timer = Timer()
+    var count: Int = 0
+    var score: ScoreLog = ScoreLog(score: 0, date: Date())
+    
+    
     
     //MARK: Life cycle
     
@@ -37,6 +42,7 @@ class FlashCardViewController: UIViewController {
         // every time screen loads create object with flashcard data
         startUpFlashCards()
         model()
+        timerFunction()
     }
     //MARK: @IBActions
     //what to do if buttons are pressed
@@ -139,6 +145,17 @@ class FlashCardViewController: UIViewController {
     }
     //MARK: methods
     
+    //setup timer
+    func timerFunction() {
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerSelectorFunc), userInfo: nil, repeats: true)
+    }
+    
+    @objc func timerSelectorFunc() {
+//        add the visable timer
+        count += 1
+        countTimerLabel.text = "\(count)"
+    }
+    
     func startUpFlashCards() {
         chosenCountDetailView = flashCardVCInstanceOfNicknamesArray.createArray()
         
@@ -177,9 +194,13 @@ class FlashCardViewController: UIViewController {
             
             
         } else {
-            // if all the cards have been displayed, clean up properties and lock all the buttons by marking finished as true
+//            MARK: game over cleanup
+            // if all the cards have been displayed, clean up properties, invalidate timer, capture score, and lock all the buttons by marking finished as true
             finalArrayOfIndexes = []
-            grandStaffUIImage.image = UIImage(named: "Done")
+            grandStaffUIImage.image = UIImage(named: Constants.DONE_CARD_NAME)
+            timer.invalidate()
+//            capture the score for high score page
+            score.score = count
             finished = true
         }
         
@@ -190,11 +211,7 @@ class FlashCardViewController: UIViewController {
         wrongAnswerCounter += 1
         button.backgroundColor = .red
         if wrongAnswerCounter == 2 {
-            
-            //MARK: TODO -  add the proper image
-            
-            
-            
+
             performSegue(withIdentifier: Constants.LETTER_SEGUE_FLASHVC_TO_CARTOONVC_IDENTIFIER, sender: Any?.self)
         }
         

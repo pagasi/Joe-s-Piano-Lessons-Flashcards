@@ -13,7 +13,7 @@ class NicknamesArray {
     func createArray() -> [Letter]{
         var tempArray: [Letter] = []
         
-        let letter0: Letter = Letter(letterNickname: "Cat C", letterSwitch: tempSwitch)
+        let letter0: Letter = Letter(letterNickname: "RH Cat C", letterSwitch: tempSwitch)
         let letter1: Letter = Letter(letterNickname: "Dangling D", letterSwitch: tempSwitch)
         let letter2: Letter = Letter(letterNickname: "Elephant E", letterSwitch: tempSwitch)
         let letter3: Letter = Letter(letterNickname: "Frisbee F", letterSwitch: tempSwitch)

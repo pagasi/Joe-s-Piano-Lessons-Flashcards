@@ -19,5 +19,5 @@ struct Constants {
     static var CUSTOMIZE_VC_IDENTIFIER = "customizeVC"
     static var NICKNAMES_CELL_REUSE_IDENTIFIER = "nicknamesCellIdentifier"
     static var LETTER_SEGUE_FLASHVC_TO_CARTOONVC_IDENTIFIER = "letterSegueFlashcardVCToCartoonVC"
-    
+    static var DONE_CARD_NAME = "Done"
 }
