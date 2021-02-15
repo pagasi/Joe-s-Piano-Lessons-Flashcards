@@ -13,14 +13,42 @@ class NicknamesViewController: UIViewController  {
     
     @IBOutlet weak var nicknamesTableView: UITableView!
     @IBOutlet weak var nicknamesImage: UIImageView!
-    @IBOutlet weak var BeginnerButton: UIButton!
-    @IBOutlet weak var fortyFiveSecondButton: UIButton!
-    @IBOutlet weak var sixteenSecondButton: UIButton!
-    @IBOutlet weak var fullDeckButton: UIButton!
+//    @IBOutlet weak var BeginnerButton: UIButton!
+//    @IBOutlet weak var fortyFiveSecondButton: UIButton!
+//    @IBOutlet weak var sixteenSecondButton: UIButton!
+//    @IBOutlet weak var fullDeckButton: UIButton!
     @IBOutlet weak var nicknamesViewLabel: UILabel!
+    @IBOutlet weak var switchHorizontalStack: UIStackView!
     
     var letterArray: [Letter] = []
     var ArrayOfLettersSwitchedOff = [Int]()
+    
+    lazy var fortyFiveSecondButton: SelectionButton = {
+        let button = SelectionButton(title: "45 Sec")
+        button.addTarget(self, action: #selector(fortyFiveSecondButtonPressed), for: .touchUpInside)
+        button.widthAnchor.constraint(equalToConstant: 70).isActive = true
+        return button
+    }()
+    
+    lazy var sixteenSecondButton: SelectionButton = {
+        let button = SelectionButton(title: "16 Sec")
+        button.addTarget(self, action: #selector(sixteenSecondButtonPressed), for: .touchUpInside)
+        button.widthAnchor.constraint(equalToConstant: 70).isActive = true
+        return button
+    }()
+    
+    lazy var beginnerButton: SelectionButton = {
+        let button = SelectionButton(title: "Beginner")
+        button.addTarget(self, action: #selector(beginnerButtonPressed), for: .touchUpInside)
+        return button
+    }()
+    
+    lazy var fullDeckButton: SelectionButton = {
+        let button = SelectionButton(title: "16 Sec")
+        button.addTarget(self, action: #selector(fullDeckButtonPressed), for: .touchUpInside)
+        return button
+    }()
+    
     
     //MARK:  life cycle
     
@@ -30,37 +58,38 @@ class NicknamesViewController: UIViewController  {
         //assign NicknamesViewController as the delegate and data source for the table view in the NicknamesViewController
         nicknamesTableView.delegate = self
         nicknamesTableView.dataSource = self
-        
-        //        customize buttons
-        BeginnerButton.layer.cornerRadius = 20
-        fortyFiveSecondButton.layer.cornerRadius = 20
-        sixteenSecondButton.layer.cornerRadius = 20
-        fullDeckButton.layer.cornerRadius = 20
-        
+
+        //add programmatic buttons to the stackview
+        switchHorizontalStack.addArrangedSubview(fortyFiveSecondButton)
+        switchHorizontalStack.addArrangedSubview(sixteenSecondButton)
+        switchHorizontalStack.addArrangedSubview(beginnerButton)
+        switchHorizontalStack.addArrangedSubview(fullDeckButton)
         
     } //end viewDidLoasd
     
-    //    MARK: IBActions
-    
-    @IBAction func beginnerButtonPressed(_ sender: Any) {
-        ArrayOfLettersSwitchedOff = [4,3,2,1]
-        switchTheSwitches()
-    }
-    @IBAction func fortyFiveSecondButtonPressed(_ sender: Any) {
+    //    MARK: @objc funcs
+    //setup switch functions
+    @objc func fortyFiveSecondButtonPressed() {
         ArrayOfLettersSwitchedOff = [4,3,2,0]
         switchTheSwitches()
     }
-    @IBAction func sixteenSecondButtonPressed(_ sender: Any) {
-        ArrayOfLettersSwitchedOff = [4,3,1,0]
+    @objc func sixteenSecondButtonPressed() {
+        ArrayOfLettersSwitchedOff = [4,2,0]
         switchTheSwitches()
     }
-    @IBAction func fullDeckButtonPressed(_ sender: Any) {
-        ArrayOfLettersSwitchedOff = [3,2,1,0]
+    
+    @objc func beginnerButtonPressed() {
+        ArrayOfLettersSwitchedOff = [3,1,0]
+        switchTheSwitches()
+    }
+    
+    @objc func fullDeckButtonPressed() {
+        ArrayOfLettersSwitchedOff = [0]
         switchTheSwitches()
     }
     
     
-    //    MARK: @objc funcs
+    
     @objc func switchDidChange(_ sender: UISwitch){
         //track which switch is being flipped
         print("sender is \(sender.tag)")
@@ -130,13 +159,16 @@ extension NicknamesViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.NICKNAMES_CELL_REUSE_IDENTIFIER) as! CustomTableViewCell
         
         //customize the cellview for rounded corners
-        cell.cellView.layer.cornerRadius = 20
-        
+        cell.cellView.translatesAutoresizingMaskIntoConstraints = false
+        cell.cellView.layer.cornerRadius = 10
+        cell.cellView.layer.shadowRadius = 30
+        cell.cellView.layer.shadowColor = UIColor.black.cgColor
         //set the text in each cell to the nicknames of each card
         cell.nicknamesLabel.text = letter.letterNickname
         
         //add switch programmatically so that i can track tag numbers
         let switchView = UISwitch(frame: .zero)
+        switchView.isHighlighted = true
         //start all switches as ON
         switchView.setOn(true, animated: true)
         //individualize each switch with a tag
