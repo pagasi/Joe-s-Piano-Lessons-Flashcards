@@ -1,20 +1,20 @@
 //
-//  ScalesViewController.swift
+//  Scales4ViewController.swift
 //  Joe's Piano Lessons Flashcards
 //
-//  Created by Whitney Naquin on 2/11/21.
+//  Created by Whitney Naquin on 2/16/21.
 //
 
 import UIKit
 
-class ScalesViewController: UIViewController {
-    
-    let VCInstanceOfScaleData = ScaleData()
-    var theArrayForVC2: [ScaleModel] = []
+class Scales4ViewController: UIViewController {
+
+    let VCInstanceOfScaleData = ScaleData4()
+    var theArrayForVC4: [ScaleModel] = []
     
     let scaleTableView: UITableView = {
         let table = UITableView()
-        table.register(ScalesTableViewCell.self, forCellReuseIdentifier: Constants.SCALES_CELL_IDENTIFIER)
+        table.register(ScalesTableViewCell.self, forCellReuseIdentifier: Constants.SCALES_CELL_IDENTIFIER4)
         table.rowHeight = 144
         table.allowsSelection = false
         return table
@@ -33,23 +33,23 @@ class ScalesViewController: UIViewController {
         scaleTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         scaleTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         
-        scaleTableView.backgroundColor = .white
+        scaleTableView.backgroundColor = .black
         
-        theArrayForVC2 = VCInstanceOfScaleData.createArray()
+        theArrayForVC4 = VCInstanceOfScaleData.createArray()
     }
 }
 
 
 
-extension ScalesViewController: UITableViewDelegate, UITableViewDataSource {
+extension Scales4ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return theArrayForVC2.count
+        return theArrayForVC4.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.SCALES_CELL_IDENTIFIER, for: indexPath) as! ScalesTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.SCALES_CELL_IDENTIFIER4, for: indexPath) as! ScalesTableViewCell
         cell.backgroundColor = .white
-        cell.fullStackSetup(tableIndex: indexPath.row, cellScaleDataChoice: 0)
+        cell.fullStackSetup(tableIndex: indexPath.row, cellScaleDataChoice: 3)
         
         return cell
     }

@@ -45,3 +45,39 @@ class ScaleData {
   return theArray
     }
 }
+
+class ScaleData2 {
+    let cMajorScale: ScaleModel = ScaleModel(scaleName: "C Major", scaleFingeringRH: [1,2,3,1,2,3,4,1,2,3,1,2,3,4,5], scaleFingeringLH: [5,4,3,2,1,3,2,1,4,3,2,1,3,2,1], scaleLetters: ["C","D","E","F","G","A","B","C","D","E","F","G","A","B","C"])
+
+    func createArray() -> [ScaleModel] {
+        
+        let theArray: [ScaleModel] = [cMajorScale]
+        /*, gMajorScale, dMajorScale, aMajorScale, eMajorScale, bMajorScale, cbMajorScale, fSharpMajorScale, gbMajorScale, cSharpMajorScale, dbMajorScale, abMajorScale, ebMajorScale, bbMajorScale, fMajorScale]*/
+        
+  return theArray
+    }
+}
+
+class ScaleData3 {
+    let cMinorScale: ScaleModel = ScaleModel(scaleName: "C Minor Harmonic", scaleFingeringRH: [1,2,3,1,2,3,4,5], scaleFingeringLH: [5,4,3,2,1,3,2,1], scaleLetters: ["C","D","Eb","F","G","Ab","BN","C"])
+
+    func createArray() -> [ScaleModel] {
+        
+        let theArray: [ScaleModel] = [cMinorScale]
+        /*, gMajorScale, dMajorScale, aMajorScale, eMajorScale, bMajorScale, cbMajorScale, fSharpMajorScale, gbMajorScale, cSharpMajorScale, dbMajorScale, abMajorScale, ebMajorScale, bbMajorScale, fMajorScale]*/
+        
+  return theArray
+    }
+}
+
+class ScaleData4 {
+    let cMinorScale: ScaleModel = ScaleModel(scaleName: "C Minor Harmonic", scaleFingeringRH: [1,2,3,1,2,3,4,1,2,3,1,2,3,4,5], scaleFingeringLH: [5,4,3,2,1,3,2,1,4,3,2,1,3,2,1], scaleLetters: ["C","D","Eb","F","G","Ab","BN","C","D","Eb","F","G","Ab","BN","C"])
+
+    func createArray() -> [ScaleModel] {
+        
+        let theArray: [ScaleModel] = [cMinorScale]
+        /*, gMajorScale, dMajorScale, aMajorScale, eMajorScale, bMajorScale, cbMajorScale, fSharpMajorScale, gbMajorScale, cSharpMajorScale, dbMajorScale, abMajorScale, ebMajorScale, bbMajorScale, fMajorScale]*/
+        
+  return theArray
+    }
+}

@@ -32,6 +32,9 @@
 		6FBBB81225D71B2E0000DB0B /* ScalesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBBB81125D71B2E0000DB0B /* ScalesTableViewCell.swift */; };
 		6FBBB84825DB013F0000DB0B /* ScaleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBBB84725DB013F0000DB0B /* ScaleModel.swift */; };
 		6FBBB84B25DB01AF0000DB0B /* ScaleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBBB84A25DB01AF0000DB0B /* ScaleData.swift */; };
+		6FBBB85225DC83C70000DB0B /* Scales2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBBB85125DC83C70000DB0B /* Scales2ViewController.swift */; };
+		6FBBB85725DC8F040000DB0B /* Scales3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBBB85625DC8F040000DB0B /* Scales3ViewController.swift */; };
+		6FBBB85A25DC8F110000DB0B /* Scales4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBBB85925DC8F110000DB0B /* Scales4ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +65,9 @@
 		6FBBB81125D71B2E0000DB0B /* ScalesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalesTableViewCell.swift; sourceTree = "<group>"; };
 		6FBBB84725DB013F0000DB0B /* ScaleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleModel.swift; sourceTree = "<group>"; };
 		6FBBB84A25DB01AF0000DB0B /* ScaleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleData.swift; sourceTree = "<group>"; };
+		6FBBB85125DC83C70000DB0B /* Scales2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scales2ViewController.swift; sourceTree = "<group>"; };
+		6FBBB85625DC8F040000DB0B /* Scales3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scales3ViewController.swift; sourceTree = "<group>"; };
+		6FBBB85925DC8F110000DB0B /* Scales4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scales4ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,9 @@
 				6F16AE6625BEFA01005ADDFE /* AboutViewController.swift */,
 				6F16AE6C25BEFAFF005ADDFE /* SettingsViewController.swift */,
 				6FBBB80325D5D3780000DB0B /* ScalesViewController.swift */,
+				6FBBB85125DC83C70000DB0B /* Scales2ViewController.swift */,
+				6FBBB85625DC8F040000DB0B /* Scales3ViewController.swift */,
+				6FBBB85925DC8F110000DB0B /* Scales4ViewController.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -242,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FBBB85A25DC8F110000DB0B /* Scales4ViewController.swift in Sources */,
 				6F16AE6025BEF9D7005ADDFE /* CartoonViewController.swift in Sources */,
 				6F16AE4425BEF54C005ADDFE /* AppDelegate.swift in Sources */,
 				6FBBB7D625D2B6A40000DB0B /* SelectionButton.swift in Sources */,
@@ -255,11 +265,13 @@
 				6F16AE7825C0689D005ADDFE /* CacheManager.swift in Sources */,
 				6F16AE5925BEF574005ADDFE /* MainViewController.swift in Sources */,
 				6FBBB7FF25D40B020000DB0B /* ScoreLog.swift in Sources */,
+				6FBBB85225DC83C70000DB0B /* Scales2ViewController.swift in Sources */,
 				6F16AE6725BEFA01005ADDFE /* AboutViewController.swift in Sources */,
 				6FBBB80425D5D3790000DB0B /* ScalesViewController.swift in Sources */,
 				6F16AE8925C1B9A3005ADDFE /* NicknamesArray.swift in Sources */,
 				6F16AEC925C9129B005ADDFE /* FlashCardModel.swift in Sources */,
 				6F16AE5C25BEF5DF005ADDFE /* FlashCardViewController.swift in Sources */,
+				6FBBB85725DC8F040000DB0B /* Scales3ViewController.swift in Sources */,
 				6F16AE8125C1A227005ADDFE /* CustomTableViewCell.swift in Sources */,
 				6FBBB81225D71B2E0000DB0B /* ScalesTableViewCell.swift in Sources */,
 				6FBBB80F25D6BDCB0000DB0B /* AnswerButton.swift in Sources */,

@@ -25,6 +25,7 @@ struct Constants {
     static var ABOUT_BUTTON_TO_ABOUTVC_SEGUE_IDENTIFIER = "aboutButtontoAboutVC"
     static var SCALES_BUTTON_TO_SCALESVC_SEGUE_IDENTIFIER = "scalesButtonToScalesVC"
     static var SCALES_CELL_IDENTIFIER = "scalesCellIdentifier"
-    
-    
+    static var SCALES_CELL_IDENTIFIER2 = "scalesCellIdentifier2"
+    static var SCALES_CELL_IDENTIFIER3 = "scalesCellIdentifier3"
+    static var SCALES_CELL_IDENTIFIER4 = "scalesCellIdentifier4"
 }

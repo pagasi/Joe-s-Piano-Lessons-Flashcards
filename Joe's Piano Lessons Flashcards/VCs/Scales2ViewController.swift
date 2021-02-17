@@ -1,20 +1,20 @@
 //
-//  ScalesViewController.swift
+//  Scales2ViewController.swift
 //  Joe's Piano Lessons Flashcards
 //
-//  Created by Whitney Naquin on 2/11/21.
+//  Created by Whitney Naquin on 2/16/21.
 //
 
 import UIKit
 
-class ScalesViewController: UIViewController {
-    
-    let VCInstanceOfScaleData = ScaleData()
+class Scales2ViewController: UIViewController {
+
+    let VCInstanceOfScaleData = ScaleData2()
     var theArrayForVC2: [ScaleModel] = []
     
     let scaleTableView: UITableView = {
         let table = UITableView()
-        table.register(ScalesTableViewCell.self, forCellReuseIdentifier: Constants.SCALES_CELL_IDENTIFIER)
+        table.register(ScalesTableViewCell.self, forCellReuseIdentifier: Constants.SCALES_CELL_IDENTIFIER2)
         table.rowHeight = 144
         table.allowsSelection = false
         return table
@@ -33,7 +33,7 @@ class ScalesViewController: UIViewController {
         scaleTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         scaleTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         
-        scaleTableView.backgroundColor = .white
+        scaleTableView.backgroundColor = .black
         
         theArrayForVC2 = VCInstanceOfScaleData.createArray()
     }
@@ -41,15 +41,15 @@ class ScalesViewController: UIViewController {
 
 
 
-extension ScalesViewController: UITableViewDelegate, UITableViewDataSource {
+extension Scales2ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return theArrayForVC2.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.SCALES_CELL_IDENTIFIER, for: indexPath) as! ScalesTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.SCALES_CELL_IDENTIFIER2, for: indexPath) as! ScalesTableViewCell
         cell.backgroundColor = .white
-        cell.fullStackSetup(tableIndex: indexPath.row, cellScaleDataChoice: 0)
+        cell.fullStackSetup(tableIndex: indexPath.row, cellScaleDataChoice: 1)
         
         return cell
     }

@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,7 +24,7 @@
                         <segue destination="V3l-H6-IXv" kind="show" identifier="flashButtonToNicknamesVCSegue" id="pK4-2F-muv"/>
                         <segue destination="gqh-uM-vAV" kind="show" identifier="settingsButtonToSettingsVC" id="y4Q-9s-XeR"/>
                         <segue destination="Gkj-qN-A1N" kind="show" identifier="aboutButtontoAboutVC" id="EPV-i6-hzc"/>
-                        <segue destination="OJ2-Va-1G8" kind="show" identifier="scalesButtonToScalesVC" id="CGK-QO-UnX"/>
+                        <segue destination="jHN-PV-b5k" kind="show" identifier="scalesButtonToScalesVC" id="TxJ-HH-Qve"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -56,8 +57,8 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a note to display the cartoon" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kzw-Ki-wEJ">
-                                                <rect key="frame" x="62.5" y="90" width="269.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="64" y="90" width="266" height="20"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -238,13 +239,87 @@
                         <viewLayoutGuide key="safeArea" id="OjO-al-MS3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Maj 1 Octave" id="T1q-e8-aLv">
+                        <imageReference key="image" image="pianokeys" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Scales" largeTitleDisplayMode="always" id="JZn-LA-LeQ">
                         <barButtonItem key="backBarButtonItem" title=" " id="55f-ph-WxN"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="veF-vp-gaC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="837.68115942028987" y="862.5"/>
+            <point key="canvasLocation" x="32" y="1590"/>
+        </scene>
+        <!--Maj 2 Octaves-->
+        <scene sceneID="W8a-gu-oJd">
+            <objects>
+                <viewController id="5Ww-28-eyc" customClass="Scales2ViewController" customModule="Joe_s_Piano_Lessons_Flashcards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LYW-oi-2xt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ndM-p2-1rG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Maj 2 Octaves" image="pianokeys" catalog="system" id="vCK-da-Rh8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bB2-M6-CFI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="732" y="1590"/>
+        </scene>
+        <!--Min 1 Octave-->
+        <scene sceneID="Mdn-Pe-yFf">
+            <objects>
+                <viewController id="iLs-LL-GlL" customClass="Scales3ViewController" customModule="Joe_s_Piano_Lessons_Flashcards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ui4-am-u4Q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Izl-RP-xMP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Min 1 Octave" image="pianokeys" catalog="system" id="ave-vC-Sxf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tXM-cG-UT3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1465" y="1590"/>
+        </scene>
+        <!--Min 2 Octaves-->
+        <scene sceneID="RMa-Q1-m9q">
+            <objects>
+                <viewController id="voa-Mv-Ud5" customClass="Scales4ViewController" customModule="Joe_s_Piano_Lessons_Flashcards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7sG-Ic-sQ0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="MMN-w1-cIJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Min 2 Octaves" image="pianokeys" catalog="system" id="ajW-Sg-41g"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T5J-pD-w0V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2223" y="1590"/>
+        </scene>
+        <!--Scales-->
+        <scene sceneID="uvg-4l-sng">
+            <objects>
+                <tabBarController id="jHN-PV-b5k" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Scales" id="0FO-Y9-TrG" userLabel="ScalesTabBar"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0Nb-jo-YAT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="0.50436108729999996" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="labelColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="OJ2-Va-1G8" kind="relationship" relationship="viewControllers" id="VNR-fE-aZv"/>
+                        <segue destination="5Ww-28-eyc" kind="relationship" relationship="viewControllers" id="ppf-GJ-u40"/>
+                        <segue destination="iLs-LL-GlL" kind="relationship" relationship="viewControllers" id="HuP-j4-ojm"/>
+                        <segue destination="voa-Mv-Ud5" kind="relationship" relationship="viewControllers" id="O0y-eL-JsD"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cL8-J4-b0J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="733" y="863"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="1er-bp-rIo">
@@ -568,6 +643,7 @@
     </scenes>
     <resources>
         <image name="grand staff" width="375" height="280"/>
+        <image name="pianokeys" catalog="system" width="128" height="93"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

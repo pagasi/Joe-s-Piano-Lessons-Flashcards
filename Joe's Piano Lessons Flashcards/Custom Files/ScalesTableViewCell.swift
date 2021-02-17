@@ -10,6 +10,9 @@ import UIKit
 class ScalesTableViewCell: UITableViewCell {
     var setupcomplete: Bool = false
     let cellScaleData = ScaleData()
+    let cellScaleData2 = ScaleData2()
+    let cellScaleData3 = ScaleData3()
+    let cellScaleData4 = ScaleData4()
     var mainStack: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
@@ -22,7 +25,7 @@ class ScalesTableViewCell: UITableViewCell {
         return stack
     }()
     
-    func fullStackSetup(tableIndex:Int) {
+    func fullStackSetup(tableIndex:Int, cellScaleDataChoice: Int) {
         if setupcomplete == true {
             for _ in 0...5 {
                 mainStack.subviews[0].removeFromSuperview()
@@ -30,7 +33,7 @@ class ScalesTableViewCell: UITableViewCell {
         }
         mainStack.removeFromSuperview()
         setupVerticalStackView()
-        setupHorizontalStacks(tableIndex: tableIndex)
+        setupHorizontalStacks(tableIndex: tableIndex, cellScaleDataChoice: cellScaleDataChoice)
     }
     
     func setupVerticalStackView() {
@@ -39,14 +42,13 @@ class ScalesTableViewCell: UITableViewCell {
         //constraints
         mainStack.topAnchor.constraint(equalTo:  contentView.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
         mainStack.bottomAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.bottomAnchor, constant: 0).isActive = true
-        mainStack.leadingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
+        mainStack.leadingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.leadingAnchor, constant: 0).isActive = true
         mainStack.trailingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.trailingAnchor, constant: 0).isActive = true
     }
     
-    func setupHorizontalStacks(tableIndex: Int) {
-        let scaleArray: [ScaleModel] = cellScaleData.createArray()
+    func setupHorizontalStacks(tableIndex: Int, cellScaleDataChoice: Int) {
         
-        
+        let scaleArray = setupScaleArray(cellScaleDataChoice: cellScaleDataChoice)
         
         for index1 in 0...5 {
             let horizontalStackView = UIStackView()
@@ -56,8 +58,8 @@ class ScalesTableViewCell: UITableViewCell {
             horizontalStackView.spacing = 1
             horizontalStackView.alignment = .center
             horizontalStackView.distribution = .fillEqually
-            horizontalStackView.leadingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.leadingAnchor, constant: 0).isActive = true
-            horizontalStackView.trailingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.trailingAnchor, constant: 0).isActive = true
+            horizontalStackView.leadingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
+            horizontalStackView.trailingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.trailingAnchor, constant: -20).isActive = true
             
             switch index1 {
             case 1 :
@@ -73,11 +75,31 @@ class ScalesTableViewCell: UITableViewCell {
             }
         }
     }
+    func setupScaleArray(cellScaleDataChoice: Int) -> [ScaleModel] {
+    
+        switch cellScaleDataChoice {
+    case 0:
+        return cellScaleData.createArray()
+    case 1:
+        return cellScaleData2.createArray()
+    case 2:
+        return cellScaleData3.createArray()
+    case 3:
+        return cellScaleData4.createArray()
+    default:
+        print("default scale Array")
+        return cellScaleData.createArray()
+        
+    }
+    }
+    
     
     func createScaleName(scale: ScaleModel, Hstack: UIStackView) {
         let label = UILabel()
         label.text = scale.scaleName
         label.textColor = .black
+        label.font = UIFont(name: "Helvetica", size: 20)
+        label.font = .boldSystemFont(ofSize: 20)
         label.textAlignment = .center
         //                horizontalStackView.distribution = .fill
         Hstack.alignment = .center
@@ -87,6 +109,8 @@ class ScalesTableViewCell: UITableViewCell {
     func createRHLabels(scale: ScaleModel, Hstack: UIStackView) {
         for index2 in 0...scale.scaleFingeringRH.count - 1 {
             let label = UILabel()
+            label.textAlignment = .center
+            label.font = UIFont(name: "Helvetica", size: 12)
             label.text = "\(scale.scaleFingeringRH[index2])"
             label.textColor = .black
             Hstack.addArrangedSubview(label)
@@ -96,6 +120,8 @@ class ScalesTableViewCell: UITableViewCell {
     func createLetterLabels(scale: ScaleModel, Hstack: UIStackView) {
         for index2 in 0...scale.scaleLetters.count - 1 {
             let label = UILabel()
+            label.textAlignment = .center
+            label.font = UIFont(name: "Helvetica", size: 12)
             label.text = "\(scale.scaleLetters[index2])"
             label.textColor = .black
             Hstack.addArrangedSubview(label)
@@ -105,6 +131,8 @@ class ScalesTableViewCell: UITableViewCell {
     func createLHLabels(scale: ScaleModel, Hstack: UIStackView) {
         for index2 in 0...scale.scaleFingeringLH.count - 1 {
             let label = UILabel()
+            label.textAlignment = .center
+            label.font = UIFont(name: "Helvetica", size: 12)
             label.text = "\(scale.scaleFingeringLH[index2])"
             label.textColor = .black
             Hstack.addArrangedSubview(label)
