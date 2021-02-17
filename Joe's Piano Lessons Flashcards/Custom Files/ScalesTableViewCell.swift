@@ -58,8 +58,8 @@ class ScalesTableViewCell: UITableViewCell {
             horizontalStackView.spacing = 1
             horizontalStackView.alignment = .center
             horizontalStackView.distribution = .fillEqually
-            horizontalStackView.leadingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
-            horizontalStackView.trailingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.trailingAnchor, constant: -20).isActive = true
+            horizontalStackView.leadingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.leadingAnchor, constant: 15).isActive = true
+            horizontalStackView.trailingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.trailingAnchor, constant: -15).isActive = true
             
             switch index1 {
             case 1 :
