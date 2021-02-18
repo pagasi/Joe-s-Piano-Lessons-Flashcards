@@ -11,15 +11,5 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var nicknamesLabel: UILabel!
     @IBOutlet weak var cellView: UIView!
     
-    
-
-    
-//    func setCell(letterSet: Letter) -> Letter {
-//        var finishedLetter = Letter(letterNickname: letterSet.letterNickname, letterSwitch: UISwitch)
-//        
-//        
-//        finishedLetter.letterNickname = letterSet.letterNickname
-//       
-//        return finishedLetter
 //    }
 }

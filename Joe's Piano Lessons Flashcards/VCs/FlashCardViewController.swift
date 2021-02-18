@@ -122,7 +122,7 @@ class FlashCardViewController: UIViewController {
         }
     } //end GButton
     
-
+    
     @IBAction func cartoonButtonPressed(_ sender: Any) {
         //check to see if the user has finished all cards.  If finished, don't do anything
         if finished == false {
@@ -151,7 +151,7 @@ class FlashCardViewController: UIViewController {
     }
     
     @objc func timerSelectorFunc() {
-//        add the visable timer
+        //        add the visable timer
         count += 1
         countTimerLabel.text = "\(count)"
     }
@@ -167,6 +167,9 @@ class FlashCardViewController: UIViewController {
         }
         print(chosenCountDetailView)
     } //end start up flashcards func
+    
+    
+    
     
     //MARK:  Model of flashcard math
     func model() {
@@ -194,12 +197,12 @@ class FlashCardViewController: UIViewController {
             
             
         } else {
-//            MARK: game over cleanup
+            //            MARK: game over cleanup
             // if all the cards have been displayed, clean up properties, invalidate timer, capture score, and lock all the buttons by marking finished as true
             finalArrayOfIndexes = []
             grandStaffUIImage.image = UIImage(named: Constants.DONE_CARD_NAME)
             timer.invalidate()
-//            capture the score for high score page
+            //            capture the score for high score page
             score.score = count
             finished = true
         }
@@ -211,7 +214,7 @@ class FlashCardViewController: UIViewController {
         wrongAnswerCounter += 1
         button.backgroundColor = .red
         if wrongAnswerCounter == 2 {
-
+            
             performSegue(withIdentifier: Constants.LETTER_SEGUE_FLASHVC_TO_CARTOONVC_IDENTIFIER, sender: Any?.self)
         }
         

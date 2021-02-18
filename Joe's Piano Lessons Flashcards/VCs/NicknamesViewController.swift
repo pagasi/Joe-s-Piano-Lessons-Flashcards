@@ -13,10 +13,6 @@ class NicknamesViewController: UIViewController  {
     
     @IBOutlet weak var nicknamesTableView: UITableView!
     @IBOutlet weak var nicknamesImage: UIImageView!
-//    @IBOutlet weak var BeginnerButton: UIButton!
-//    @IBOutlet weak var fortyFiveSecondButton: UIButton!
-//    @IBOutlet weak var sixteenSecondButton: UIButton!
-//    @IBOutlet weak var fullDeckButton: UIButton!
     @IBOutlet weak var nicknamesViewLabel: UILabel!
     @IBOutlet weak var switchHorizontalStack: UIStackView!
     
@@ -122,9 +118,9 @@ class NicknamesViewController: UIViewController  {
     func switchTheSwitches() {
         for index in 0...letterArray.count - 1 {
             if ArrayOfLettersSwitchedOff.contains(index) {
-                letterArray[index].letterSwitch.setOn(false, animated: true)
+                letterArray[index].letterSwitch.setOn(false, animated: false)
             } else {
-                letterArray[index].letterSwitch.setOn(true, animated: true)
+                letterArray[index].letterSwitch.setOn(true, animated: false)
             }
         }
     }
@@ -151,7 +147,7 @@ extension NicknamesViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        switchTheSwitches()
         //pull the data from the "array of all cards" for each cell
         let letter = letterArray[indexPath.row]
         
@@ -170,6 +166,7 @@ extension NicknamesViewController: UITableViewDelegate, UITableViewDataSource {
         let switchView = UISwitch(frame: .zero)
         switchView.isHighlighted = true
         //start all switches as ON
+        
         switchView.setOn(true, animated: true)
         //individualize each switch with a tag
         switchView.tag = indexPath.row

@@ -100,14 +100,14 @@
 		6F16AE4225BEF54C005ADDFE /* Joe's Piano Lessons Flashcards */ = {
 			isa = PBXGroup;
 			children = (
-				6F16AEC425C91239005ADDFE /* Models */,
-				6F16AE8E25C1BA0A005ADDFE /* Objects */,
-				6F16AE8D25C1B9E8005ADDFE /* Custom Files */,
-				6F16AE8C25C1B9BA005ADDFE /* StoryBoards */,
-				6F16AE5E25BEF99D005ADDFE /* VCs */,
 				6F16AE4325BEF54C005ADDFE /* AppDelegate.swift */,
 				6F16AE4525BEF54C005ADDFE /* SceneDelegate.swift */,
 				6F16AE4C25BEF54F005ADDFE /* Assets.xcassets */,
+				6F16AEC425C91239005ADDFE /* Models */,
+				6F16AE8E25C1BA0A005ADDFE /* Data */,
+				6F16AE8D25C1B9E8005ADDFE /* Custom Files */,
+				6F16AE8C25C1B9BA005ADDFE /* StoryBoards */,
+				6F16AE5E25BEF99D005ADDFE /* VCs */,
 				6F16AE5125BEF54F005ADDFE /* Info.plist */,
 				6F16AE7625C06883005ADDFE /* Helpers */,
 			);
@@ -161,13 +161,13 @@
 			path = "Custom Files";
 			sourceTree = "<group>";
 		};
-		6F16AE8E25C1BA0A005ADDFE /* Objects */ = {
+		6F16AE8E25C1BA0A005ADDFE /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				6F16AE8825C1B9A3005ADDFE /* NicknamesArray.swift */,
 				6FBBB84A25DB01AF0000DB0B /* ScaleData.swift */,
 			);
-			path = Objects;
+			path = Data;
 			sourceTree = "<group>";
 		};
 		6F16AEC425C91239005ADDFE /* Models */ = {

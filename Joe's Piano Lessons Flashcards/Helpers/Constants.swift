@@ -28,4 +28,8 @@ struct Constants {
     static var SCALES_CELL_IDENTIFIER2 = "scalesCellIdentifier2"
     static var SCALES_CELL_IDENTIFIER3 = "scalesCellIdentifier3"
     static var SCALES_CELL_IDENTIFIER4 = "scalesCellIdentifier4"
+    
+    //flashcard strings
+    static var APPLE_A = "Apple A"
+    static var GREAT_2ND_COUSIN = "Great Second Kissing Cousin C"
 }
