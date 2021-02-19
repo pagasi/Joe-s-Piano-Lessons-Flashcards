@@ -34,7 +34,7 @@ class ScaleData {
     
     let ebMajorScale: ScaleModel = ScaleModel(scaleName: "Eb Major", scaleFingeringRH: [3,1,2,3,4,1,2,3], scaleFingeringLH: [3,2,1,4,3,2,1,3], scaleLetters: ["Eb","F","G","Ab","Bb","C","D","Eb"])
     
-    let bbMajorScale: ScaleModel = ScaleModel(scaleName: "Bb Major", scaleFingeringRH: [3,1,2,4,3,2,1,3], scaleFingeringLH: [4,1,2,3,1,2,3,4], scaleLetters: ["Bb","C","D","Eb","F","G","A","Bb"])
+    let bbMajorScale: ScaleModel = ScaleModel(scaleName: "Bb Major", scaleFingeringRH: [4,1,2,3,1,2,3,4], scaleFingeringLH: [3,2,1,4,3,2,1,3], scaleLetters: ["Bb","C","D","Eb","F","G","A","Bb"])
     
     let fMajorScale: ScaleModel = ScaleModel(scaleName: "F Major", scaleFingeringRH: [1,2,3,4,1,2,3,4], scaleFingeringLH: [5,4,3,2,1,3,2,1], scaleLetters: ["F","G","A","Bb","C","D","E","F"])
     
@@ -73,7 +73,7 @@ class ScaleData2 {
     
     let ebMajorScale: ScaleModel = ScaleModel(scaleName: "Eb Major", scaleFingeringRH: [3,1,2,3,4,1,2,3,1,2,3,4,1,2,3], scaleFingeringLH: [3,2,1,4,3,2,1,3,2,1,4,3,2,1,3], scaleLetters: ["Eb","F","G","Ab","Bb","C","D","Eb","F","G","Ab","Bb","C","D","Eb"])
     
-    let bbMajorScale: ScaleModel = ScaleModel(scaleName: "Bb Major", scaleFingeringRH: [3,1,2,4,3,2,1,3,1,2,4,3,2,1,3], scaleFingeringLH: [4,1,2,3,1,2,3,4,1,2,3,1,2,3,4], scaleLetters: ["Bb","C","D","Eb","F","G","A","Bb","C","D","Eb","F","G","A","Bb"])
+    let bbMajorScale: ScaleModel = ScaleModel(scaleName: "Bb Major", scaleFingeringRH: [4,1,2,3,1,2,3,4,1,2,3,1,2,3,4], scaleFingeringLH: [3,2,1,4,3,2,1,3,2,1,4,3,2,1,3], scaleLetters: ["Bb","C","D","Eb","F","G","A","Bb","C","D","Eb","F","G","A","Bb"])
     
     let fMajorScale: ScaleModel = ScaleModel(scaleName: "F Major", scaleFingeringRH: [1,2,3,4,1,2,3,1,2,3,4,1,2,3,4], scaleFingeringLH: [5,4,3,2,1,3,2,1,4,3,2,1,3,2,1], scaleLetters: ["F","G","A","Bb","C","D","E","F","G","A","Bb","C","D","E","F"])
     
@@ -124,7 +124,7 @@ class ScaleData3 {
     
     let fSharpMinorScaleHarmonic: ScaleModel = ScaleModel(scaleName: "f# Minor Harmonic", scaleFingeringRH: [3,4,1,2,3,1,2,3], scaleFingeringLH: [4,3,2,1,3,2,1,4], scaleLetters: ["F#","G#","A","B","C#","D","E#","F#"])
     
-    let fSharpMinorScaleMelodicAscending: ScaleModel = ScaleModel(scaleName: "f# Minor Melodic Ascending", scaleFingeringRH: [2,3,1,2,3,1,2,3], scaleFingeringLH: [4,3,2,1,3,2,1,4], scaleLetters: ["F#","G#","A","B","C#","D#","E#","F#"])
+    let fSharpMinorScaleMelodicAscending: ScaleModel = ScaleModel(scaleName: "f# Minor Melodic Ascending", scaleFingeringRH: [2,3,1,2,3,4,1,3], scaleFingeringLH: [4,3,2,1,3,2,1,4], scaleLetters: ["F#","G#","A","B","C#","D#","E#","F#"])
     
     let fSharpMinorScaleMelodicDescending: ScaleModel = ScaleModel(scaleName: "f# Minor Melodic Descending", scaleFingeringRH: [3,2,1,3,2,1,4,3], scaleFingeringLH: [4,1,2,3,1,2,3,4], scaleLetters: ["F#","EN","DN","C#","B","A","G#","F#"])
     
@@ -199,7 +199,7 @@ class ScaleData4 {
     
     let dMinorScaleHarmonic: ScaleModel = ScaleModel(scaleName: "d Minor Harmonic", scaleFingeringRH: [1,2,3,1,2,3,4,1,2,3,1,2,3,4,5], scaleFingeringLH: [5,4,3,2,1,3,2,1,4,3,2,1,3,2,1], scaleLetters: ["D","E","F","G","A","Bb","C#","D","E","F","G","A","Bb","C#","D"])
     
-    let dMinorScaleMelodicAscending: ScaleModel = ScaleModel(scaleName: "d Minor Melodic Ascending", scaleFingeringRH: [1,2,3, 1,2,3,4,5], scaleFingeringLH: [5,4,3,2,1,3,2,1,4,3,2,1,3,2,1], scaleLetters: ["D","E","F","G","A","BN","C#","D","E","F","G","A","BN","C#","D"])
+    let dMinorScaleMelodicAscending: ScaleModel = ScaleModel(scaleName: "d Minor Melodic Ascending", scaleFingeringRH: [1,2,3,1,2,3,4,1,2,3,1,2,3,4,5], scaleFingeringLH: [5,4,3,2,1,3,2,1,4,3,2,1,3,2,1], scaleLetters: ["D","E","F","G","A","BN","C#","D","E","F","G","A","BN","C#","D"])
     
     let dMinorScaleMelodicDescending: ScaleModel = ScaleModel(scaleName: "d Minor Melodic Descending", scaleFingeringRH: [5,4,3,2,1,3,2,1,4,3,2,1,3,2,1], scaleFingeringLH: [1,2,3,1,2,3,4,1,2,3,1,2,3,4,5], scaleLetters: ["D","CN","Bb","A","G","F","E","D","CN","Bb","A","G","F","E","D"])
     
@@ -241,7 +241,7 @@ class ScaleData4 {
 
     let abMinorScaleHarmonic: ScaleModel = ScaleModel(scaleName: "ab Minor Harmonic", scaleFingeringRH: [3,4,1,2,3,1,2,3,4,1,2,3,1,2,3], scaleFingeringLH: [3,2,1,4,3,2,1,3,2,1,4,3,2,1,3], scaleLetters: ["Ab","Bb","Cb","Db","Eb","Fb","G","Ab","Bb","Cb","Db","Eb","Fb","G","Ab"])
     
-    let abMinorScaleMelodicAscending: ScaleModel = ScaleModel(scaleName: "ab Minor Melodic Ascending", scaleFingeringRH: [3,4,1,2,3,1,2,3,4,1,2,3,1,2,3], scaleFingeringLH: [3,4,1,2,3,1,2,3,4,1,2,3,1,2,3], scaleLetters: ["Ab","Bb","Cb","Db","Eb","F","G","Ab","Bb","Cb","Db","Eb","F","G","Ab"])
+    let abMinorScaleMelodicAscending: ScaleModel = ScaleModel(scaleName: "ab Minor Melodic Ascending", scaleFingeringRH: [3,4,1,2,3,1,2,3,4,1,2,3,1,2,3], scaleFingeringLH: [3,2,1,4,3,2,1,3,2,1,4,3,2,1,3], scaleLetters: ["Ab","Bb","Cb","Db","Eb","F","G","Ab","Bb","Cb","Db","Eb","F","G","Ab"])
     
     let abMinorScaleMelodicDescending: ScaleModel = ScaleModel(scaleName: "ab Minor Melodic Descending", scaleFingeringRH: [3,2,1,3,2,1,4,3,2,1,3,2,1,4,3], scaleFingeringLH: [3,4,1,2,3,1,2,3,4,1,2,3,1,2,3], scaleLetters: ["Ab","Gb","Fb","Eb","Db","Cb","Bb","Ab","Gb","Fb","Eb","Db","Cb","Bb","Ab"])
   
@@ -253,7 +253,7 @@ class ScaleData4 {
 
     let ebMinorScaleHarmonic: ScaleModel = ScaleModel(scaleName: "eb Minor Harmonic", scaleFingeringRH: [3,1,2,3,4,1,2,3,1,2,3,4,1,2,3], scaleFingeringLH: [2,1,4,3,2,1,3,2,1,4,3,2,1,3,2], scaleLetters: ["Eb","F","Gb","Ab","Bb","Cb","D","Eb","F","Gb","Ab","Bb","Cb","D","Eb"])
     
-    let ebMinorScaleMelodicAscending: ScaleModel = ScaleModel(scaleName: "eb Minor Melodic Ascending", scaleFingeringRH: [3,1,2,3,4,1,2,3,1,2,3,4,1,2,3], scaleFingeringLH: [3,1,2,3,4,1,2,3,1,2,3,4,1,2,3], scaleLetters: ["Eb","F","Gb","Ab","Bb","CN","D","Eb","F","Gb","Ab","Bb","CN","D","Eb"])
+    let ebMinorScaleMelodicAscending: ScaleModel = ScaleModel(scaleName: "eb Minor Melodic Ascending", scaleFingeringRH: [3,1,2,3,4,1,2,3,1,2,3,4,1,2,3], scaleFingeringLH: [2,1,4,3,2,1,3,2,1,4,3,2,1,3,2], scaleLetters: ["Eb","F","Gb","Ab","Bb","CN","D","Eb","F","Gb","Ab","Bb","CN","D","Eb"])
     
     let ebMinorScaleMelodicDescending: ScaleModel = ScaleModel(scaleName: "eb Minor Melodic Descending", scaleFingeringRH: [3,2,1,4,3,2,1,3,2,1,4,3,2,1,3], scaleFingeringLH: [2,3,1,2,3,4,1,2,3,1,2,3,4,1,2], scaleLetters: ["Eb","Db","Cb","Bb","Ab","Gb","F","Eb","Db","Cb","Bb","Ab","Gb","F","Eb"])
 

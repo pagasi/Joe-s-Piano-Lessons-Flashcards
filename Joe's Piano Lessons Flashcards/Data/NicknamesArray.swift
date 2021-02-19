@@ -12,28 +12,48 @@ class NicknamesArray {
     
     func createArray() -> [Letter]{
         var tempArray: [Letter] = []
-        //cards in the house
-        let letter0: Letter = Letter(letterNickname: "RH Cat C", letterSwitch: tempSwitch)
-        let letter1: Letter = Letter(letterNickname: "Dangling D", letterSwitch: tempSwitch)
-        let letter2: Letter = Letter(letterNickname: "Elephant E", letterSwitch: tempSwitch)
-        let letter3: Letter = Letter(letterNickname: "Frisbee F", letterSwitch: tempSwitch)
-        let letter4: Letter = Letter(letterNickname: "Splat Apple A", letterSwitch: tempSwitch)
-        let letter5: Letter = Letter(letterNickname: "Apple A On the Ground A", letterSwitch: tempSwitch)
+        //beginner notes
+        let letter0: Letter = Letter(letterNickname: Constants.RH_CAT_C, letterSwitch: tempSwitch)
+        let letter1: Letter = Letter(letterNickname: Constants.DANGLING_D, letterSwitch: tempSwitch)
+        let letter2: Letter = Letter(letterNickname: Constants.ELEPHANT_E, letterSwitch: tempSwitch)
+        let letter3: Letter = Letter(letterNickname: Constants.FRISBEE_F, letterSwitch: tempSwitch)
+        let letter4: Letter = Letter(letterNickname: Constants.SPLAT_APPLE_A, letterSwitch: tempSwitch)
+        let letter5: Letter = Letter(letterNickname: Constants.APPLE_A_ON_THE_GROUND_A, letterSwitch: tempSwitch)
         let letter6: Letter = Letter(letterNickname: Constants.APPLE_A, letterSwitch: tempSwitch)
-        let letter7: Letter = Letter(letterNickname: "Apple In The Chimney A", letterSwitch: tempSwitch)
-        let letter8: Letter = Letter(letterNickname: "Apple On The Window Sill A", letterSwitch: tempSwitch)
-        let letter9: Letter = Letter(letterNickname: "Bomb B", letterSwitch: tempSwitch)
-        let letter10: Letter = Letter(letterNickname: "Bomber B", letterSwitch: tempSwitch)
-        let letter11: Letter = Letter(letterNickname: "Bouncing Ball B", letterSwitch: tempSwitch)
-        let letter12: Letter = Letter(letterNickname: "Dunkin D", letterSwitch: tempSwitch)
-        let letter13: Letter = Letter(letterNickname: "Eyeball E", letterSwitch: tempSwitch)
-        let letter14: Letter = Letter(letterNickname: "Giant or Giraffe G", letterSwitch: tempSwitch)
-        let letter15: Letter = Letter(letterNickname: "Goat On The Roof G", letterSwitch: tempSwitch)
-        let letter16: Letter = Letter(letterNickname: "Ground G", letterSwitch: tempSwitch)
-        let letter17: Letter = Letter(letterNickname: "Roof F", letterSwitch: tempSwitch)
-        
-        
-        
+        let letter7: Letter = Letter(letterNickname: Constants.APPLE_IN_THE_CHIMNEY_A, letterSwitch: tempSwitch)
+        let letter8: Letter = Letter(letterNickname: Constants.APPLE_ON_THE_WINDOW_SILL_A, letterSwitch: tempSwitch)
+        let letter9: Letter = Letter(letterNickname: Constants.BOMB_B, letterSwitch: tempSwitch)
+        let letter10: Letter = Letter(letterNickname: Constants.BOMBER_B, letterSwitch: tempSwitch)
+        let letter11: Letter = Letter(letterNickname: Constants.BOUNCING_BALL_B, letterSwitch: tempSwitch)
+        let letter12: Letter = Letter(letterNickname: Constants.DUNKIN_D, letterSwitch: tempSwitch)
+        let letter13: Letter = Letter(letterNickname: Constants.EYEBALL_E, letterSwitch: tempSwitch)
+        let letter14: Letter = Letter(letterNickname: Constants.GIANT_OR_GIRAFFE_G, letterSwitch: tempSwitch)
+        let letter15: Letter = Letter(letterNickname: Constants.GOAT_ON_THE_ROOF_G, letterSwitch: tempSwitch)
+        let letter16: Letter = Letter(letterNickname: Constants.GROUND_G, letterSwitch: tempSwitch)
+        let letter17: Letter = Letter(letterNickname: Constants.ROOF_F, letterSwitch: tempSwitch)
+//        let letter18: Letter = Letter(letterNickname: Constants., letterSwitch: tempSwitch)
+//        let letter19: Letter = Letter(letterNickname: Constants., letterSwitch: tempSwitch)
+//        let letter20: Letter = Letter(letterNickname: Constants., letterSwitch: tempSwitch)
+//        let letter21: Letter = Letter(letterNickname: Constants., letterSwitch: tempSwitch)
+//        let letter22: Letter = Letter(letterNickname: Constants., letterSwitch: tempSwitch)
+//        let letter23: Letter = Letter(letterNickname: Constants., letterSwitch: tempSwitch)
+//        let letter24: Letter = Letter(letterNickname: Constants., letterSwitch: tempSwitch)
+//        let letter25: Letter = Letter(letterNickname: Constants., letterSwitch: tempSwitch)
+//        let letter26: Letter = Letter(letterNickname: Constants., letterSwitch: tempSwitch)
+//        let letter27: Letter = Letter(letterNickname: Constants., letterSwitch: tempSwitch)
+//        let letter28: Letter = Letter(letterNickname: Constants., letterSwitch: tempSwitch)
+//        let letter29: Letter = Letter(letterNickname: Constants., letterSwitch: tempSwitch)
+//        let letter30: Letter = Letter(letterNickname: Constants., letterSwitch: tempSwitch)
+//        let letter31: Letter = Letter(letterNickname: Constants., letterSwitch: tempSwitch)
+//        let letter32: Letter = Letter(letterNickname: Constants., letterSwitch: tempSwitch)
+//        let letter33: Letter = Letter(letterNickname: Constants., letterSwitch: tempSwitch)
+//        let letter34: Letter = Letter(letterNickname: Constants., letterSwitch: tempSwitch)
+//        let letter35: Letter = Letter(letterNickname: Constants., letterSwitch: tempSwitch)
+//        let letter36: Letter = Letter(letterNickname: Constants., letterSwitch: tempSwitch)
+//        let letter37: Letter = Letter(letterNickname: Constants., letterSwitch: tempSwitch)
+//        let letter38: Letter = Letter(letterNickname: Constants., letterSwitch: tempSwitch)
+
+
         
         tempArray.append(letter0)
         tempArray.append(letter1)
@@ -74,7 +94,6 @@ class NicknamesArray {
 //        tempArray.append(letter36)
 //        tempArray.append(letter37)
 //        tempArray.append(letter38)
-//        tempArray.append(letter39)
 //        
         
         return tempArray
