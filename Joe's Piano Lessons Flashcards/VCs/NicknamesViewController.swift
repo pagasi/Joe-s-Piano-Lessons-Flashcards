@@ -165,9 +165,8 @@ extension NicknamesViewController: UITableViewDelegate, UITableViewDataSource {
         //add switch programmatically so that i can track tag numbers
         let switchView = UISwitch(frame: .zero)
         switchView.isHighlighted = true
-        //start all switches as ON
-        
-        switchView.setOn(true, animated: true)
+        //start all switches on their appropriate on or off status
+        ArrayOfLettersSwitchedOff.contains(indexPath.row) ? switchView.setOn(false, animated: false) : switchView.setOn(true, animated: true)
         //individualize each switch with a tag
         switchView.tag = indexPath.row
         //set target for when the switch is activated

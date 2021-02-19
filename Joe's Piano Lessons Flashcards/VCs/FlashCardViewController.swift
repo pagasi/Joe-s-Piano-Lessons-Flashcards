@@ -41,7 +41,7 @@ class FlashCardViewController: UIViewController {
         super.viewDidLoad()
         // every time screen loads create object with flashcard data
         startUpFlashCards()
-        model()
+        newCard()
         timerFunction()
     }
     //MARK: @IBActions
@@ -53,7 +53,7 @@ class FlashCardViewController: UIViewController {
             let lastLetter = chosenCountDetailView[finalArrayOfIndexes.last!].letterNickname.last!
             if lastLetter == "A" {
                 //if they were correct, get them a new card
-                model()
+                newCard()
             } else {
                 //otherwise run the wrong answer method
                 wrongAnswer(button: AButton)
@@ -64,7 +64,7 @@ class FlashCardViewController: UIViewController {
         if finished == false {
             let lastLetter = chosenCountDetailView[finalArrayOfIndexes.last!].letterNickname.last!
             if lastLetter == "B" {
-                model()
+                newCard()
             } else {
                 wrongAnswer(button: BButton)
             }
@@ -74,7 +74,7 @@ class FlashCardViewController: UIViewController {
         if finished == false {
             let lastLetter = chosenCountDetailView[finalArrayOfIndexes.last!].letterNickname.last!
             if lastLetter == "C" {
-                model()
+                newCard()
             } else {
                 wrongAnswer(button: CButton)
             }
@@ -84,7 +84,7 @@ class FlashCardViewController: UIViewController {
         if finished == false {
             let lastLetter = chosenCountDetailView[finalArrayOfIndexes.last!].letterNickname.last!
             if lastLetter == "D" {
-                model()
+                newCard()
             } else {
                 wrongAnswer(button: DButton)
             }
@@ -95,7 +95,7 @@ class FlashCardViewController: UIViewController {
         if finished == false {
             let lastLetter = chosenCountDetailView[finalArrayOfIndexes.last!].letterNickname.last!
             if lastLetter == "E" {
-                model()
+                newCard()
             } else {
                 wrongAnswer(button: EButton)
             }
@@ -105,7 +105,7 @@ class FlashCardViewController: UIViewController {
         if finished == false {
             let lastLetter = chosenCountDetailView[finalArrayOfIndexes.last!].letterNickname.last!
             if lastLetter == "F" {
-                model()
+                newCard()
             } else {
                 wrongAnswer(button: FButton)
             }
@@ -115,7 +115,7 @@ class FlashCardViewController: UIViewController {
         if finished == false {
             let lastLetter = chosenCountDetailView[finalArrayOfIndexes.last!].letterNickname.last!
             if lastLetter == "G" {
-                model()
+                newCard()
             } else {
                 wrongAnswer(button: GButton)
             }
@@ -140,8 +140,8 @@ class FlashCardViewController: UIViewController {
         destinationVC.passingVar = chosenCountDetailView[finalArrayOfIndexes.last!].letterNickname
         //add the card that was not correctly answered back into the deck so it comes back up later
         finalArrayOfIndexes.removeLast()
-        //run the model so that apon return to flashcard vc there is a new card showing and one index at 0 in the finalArrayOfIndexes
-        model()
+        //run the newCard so that apon return to flashcard vc there is a new card showing and one index at 0 in the finalArrayOfIndexes
+        newCard()
     }
     //MARK: methods
     
@@ -171,8 +171,8 @@ class FlashCardViewController: UIViewController {
     
     
     
-    //MARK:  Model of flashcard math
-    func model() {
+    //MARK:  flashcard math
+    func newCard() {
         //clean up previous card
         screenClean()
         //check if all the cards have been displayed
