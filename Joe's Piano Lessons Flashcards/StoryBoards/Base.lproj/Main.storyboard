@@ -16,8 +16,19 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background piano" translatesAutoresizingMaskIntoConstraints="NO" id="G8H-fx-9Q8">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="G8H-fx-9Q8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="B6u-dY-iQt"/>
+                            <constraint firstAttribute="bottom" secondItem="G8H-fx-9Q8" secondAttribute="bottom" id="Ck2-Ia-OdI"/>
+                            <constraint firstItem="G8H-fx-9Q8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Tgh-u9-FDQ"/>
+                            <constraint firstAttribute="trailing" secondItem="G8H-fx-9Q8" secondAttribute="trailing" id="Ws6-yr-cKB"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Joe's Piano Lessons Flash Cards" largeTitleDisplayMode="always" id="2Sw-MN-Szd"/>
                     <connections>
@@ -408,14 +419,14 @@
                                                 <rect key="frame" x="0.0" y="25.5" width="177" height="29"/>
                                                 <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="0.50436108729999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <color key="textColor" systemColor="systemGray6Color"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIH-7g-hJY">
                                                 <rect key="frame" x="197" y="25.5" width="177" height="29"/>
                                                 <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="0.50436108729999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <color key="textColor" systemColor="systemGray6Color"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -674,6 +685,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="background piano" width="375" height="812"/>
         <image name="grand staff" width="375" height="280"/>
         <image name="pianokeys" catalog="system" width="128" height="93"/>
         <systemColor name="labelColor">

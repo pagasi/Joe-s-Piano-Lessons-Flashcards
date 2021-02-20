@@ -47,7 +47,7 @@ class MainViewController: UIViewController {
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.widthAnchor.constraint(equalToConstant: 250).isActive = true
         stack.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        stack.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -200).isActive = true
+        stack.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
        
         
         // Do any additional setup after loading the view.

@@ -19,13 +19,17 @@ class SelectionButton: UIButton {
         setTitle(title, for: .normal)
         titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         setTitleColor(.black, for: .normal)
-        layer.shadowRadius = 15
         layer.borderWidth = 2
         layer.cornerRadius = 10
         layer.shadowColor = UIColor.black.cgColor
         layer.masksToBounds = false
-        clipsToBounds = true
+//        clipsToBounds = true
         heightAnchor.constraint(equalToConstant: 45).isActive = true
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowRadius = 5
+        layer.shadowOffset = CGSize(width: 5, height: 5)
+        layer.shadowOpacity = 1
+        
         
         translatesAutoresizingMaskIntoConstraints = false
         heightAnchor.constraint(equalToConstant: 50).isActive = true
