@@ -9,7 +9,7 @@ import Foundation
 
 struct Constants {
     
-    
+    //VC identifiers
     static var MAIN_VC_IDENTIFIER = "mainVC"
     static var NICKNAMES_VC_IDENTIFIER = "nicknamesVC"
     static var FLASHCARDS_VC_IDENTIFIER = "flashcardsVC"
@@ -17,17 +17,23 @@ struct Constants {
     static var SETTINGS_VC_IDENTIFIER = "settingsVC"
     static var ABOUT_VC_IDENTIFIER = "aboutVC"
     static var CUSTOMIZE_VC_IDENTIFIER = "customizeVC"
+    
+    //cell identifiers
     static var NICKNAMES_CELL_REUSE_IDENTIFIER = "nicknamesCellIdentifier"
-    static var LETTER_SEGUE_FLASHVC_TO_CARTOONVC_IDENTIFIER = "letterSegueFlashcardVCToCartoonVC"
-    static var DONE_CARD_NAME = "Done"
-    static var FLASHCARD_BUTTON_TO_NICKNAMESVC_SEGUE_IDENTIFIER = "flashButtonToNicknamesVCSegue"
-    static var SETTINGS_BUTTON_TO_SETTINGSVC_SEGUE_IDENTIFIER = "settingsButtonToSettingsVC"
-    static var ABOUT_BUTTON_TO_ABOUTVC_SEGUE_IDENTIFIER = "aboutButtontoAboutVC"
-    static var SCALES_BUTTON_TO_SCALESVC_SEGUE_IDENTIFIER = "scalesButtonToScalesVC"
     static var SCALES_CELL_IDENTIFIER = "scalesCellIdentifier"
     static var SCALES_CELL_IDENTIFIER2 = "scalesCellIdentifier2"
     static var SCALES_CELL_IDENTIFIER3 = "scalesCellIdentifier3"
     static var SCALES_CELL_IDENTIFIER4 = "scalesCellIdentifier4"
+    
+    
+    //segue identifiers
+    static var DECK_TO_NICKNAMES_VC_SEGUE_IDENTIFIER = "deckToNicknamesSegue"
+    static var LETTER_SEGUE_FLASHVC_TO_CARTOONVC_IDENTIFIER = "letterSegueFlashcardVCToCartoonVC"
+    static var FLASHCARD_BUTTON_TO_NICKNAMESVC_SEGUE_IDENTIFIER = "flashButtonToNicknamesVCSegue"
+    static var SETTINGS_BUTTON_TO_SETTINGSVC_SEGUE_IDENTIFIER = "settingsButtonToSettingsVC"
+    static var ABOUT_BUTTON_TO_ABOUTVC_SEGUE_IDENTIFIER = "aboutButtontoAboutVC"
+    static var SCALES_BUTTON_TO_SCALESVC_SEGUE_IDENTIFIER = "scalesButtonToScalesVC"
+
     
     //flashcard strings
     static var APPLE_A = "Apple A"//
@@ -68,4 +74,7 @@ struct Constants {
     static var TREBLE_G = "Treble G"
     static var C3_SECOND_KISSING_COUSIN_C = "C3 Second Kissing Cousin C"
     static var LH_CAT_C = "LH Cat C"
+    
+    //other identifiers
+    static var DONE_CARD_NAME = "Done"
 }

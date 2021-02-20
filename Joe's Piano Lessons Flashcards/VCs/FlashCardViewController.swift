@@ -32,7 +32,7 @@ class FlashCardViewController: UIViewController {
     var timer = Timer()
     var count: Int = 0
     var score: ScoreLog = ScoreLog(score: 0, date: Date())
-    
+    var chosenArrayPassed: Int = 0
     
     
     //MARK: Life cycle
@@ -157,7 +157,7 @@ class FlashCardViewController: UIViewController {
     }
     
     func startUpFlashCards() {
-        chosenCountDetailView = flashCardVCInstanceOfNicknamesArray.createArray()
+        chosenCountDetailView = flashCardVCInstanceOfNicknamesArray.createArray(chosenArray: chosenArrayPassed)
         
         //code to sift out the unwanted flashcards for the flashcardVC
         if passingArrayOfLettersSwitchedOff.count > 0 {

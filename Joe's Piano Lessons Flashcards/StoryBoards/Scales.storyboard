@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NTs-so-nt2">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scales-->
+        <scene sceneID="aLw-T5-VCc">
+            <objects>
+                <viewController id="jEE-qE-cQw" customClass="ScalesViewController" customModule="Joe_s_Piano_Lessons_Flashcards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hzR-zB-8V0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="VmM-Dp-WUt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Maj 1 Octave" id="r3E-ag-Mnr">
+                        <imageReference key="image" image="pianokeys" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="Scales" largeTitleDisplayMode="always" id="h95-iZ-4Wu">
+                        <barButtonItem key="backBarButtonItem" title=" " id="kee-LN-Jmb"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3NK-PH-JEh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32" y="1590"/>
+        </scene>
+        <!--Maj 2 Octaves-->
+        <scene sceneID="9gf-Bd-zL3">
+            <objects>
+                <viewController id="7JB-Kg-0tp" customClass="Scales2ViewController" customModule="Joe_s_Piano_Lessons_Flashcards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bjl-wu-mGm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="1Ih-TP-nOi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Maj 2 Octaves" image="pianokeys" catalog="system" id="pkb-kx-GNi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1RV-fr-fGJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="732" y="1590"/>
+        </scene>
+        <!--Min 1 Octave-->
+        <scene sceneID="Y9E-1x-Kqh">
+            <objects>
+                <viewController id="40B-GJ-k4f" customClass="Scales3ViewController" customModule="Joe_s_Piano_Lessons_Flashcards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2r4-ep-J3k">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="2ZK-R4-zw6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Min 1 Octave" image="pianokeys" catalog="system" id="qHU-A2-YWs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HBx-Gk-PVf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1465" y="1590"/>
+        </scene>
+        <!--Min 2 Octaves-->
+        <scene sceneID="wLY-He-Id3">
+            <objects>
+                <viewController id="3JI-bx-4JN" customClass="Scales4ViewController" customModule="Joe_s_Piano_Lessons_Flashcards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UMG-CQ-lhO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Pa1-Fb-hLP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Min 2 Octaves" image="pianokeys" catalog="system" id="V7k-Zf-9dz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H9S-z1-a6j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2223" y="1590"/>
+        </scene>
+        <!--Scales-->
+        <scene sceneID="qGp-n0-IR9">
+            <objects>
+                <tabBarController id="NTs-so-nt2" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Scales" id="jML-NF-k2H" userLabel="ScalesTabBar"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pQd-2T-cgT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="0.50436108729999996" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="labelColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="jEE-qE-cQw" kind="relationship" relationship="viewControllers" id="XW6-K0-enX"/>
+                        <segue destination="7JB-Kg-0tp" kind="relationship" relationship="viewControllers" id="h2S-Il-SZK"/>
+                        <segue destination="40B-GJ-k4f" kind="relationship" relationship="viewControllers" id="Oe2-Ep-idU"/>
+                        <segue destination="3JI-bx-4JN" kind="relationship" relationship="viewControllers" id="ETO-7n-sWd"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eyH-N1-3jB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="733" y="863"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pianokeys" catalog="system" width="128" height="93"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

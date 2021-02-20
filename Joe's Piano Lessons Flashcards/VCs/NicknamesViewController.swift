@@ -18,6 +18,7 @@ class NicknamesViewController: UIViewController  {
     
     var letterArray: [Letter] = []
     var ArrayOfLettersSwitchedOff = [Int]()
+    var buttonSelectedAndPassed: Int = 0
     
     lazy var fortyFiveSecondButton: SelectionButton = {
         let button = SelectionButton(title: "45 Sec")
@@ -111,6 +112,8 @@ class NicknamesViewController: UIViewController  {
         //sort the array of letters that are not desired from largest to smallest to prepare to remove these letters from the array of All the cards (if this is not done, when someone removes a lower number such as 0, all the other card indexes shift down one index so that the next card to get removed will be attached to the wrong index.  The wrong card will be removed, or worse, the app crashes
         ArrayOfLettersSwitchedOff.sort(by: >)
         let destinationVC = segue.destination as! FlashCardViewController
+        //pass the selected array from deck selection vc
+        destinationVC.chosenArrayPassed = buttonSelectedAndPassed
         //set the arrays of unwanted cards equal in both view controllers
         destinationVC.passingArrayOfLettersSwitchedOff = ArrayOfLettersSwitchedOff
     }
@@ -134,7 +137,7 @@ extension NicknamesViewController: UITableViewDelegate, UITableViewDataSource {
         //create an instance of the class that runs the method to create the list of all the cards
         let NicknamesVCInstanceOfNicknamesArray = NicknamesArray()
         //create the array of all cards
-        let letterArray = NicknamesVCInstanceOfNicknamesArray.createArray()
+        let letterArray = NicknamesVCInstanceOfNicknamesArray.createArray(chosenArray: buttonSelectedAndPassed)
         //set the class property letterArray as a list of all the cards as well so that it can be used in other methods
         self.letterArray = letterArray
         

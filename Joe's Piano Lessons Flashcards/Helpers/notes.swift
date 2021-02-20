@@ -12,6 +12,17 @@ import Foundation
 //        vc.modalPresentationStyle = .fullScreen
 //        self.present(vc, animated: true, completion: nil)
 
+//or
+
+//override func prepare(for segue: UIStoryboardSegue, sender: Any?)  {
+//    //pass to segue
+//    let newVC = segue.destination as! NicknamesViewController
+//    newVC.buttonSelectedAndPassed = buttonSelected
+//}
+//
+//func goToFlashVC() {
+//    performSegue(withIdentifier: Constants.DECK_TO_NICKNAMES_VC_SEGUE_IDENTIFIER, sender: self)
+//}
 
 
 // MARK: code to sift out the unwanted flashcards for the flashcardVC
@@ -20,3 +31,4 @@ import Foundation
 //    letterArray.remove(at: letterArrayPosition)
 //    }
 
+// 
