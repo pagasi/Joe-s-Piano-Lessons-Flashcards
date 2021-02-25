@@ -31,4 +31,34 @@ import Foundation
 //    letterArray.remove(at: letterArrayPosition)
 //    }
 
-// 
+// MARK: unused buttons for reference
+//lazy var fortyFiveSecondButton: SelectionButton = {
+//    let button = SelectionButton(title: "45 Sec")
+//    button.addTarget(self, action: #selector(fortyFiveSecondButtonPressed), for: .touchUpInside)
+//    button.widthAnchor.constraint(equalToConstant: 70).isActive = true
+//    return button
+//}()
+//
+//lazy var sixteenSecondButton: SelectionButton = {
+//    let button = SelectionButton(title: "16 Sec")
+//    button.addTarget(self, action: #selector(sixteenSecondButtonPressed), for: .touchUpInside)
+//    button.widthAnchor.constraint(equalToConstant: 70).isActive = true
+//    return button
+//}()
+//
+//lazy var beginnerButton: SelectionButton = {
+//    let button = SelectionButton(title: "Beginner")
+//    button.addTarget(self, action: #selector(beginnerButtonPressed), for: .touchUpInside)
+//    return button
+//}()
+//
+//lazy var fullDeckButton: SelectionButton = {
+//    let button = SelectionButton(title: "16 Sec")
+//    button.addTarget(self, action: #selector(fullDeckButtonPressed), for: .touchUpInside)
+//    return button
+//}()
+
+
+
+//MARK: add programmatic buttons to the stackview
+//[fortyFiveSecondButton, sixteenSecondButton, beginnerButton, fullDeckButton].forEach {switchHorizontalStack.addArrangedSubview($0)}

@@ -33,13 +33,24 @@
                     <connections>
                         <segue destination="gqh-uM-vAV" kind="show" identifier="settingsButtonToSettingsVC" id="y4Q-9s-XeR"/>
                         <segue destination="Gkj-qN-A1N" kind="show" identifier="aboutButtontoAboutVC" id="EPV-i6-hzc"/>
-                        <segue destination="0I3-BI-DEG" kind="show" identifier="flashButtonToNicknamesVCSegue" id="vA4-tJ-kzd"/>
+                        <segue destination="0I3-BI-DEG" kind="show" identifier="quickStartButtonToFlashCardsVCSegue" id="vA4-tJ-kzd"/>
                         <segue destination="4GW-In-Rcp" kind="show" identifier="scalesButtonToScalesVC" id="FKD-0v-Ade"/>
+                        <segue destination="MGY-C6-Yui" kind="show" identifier="flashButtonToNicknamesVCSegue" id="hqJ-k8-fBR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="33" y="115"/>
+        </scene>
+        <!--DeckSelection-->
+        <scene sceneID="pMX-1k-bMW">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DeckSelection" id="MGY-C6-Yui" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="kZ5-Lj-ney"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Xf-Sd-uLR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="994" y="470"/>
         </scene>
         <!--FlashCards-->
         <scene sceneID="Uz4-1C-M9K">
@@ -125,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Plh-S9-HDu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="60" y="2301"/>
+            <point key="canvasLocation" x="-1641" y="102"/>
         </scene>
         <!--Settings-->
         <scene sceneID="1er-bp-rIo">

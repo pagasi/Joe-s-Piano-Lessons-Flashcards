@@ -7,13 +7,26 @@
 
 import UIKit
 
+protocol getTheDefaults {
+    func gatherDefaults()
+}
+
 class MainViewController: UIViewController {
-
+    //MARK: INIT
     @IBOutlet weak var stackView1: UIStackView!
-
+    
+    let defaults = UserDefaults.standard
+    var getTheDefaultsDelegate: getTheDefaults?
+  
     lazy var flashButton: SelectionButton = {
-        let button = SelectionButton(title: "Flash Cards")
+        let button = SelectionButton(title: "Flash Card Decks")
         button.addTarget(self, action: #selector(flashButtonPressed), for: .touchUpInside)
+        return button
+    }()
+    
+    lazy var quickStartButton: SelectionButton = {
+        let button = SelectionButton(title: "Flash Card Quick Start")
+        button.addTarget(self, action: #selector(quickStartButtonPressed), for: .touchUpInside)
         return button
     }()
     
@@ -34,11 +47,11 @@ class MainViewController: UIViewController {
         button.addTarget(self, action: #selector(aboutButtonPressed), for: .touchUpInside)
         return button
     }()
-    
+    //MARK: life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let stack = UIStackView(arrangedSubviews: [flashButton, settingsButton, scalesButton, aboutButton])
+        let stack = UIStackView(arrangedSubviews: [flashButton, quickStartButton, scalesButton, aboutButton, settingsButton])
         stack.axis = .vertical
         stack.spacing = 15
         stack.distribution = .fillEqually
@@ -48,17 +61,24 @@ class MainViewController: UIViewController {
         stack.widthAnchor.constraint(equalToConstant: 250).isActive = true
         stack.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         stack.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-       
-        
-        // Do any additional setup after loading the view.
     }
-    
+//MARK: @objc funcs
     @objc func flashButtonPressed() {
         performSegue(withIdentifier: Constants.FLASHCARD_BUTTON_TO_NICKNAMESVC_SEGUE_IDENTIFIER, sender: self)
     }
     
+    @objc func quickStartButtonPressed() {
+        getTheDefaultsDelegate = FlashCardViewController()
+        getTheDefaultsDelegate!.gatherDefaults()
+        performSegue(withIdentifier: Constants.QUICK_START_BUTTON_TO_FLASH_CARDSVC_SEGUE, sender: self)
+        //insert code to setup userDefaults
+        
+        
+    }
+    
     @objc func settingsButtonPressed() {
         performSegue(withIdentifier: Constants.SETTINGS_BUTTON_TO_SETTINGSVC_SEGUE_IDENTIFIER, sender: self)
+        
     }
     
     @objc func scalesButtonPressed() {
@@ -68,4 +88,20 @@ class MainViewController: UIViewController {
     @objc func aboutButtonPressed() {
         performSegue(withIdentifier: Constants.ABOUT_BUTTON_TO_ABOUTVC_SEGUE_IDENTIFIER, sender: self)
     }
+    
+    //MARK: methods
+
 }
+
+
+
+
+//MARK: Notes
+
+/*
+ /pass the selected array to deck selection vc
+ vc.chosenArrayPassed = buttonSelectedAndPassed
+ //set the arrays of unwanted cards equal in both view controllers
+ vc.passingArrayOfLettersSwitchedOff = ArrayOfLettersSwitchedOff
+ 
+ */

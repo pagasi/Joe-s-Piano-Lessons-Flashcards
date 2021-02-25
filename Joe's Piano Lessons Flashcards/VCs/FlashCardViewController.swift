@@ -7,46 +7,88 @@
 
 import UIKit
 
-class FlashCardViewController: UIViewController {
+class FlashCardViewController: UIViewController  {
     
     //MARK: init
     
-    @IBOutlet weak var AButton: UIButton!
-    @IBOutlet weak var BButton: UIButton!
-    @IBOutlet weak var CButton: UIButton!
-    @IBOutlet weak var DButton: UIButton!
-    @IBOutlet weak var EButton: UIButton!
-    @IBOutlet weak var FButton: UIButton!
-    @IBOutlet weak var GButton: UIButton!
+    @IBOutlet weak var iDontKnowButton: UIButton!
+    @IBOutlet weak var answerOptionsStack: UIStackView!
     @IBOutlet weak var cartoonButton: UIButton!
     @IBOutlet weak var countTimerLabel: UILabel!
     @IBOutlet weak var grandStaffUIImage: UIImageView!
     @IBOutlet weak var cardsRemaining: UILabel!
     
+    let protocolVC = MainViewController()
+    let defaults = UserDefaults.standard
     let flashCardVCInstanceOfNicknamesArray = NicknamesArray()
     var finalArrayOfIndexes = [Int]()
     var chosenCountDetailView = [Letter]()
     var wrongAnswerCounter = 0
     var finished = false
-    var passingArrayOfLettersSwitchedOff = [Int]()
     var timer = Timer()
     var count: Int = 0
     var score: ScoreLog = ScoreLog(score: 0, date: Date())
     var chosenArrayPassed: Int = 0
+    var passingArrayOfLettersSwitchedOff = [Int]()
     
+    lazy var AButton: AnswerButton = {
+        let button = AnswerButton(title: "A")
+        button.addTarget(self, action: #selector(AButtonPressed), for: .touchUpInside)
+        return button
+    }()
+    
+    lazy var BButton: AnswerButton = {
+        let button = AnswerButton(title: "B")
+        button.addTarget(self, action: #selector(BButtonPressed), for: .touchUpInside)
+        return button
+    }()
+    
+    lazy var CButton: AnswerButton = {
+        let button = AnswerButton(title: "C")
+        button.addTarget(self, action: #selector(CButtonPressed), for: .touchUpInside)
+        return button
+    }()
+    
+    lazy var DButton: AnswerButton = {
+        let button = AnswerButton(title: "D")
+        button.addTarget(self, action: #selector(DButtonPressed), for: .touchUpInside)
+        return button
+    }()
+    
+    lazy var EButton: AnswerButton = {
+        let button = AnswerButton(title: "E")
+        button.addTarget(self, action: #selector(EButtonPressed), for: .touchUpInside)
+        return button
+    }()
+    
+    lazy var FButton: AnswerButton = {
+        let button = AnswerButton(title: "F")
+        button.addTarget(self, action: #selector(FButtonPressed), for: .touchUpInside)
+        return button
+    }()
+    
+    lazy var GButton: AnswerButton = {
+        let button = AnswerButton(title: "G")
+        button.addTarget(self, action: #selector(GButtonPressed), for: .touchUpInside)
+        return button
+    }()
     
     //MARK: Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //setup answerOptionStack with buttons
+        layoutSetup()
         // every time screen loads create object with flashcard data
         startUpFlashCards()
         newCard()
         timerFunction()
     }
-    //MARK: @IBActions
+    //MARK: @objc func
     //what to do if buttons are pressed
-    @IBAction func AButtonPressed(_ sender: Any) {
+    
+    @objc func AButtonPressed() {
         //check to see if all cards have already been answered
         if finished == false {
             //get the last letter in the name of the most recently displayed flashcard and see if it matches the chosen answer
@@ -60,7 +102,8 @@ class FlashCardViewController: UIViewController {
             }
         }
     }
-    @IBAction func BButtonPressed(_ sender: Any) {
+    
+    @objc func BButtonPressed(_ sender: Any) {
         if finished == false {
             let lastLetter = chosenCountDetailView[finalArrayOfIndexes.last!].letterNickname.last!
             if lastLetter == "B" {
@@ -70,7 +113,8 @@ class FlashCardViewController: UIViewController {
             }
         }
     }
-    @IBAction func CButtonPressed(_ sender: Any) {
+    
+    @objc func CButtonPressed(_ sender: Any) {
         if finished == false {
             let lastLetter = chosenCountDetailView[finalArrayOfIndexes.last!].letterNickname.last!
             if lastLetter == "C" {
@@ -80,7 +124,8 @@ class FlashCardViewController: UIViewController {
             }
         }
     }
-    @IBAction func DButtonPressed(_ sender: Any) {
+    
+    @objc func DButtonPressed(_ sender: Any) {
         if finished == false {
             let lastLetter = chosenCountDetailView[finalArrayOfIndexes.last!].letterNickname.last!
             if lastLetter == "D" {
@@ -91,7 +136,7 @@ class FlashCardViewController: UIViewController {
         }
     }
     
-    @IBAction func EButtonPressed(_ sender: Any) {
+    @objc func EButtonPressed(_ sender: Any) {
         if finished == false {
             let lastLetter = chosenCountDetailView[finalArrayOfIndexes.last!].letterNickname.last!
             if lastLetter == "E" {
@@ -101,7 +146,8 @@ class FlashCardViewController: UIViewController {
             }
         }
     }
-    @IBAction func FButtonPressed(_ sender: Any) {
+    
+    @objc func FButtonPressed(_ sender: Any) {
         if finished == false {
             let lastLetter = chosenCountDetailView[finalArrayOfIndexes.last!].letterNickname.last!
             if lastLetter == "F" {
@@ -111,7 +157,8 @@ class FlashCardViewController: UIViewController {
             }
         }
     }
-    @IBAction func GButtonPressed(_ sender: Any) {
+    
+    @objc func GButtonPressed(_ sender: Any) {
         if finished == false {
             let lastLetter = chosenCountDetailView[finalArrayOfIndexes.last!].letterNickname.last!
             if lastLetter == "G" {
@@ -122,6 +169,11 @@ class FlashCardViewController: UIViewController {
         }
     } //end GButton
     
+    @objc func timerSelectorFunc() {
+        //        add the visable timer
+        count += 1
+        countTimerLabel.text = "\(count)"
+    }
     
     @IBAction func cartoonButtonPressed(_ sender: Any) {
         //check to see if the user has finished all cards.  If finished, don't do anything
@@ -145,27 +197,69 @@ class FlashCardViewController: UIViewController {
     }
     //MARK: methods
     
+    
+    func layoutSetup() {
+        let arrayOfAnswerButtons = [AButton, BButton, CButton, DButton, EButton, FButton, GButton]
+       var anchorCount: CGFloat = 0
+        
+        //add buttons to answerOptionsStack
+        for index in 0...6 {
+        answerOptionsStack.addSubview(arrayOfAnswerButtons[index])
+            //buttons constraints
+//            arrayOfAnswerButtons[index].leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: anchorCount).isActive = true
+//            anchorCount += 50
+        }
+        //answerOptionsStack constraints
+        answerOptionsStack.axis = .horizontal
+        answerOptionsStack.distribution = .fillEqually
+        answerOptionsStack.translatesAutoresizingMaskIntoConstraints = false
+        answerOptionsStack.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        answerOptionsStack.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        answerOptionsStack.heightAnchor.constraint(equalToConstant: 100).isActive = true
+
+        //buttons constraints
+        AButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: -165).isActive = true
+        BButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: -110).isActive = true
+        CButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: -55).isActive = true
+        DButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        EButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 55).isActive = true
+        FButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 110).isActive = true
+        GButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 165).isActive = true
+        //i don't know button layout
+        iDontKnowButton.layer.cornerRadius = 10
+        iDontKnowButton.layer.shadowColor = UIColor.black.cgColor
+        iDontKnowButton.layer.shadowRadius = 5
+        iDontKnowButton.layer.shadowOffset = CGSize(width: 5, height: 5)
+        iDontKnowButton.layer.shadowOpacity = 1
+   
+        //grand staff shadow
+        grandStaffUIImage.clipsToBounds = false
+        grandStaffUIImage.layer.shadowColor = UIColor.black.cgColor
+        grandStaffUIImage.layer.shadowRadius = 5
+        grandStaffUIImage.layer.shadowOffset = CGSize(width: 5, height: 5)
+        grandStaffUIImage.layer.shadowOpacity = 1
+        grandStaffUIImage.layer.cornerRadius = 10
+    }
+    
     //setup timer
     func timerFunction() {
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerSelectorFunc), userInfo: nil, repeats: true)
     }
     
-    @objc func timerSelectorFunc() {
-        //        add the visable timer
-        count += 1
-        countTimerLabel.text = "\(count)"
-    }
+
     
     func startUpFlashCards() {
         chosenCountDetailView = flashCardVCInstanceOfNicknamesArray.createArray(chosenArray: chosenArrayPassed)
         
         //code to sift out the unwanted flashcards for the flashcardVC
+        if passingArrayOfLettersSwitchedOff != nil {
         if passingArrayOfLettersSwitchedOff.count > 0 {
             for index in 0...passingArrayOfLettersSwitchedOff.count - 1{
                 chosenCountDetailView.remove(at: passingArrayOfLettersSwitchedOff[index])
             } // end loop
         }
         print(chosenCountDetailView)
+        } else {print("passing array = nil")}
     } //end start up flashcards func
     
     
@@ -236,4 +330,23 @@ class FlashCardViewController: UIViewController {
     
 }
 
+//Delegate file:
+//
+//class OhPleaseLetMe: DoTheThingProtocol {
+//
+//    var pager = doItHereInThisClass()
+//    pager.delegate = self
+//
+//    func thisThingHere() {} }
 
+extension FlashCardViewController: getTheDefaults {
+    func gatherDefaults() {
+        //        //retrieve chosenArrayPassed & passingArrayOfLettersSwitchedOff from the defaults
+             chosenArrayPassed = defaults.object(forKey: "chosenArrayPassed") as? Int ?? 4
+        
+             let ifEmptyArray: [Int] = []
+        var passingArrayOfLettersSwitchedOff = defaults.object(forKey: "passingArrayOfLettersSwitchedOff") as? [Int] ?? ifEmptyArray
+    }
+    
+    
+}

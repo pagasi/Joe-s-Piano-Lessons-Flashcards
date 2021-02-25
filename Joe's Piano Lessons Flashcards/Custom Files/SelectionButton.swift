@@ -9,13 +9,14 @@ import UIKit
 
 class SelectionButton: UIButton {
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
+//    override init(frame: CGRect) {
+//        super.init(frame: frame)
+//    }
     
     init(title: String) {
         super.init(frame: .zero)
         backgroundColor = .systemBlue
+        layer.opacity = 1
         setTitle(title, for: .normal)
         titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         setTitleColor(.black, for: .normal)

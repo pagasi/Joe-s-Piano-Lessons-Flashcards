@@ -33,7 +33,7 @@ struct Constants {
     static var SETTINGS_BUTTON_TO_SETTINGSVC_SEGUE_IDENTIFIER = "settingsButtonToSettingsVC"
     static var ABOUT_BUTTON_TO_ABOUTVC_SEGUE_IDENTIFIER = "aboutButtontoAboutVC"
     static var SCALES_BUTTON_TO_SCALESVC_SEGUE_IDENTIFIER = "scalesButtonToScalesVC"
-
+    static var QUICK_START_BUTTON_TO_FLASH_CARDSVC_SEGUE = "quickStartButtonToFlashCardsVCSegue"
     
     //flashcard strings
     static var APPLE_A = "Apple A"//

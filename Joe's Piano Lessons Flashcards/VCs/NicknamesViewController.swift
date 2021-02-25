@@ -11,79 +11,45 @@ class NicknamesViewController: UIViewController  {
     
     //MARK: init
     
+    @IBOutlet weak var goButton: UIButton!
     @IBOutlet weak var nicknamesTableView: UITableView!
     @IBOutlet weak var nicknamesImage: UIImageView!
     @IBOutlet weak var nicknamesViewLabel: UILabel!
-    @IBOutlet weak var switchHorizontalStack: UIStackView!
+
     
     var letterArray: [Letter] = []
     var ArrayOfLettersSwitchedOff = [Int]()
     var buttonSelectedAndPassed: Int = 0
-    
-    lazy var fortyFiveSecondButton: SelectionButton = {
-        let button = SelectionButton(title: "45 Sec")
-        button.addTarget(self, action: #selector(fortyFiveSecondButtonPressed), for: .touchUpInside)
-        button.widthAnchor.constraint(equalToConstant: 70).isActive = true
-        return button
-    }()
-    
-    lazy var sixteenSecondButton: SelectionButton = {
-        let button = SelectionButton(title: "16 Sec")
-        button.addTarget(self, action: #selector(sixteenSecondButtonPressed), for: .touchUpInside)
-        button.widthAnchor.constraint(equalToConstant: 70).isActive = true
-        return button
-    }()
-    
-    lazy var beginnerButton: SelectionButton = {
-        let button = SelectionButton(title: "Beginner")
-        button.addTarget(self, action: #selector(beginnerButtonPressed), for: .touchUpInside)
-        return button
-    }()
-    
-    lazy var fullDeckButton: SelectionButton = {
-        let button = SelectionButton(title: "16 Sec")
-        button.addTarget(self, action: #selector(fullDeckButtonPressed), for: .touchUpInside)
-        return button
-    }()
-    
+    let defaults = UserDefaults.standard
+   
     
     //MARK:  life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        goButton.layer.cornerRadius = 10
+        goButton.setTitleShadowColor(.black, for: .normal)
+        goButton.titleLabel?.shadowOffset = CGSize(width: 2, height: 2)
         //assign NicknamesViewController as the delegate and data source for the table view in the NicknamesViewController
         nicknamesTableView.delegate = self
         nicknamesTableView.dataSource = self
 
-        //add programmatic buttons to the stackview
-        switchHorizontalStack.addArrangedSubview(fortyFiveSecondButton)
-        switchHorizontalStack.addArrangedSubview(sixteenSecondButton)
-        switchHorizontalStack.addArrangedSubview(beginnerButton)
-        switchHorizontalStack.addArrangedSubview(fullDeckButton)
-        
+
     } //end viewDidLoasd
     
     //    MARK: @objc funcs
     //setup switch functions
-    @objc func fortyFiveSecondButtonPressed() {
-        ArrayOfLettersSwitchedOff = [4,3,2,0]
+    @objc func switchAllOn() {
+        ArrayOfLettersSwitchedOff = []
         switchTheSwitches()
     }
-    @objc func sixteenSecondButtonPressed() {
-        ArrayOfLettersSwitchedOff = [4,2,0]
+    //MARK: FIX ME
+    @objc func switchAllOff() {
+//        ArrayOfLettersSwitchedOff = letterArray
         switchTheSwitches()
     }
-    
-    @objc func beginnerButtonPressed() {
-        ArrayOfLettersSwitchedOff = [3,1,0]
-        switchTheSwitches()
-    }
-    
-    @objc func fullDeckButtonPressed() {
-        ArrayOfLettersSwitchedOff = [0]
-        switchTheSwitches()
-    }
+
     
     
     
@@ -116,9 +82,13 @@ class NicknamesViewController: UIViewController  {
         destinationVC.chosenArrayPassed = buttonSelectedAndPassed
         //set the arrays of unwanted cards equal in both view controllers
         destinationVC.passingArrayOfLettersSwitchedOff = ArrayOfLettersSwitchedOff
+        //add chosenArrayPassed & passingArrayOfLettersSwitchedOff to the save
+        defaults.setValue(buttonSelectedAndPassed, forKey: "chosenArrayPassed")
+        defaults.setValue(ArrayOfLettersSwitchedOff, forKey: "passingArrayOfLettersSwitchedOff")
     }
     
     func switchTheSwitches() {
+        //put all cell switches in their proper position
         for index in 0...letterArray.count - 1 {
             if ArrayOfLettersSwitchedOff.contains(index) {
                 letterArray[index].letterSwitch.setOn(false, animated: false)
@@ -160,10 +130,16 @@ extension NicknamesViewController: UITableViewDelegate, UITableViewDataSource {
         //customize the cellview for rounded corners
         cell.cellView.translatesAutoresizingMaskIntoConstraints = false
         cell.cellView.layer.cornerRadius = 10
-        cell.cellView.layer.shadowRadius = 30
-        cell.cellView.layer.shadowColor = UIColor.black.cgColor
+//        cell.cellView.backgroundColor = .clear
+        cell.backgroundColor = .clear
+        
         //set the text in each cell to the nicknames of each card
         cell.nicknamesLabel.text = letter.letterNickname
+        cell.nicknamesLabel.textColor = .white
+        cell.nicknamesLabel.font = UIFont(name: "Helvetica", size: 18)
+        cell.nicknamesLabel.textAlignment = .center
+        cell.nicknamesLabel.shadowColor = .black
+        cell.nicknamesLabel.shadowOffset = CGSize(width: 2, height: 2)
         
         //add switch programmatically so that i can track tag numbers
         let switchView = UISwitch(frame: .zero)
