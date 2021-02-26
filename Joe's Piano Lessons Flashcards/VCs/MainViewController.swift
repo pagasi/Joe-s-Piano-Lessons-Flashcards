@@ -7,17 +7,14 @@
 
 import UIKit
 
-protocol getTheDefaults {
-    func gatherDefaults()
-}
 
 class MainViewController: UIViewController {
     //MARK: INIT
     @IBOutlet weak var stackView1: UIStackView!
     
     let defaults = UserDefaults.standard
-    var getTheDefaultsDelegate: getTheDefaults?
-  
+    
+    
     lazy var flashButton: SelectionButton = {
         let button = SelectionButton(title: "Flash Card Decks")
         button.addTarget(self, action: #selector(flashButtonPressed), for: .touchUpInside)
@@ -62,14 +59,12 @@ class MainViewController: UIViewController {
         stack.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         stack.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
-//MARK: @objc funcs
+    //MARK: @objc funcs
     @objc func flashButtonPressed() {
         performSegue(withIdentifier: Constants.FLASHCARD_BUTTON_TO_NICKNAMESVC_SEGUE_IDENTIFIER, sender: self)
     }
     
     @objc func quickStartButtonPressed() {
-        getTheDefaultsDelegate = FlashCardViewController()
-        getTheDefaultsDelegate!.gatherDefaults()
         performSegue(withIdentifier: Constants.QUICK_START_BUTTON_TO_FLASH_CARDSVC_SEGUE, sender: self)
         //insert code to setup userDefaults
         
@@ -90,18 +85,28 @@ class MainViewController: UIViewController {
     }
     
     //MARK: methods
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "quickStartButtonToFlashCardsVCSegue" {
+            let vc = segue.destination as!FlashCardViewController
+            
+            //retrieve chosenArrayPassed & passingArrayOfLettersSwitchedOff from the defaults
+            let buttonSelectedAndPassed = defaults.object(forKey: "chosenArrayPassed") as? Int ?? 4
+            
+            let ifEmptyArray: [Int] = []
+            let ArrayOfLettersSwitchedOff = defaults.object(forKey: "passingArrayOfLettersSwitchedOff") as? [Int] ?? ifEmptyArray
+            //pass the selected array to deck selection vc
+            vc.chosenArrayPassed = buttonSelectedAndPassed
+            //set the arrays of unwanted cards equal in both view controllers
+            vc.passingArrayOfLettersSwitchedOff = ArrayOfLettersSwitchedOff
+        }
+    }
 }
-
 
 
 
 //MARK: Notes
 
-/*
- /pass the selected array to deck selection vc
- vc.chosenArrayPassed = buttonSelectedAndPassed
- //set the arrays of unwanted cards equal in both view controllers
- vc.passingArrayOfLettersSwitchedOff = ArrayOfLettersSwitchedOff
- 
- */
+
+
+
+

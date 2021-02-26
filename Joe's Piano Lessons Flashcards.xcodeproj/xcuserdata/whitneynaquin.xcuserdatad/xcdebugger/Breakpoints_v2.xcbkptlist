@@ -30,25 +30,9 @@
             filePath = "Joe&apos;s Piano Lessons Flashcards/VCs/FlashCardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "252"
-            endingLineNumber = "252"
+            startingLineNumber = "264"
+            endingLineNumber = "264"
             landmarkName = "startUpFlashCards()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5956FCC5-5084-48B7-90E0-B5EDB8D0F715"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Joe&apos;s Piano Lessons Flashcards/VCs/FlashCardViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "349"
-            endingLineNumber = "349"
-            landmarkName = "gatherDefaults()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

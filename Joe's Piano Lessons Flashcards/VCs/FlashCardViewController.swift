@@ -11,6 +11,7 @@ class FlashCardViewController: UIViewController  {
     
     //MARK: init
     
+    @IBOutlet weak var mainStackView: UIStackView!
     @IBOutlet weak var iDontKnowButton: UIButton!
     @IBOutlet weak var answerOptionsStack: UIStackView!
     @IBOutlet weak var cartoonButton: UIButton!
@@ -18,7 +19,7 @@ class FlashCardViewController: UIViewController  {
     @IBOutlet weak var grandStaffUIImage: UIImageView!
     @IBOutlet weak var cardsRemaining: UILabel!
     
-    let protocolVC = MainViewController()
+
     let defaults = UserDefaults.standard
     let flashCardVCInstanceOfNicknamesArray = NicknamesArray()
     var finalArrayOfIndexes = [Int]()
@@ -85,6 +86,17 @@ class FlashCardViewController: UIViewController  {
         newCard()
         timerFunction()
     }
+    
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        if UIDevice.current.orientation.isLandscape == true {
+            mainStackView.axis = .horizontal
+        } else {
+            mainStackView.axis = .vertical
+            mainStackView.layoutSubviews()
+        }
+        
+    }
+    
     //MARK: @objc func
     //what to do if buttons are pressed
     
@@ -252,14 +264,13 @@ class FlashCardViewController: UIViewController  {
         chosenCountDetailView = flashCardVCInstanceOfNicknamesArray.createArray(chosenArray: chosenArrayPassed)
         
         //code to sift out the unwanted flashcards for the flashcardVC
-        if passingArrayOfLettersSwitchedOff != nil {
         if passingArrayOfLettersSwitchedOff.count > 0 {
             for index in 0...passingArrayOfLettersSwitchedOff.count - 1{
                 chosenCountDetailView.remove(at: passingArrayOfLettersSwitchedOff[index])
             } // end loop
         }
         print(chosenCountDetailView)
-        } else {print("passing array = nil")}
+
     } //end start up flashcards func
     
     
@@ -327,26 +338,4 @@ class FlashCardViewController: UIViewController  {
         //reset the wrong answer counter to 0
         wrongAnswerCounter = 0
     }
-    
-}
-
-//Delegate file:
-//
-//class OhPleaseLetMe: DoTheThingProtocol {
-//
-//    var pager = doItHereInThisClass()
-//    pager.delegate = self
-//
-//    func thisThingHere() {} }
-
-extension FlashCardViewController: getTheDefaults {
-    func gatherDefaults() {
-        //        //retrieve chosenArrayPassed & passingArrayOfLettersSwitchedOff from the defaults
-             chosenArrayPassed = defaults.object(forKey: "chosenArrayPassed") as? Int ?? 4
-        
-             let ifEmptyArray: [Int] = []
-        var passingArrayOfLettersSwitchedOff = defaults.object(forKey: "passingArrayOfLettersSwitchedOff") as? [Int] ?? ifEmptyArray
-    }
-    
-    
 }
