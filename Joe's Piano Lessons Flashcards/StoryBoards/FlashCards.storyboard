@@ -33,14 +33,14 @@
                                                         <rect key="frame" x="0.0" y="15.5" width="177.5" height="29"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="textColor" systemColor="systemGrayColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1W-MQ-UU2">
                                                         <rect key="frame" x="197.5" y="15.5" width="177.5" height="29"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="textColor" systemColor="systemGrayColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -145,7 +145,9 @@
                             <constraint firstItem="BSl-uw-OHt" firstAttribute="leading" secondItem="Aai-hQ-HHX" secondAttribute="leading" id="vwz-CD-Jot"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Cartoon" id="Dj2-ui-goT"/>
+                    <navigationItem key="navigationItem" title="Cartoon" id="Dj2-ui-goT">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="gAd-Xq-2mb"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="cartoonImage" destination="VVG-IT-Wcx" id="MiI-V9-2WW"/>
                     </connections>
@@ -163,6 +165,9 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

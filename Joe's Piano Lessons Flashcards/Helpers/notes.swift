@@ -62,3 +62,15 @@ import Foundation
 
 //MARK: add programmatic buttons to the stackview
 //[fortyFiveSecondButton, sixteenSecondButton, beginnerButton, fullDeckButton].forEach {switchHorizontalStack.addArrangedSubview($0)}
+
+
+
+//MARK: landscape vs portriat
+//override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+//    if UIDevice.current.orientation.isLandscape == true {
+//        mainStackView.axis = .horizontal
+//    } else {
+//        mainStackView.axis = .vertical
+//        mainStackView.layoutSubviews()
+//    }
+//}

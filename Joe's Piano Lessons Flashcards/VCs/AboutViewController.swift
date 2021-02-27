@@ -8,10 +8,15 @@
 import UIKit
 
 class AboutViewController: UIViewController {
-
+    @IBOutlet weak var aboutLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        aboutLabel.text = """
+            Do I actually need this page? I don't know
+        """
+        
     }
     
 

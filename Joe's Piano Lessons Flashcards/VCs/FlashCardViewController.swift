@@ -212,14 +212,10 @@ class FlashCardViewController: UIViewController  {
     
     func layoutSetup() {
         let arrayOfAnswerButtons = [AButton, BButton, CButton, DButton, EButton, FButton, GButton]
-       var anchorCount: CGFloat = 0
         
         //add buttons to answerOptionsStack
         for index in 0...6 {
         answerOptionsStack.addSubview(arrayOfAnswerButtons[index])
-            //buttons constraints
-//            arrayOfAnswerButtons[index].leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: anchorCount).isActive = true
-//            anchorCount += 50
         }
         //answerOptionsStack constraints
         answerOptionsStack.axis = .horizontal

@@ -14,41 +14,42 @@ class MainViewController: UIViewController {
     
     let defaults = UserDefaults.standard
     
-    
-    lazy var flashButton: SelectionButton = {
-        let button = SelectionButton(title: "Flash Card Decks")
-        button.addTarget(self, action: #selector(flashButtonPressed), for: .touchUpInside)
-        return button
-    }()
-    
     lazy var quickStartButton: SelectionButton = {
-        let button = SelectionButton(title: "Flash Card Quick Start")
+        let button = SelectionButton(title: "Flashcards (redo last deck)")
+//        button.heightAnchor.constraint(equalToConstant: 500).isActive = true
         button.addTarget(self, action: #selector(quickStartButtonPressed), for: .touchUpInside)
         return button
     }()
     
-    lazy var settingsButton: SelectionButton = {
-        let button = SelectionButton(title: "Settings")
-        button.addTarget(self, action: #selector(settingsButtonPressed), for: .touchUpInside)
+    lazy var flashButton: SelectionButton = {
+        let button = SelectionButton(title: "Flashcard Deck selection")
+        button.addTarget(self, action: #selector(flashButtonPressed), for: .touchUpInside)
         return button
     }()
     
     lazy var scalesButton: SelectionButton = {
         let button = SelectionButton(title: "Scales")
+//        button.heightAnchor.constraint(equalToConstant: 500).isActive = true
         button.addTarget(self, action: #selector(scalesButtonPressed), for: .touchUpInside)
         return button
     }()
     
-    lazy var aboutButton: SelectionButton = {
-        let button = SelectionButton(title: "About Joe's Piano Lessons")
-        button.addTarget(self, action: #selector(aboutButtonPressed), for: .touchUpInside)
-        return button
-    }()
+//    lazy var settingsButton: SelectionButton = {
+//        let button = SelectionButton(title: "Settings")
+//        button.addTarget(self, action: #selector(settingsButtonPressed), for: .touchUpInside)
+//        return button
+//    }()
+//    
+//    lazy var aboutButton: SelectionButton = {
+//        let button = SelectionButton(title: "About Joe's Piano Lessons")
+//        button.addTarget(self, action: #selector(aboutButtonPressed), for: .touchUpInside)
+//        return button
+//    }()
     //MARK: life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let stack = UIStackView(arrangedSubviews: [flashButton, quickStartButton, scalesButton, aboutButton, settingsButton])
+        let stack = UIStackView(arrangedSubviews: [quickStartButton, flashButton, scalesButton, /*aboutButton, settingsButton*/])
         stack.axis = .vertical
         stack.spacing = 15
         stack.distribution = .fillEqually
@@ -58,6 +59,7 @@ class MainViewController: UIViewController {
         stack.widthAnchor.constraint(equalToConstant: 250).isActive = true
         stack.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         stack.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+
     }
     //MARK: @objc funcs
     @objc func flashButtonPressed() {
@@ -71,18 +73,17 @@ class MainViewController: UIViewController {
         
     }
     
-    @objc func settingsButtonPressed() {
-        performSegue(withIdentifier: Constants.SETTINGS_BUTTON_TO_SETTINGSVC_SEGUE_IDENTIFIER, sender: self)
-        
-    }
-    
     @objc func scalesButtonPressed() {
         performSegue(withIdentifier: Constants.SCALES_BUTTON_TO_SCALESVC_SEGUE_IDENTIFIER, sender: self)
     }
     
-    @objc func aboutButtonPressed() {
-        performSegue(withIdentifier: Constants.ABOUT_BUTTON_TO_ABOUTVC_SEGUE_IDENTIFIER, sender: self)
-    }
+    //    @objc func settingsButtonPressed() {
+    //        performSegue(withIdentifier: Constants.SETTINGS_BUTTON_TO_SETTINGSVC_SEGUE_IDENTIFIER, sender: self)
+    //    }
+//
+//    @objc func aboutButtonPressed() {
+//        performSegue(withIdentifier: Constants.ABOUT_BUTTON_TO_ABOUTVC_SEGUE_IDENTIFIER, sender: self)
+//    }
     
     //MARK: methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

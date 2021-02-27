@@ -25,7 +25,7 @@ class ScalesTableViewCell: UITableViewCell {
         return stack
     }()
     
-    func fullStackSetup(tableIndex:Int, cellScaleDataChoice: Int) {
+    func fullStackSetup(tableIndex:Int, cellScaleDataChoice: Int, inLandscape: Bool) {
         if setupcomplete == true {
             for _ in 0...5 {
                 mainStack.subviews[0].removeFromSuperview()
@@ -33,7 +33,7 @@ class ScalesTableViewCell: UITableViewCell {
         }
         mainStack.removeFromSuperview()
         setupVerticalStackView()
-        setupHorizontalStacks(tableIndex: tableIndex, cellScaleDataChoice: cellScaleDataChoice)
+        setupHorizontalStacks(tableIndex: tableIndex, cellScaleDataChoice: cellScaleDataChoice, inLandscape: inLandscape)
     }
     
     func setupVerticalStackView() {
@@ -46,7 +46,7 @@ class ScalesTableViewCell: UITableViewCell {
         mainStack.trailingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.trailingAnchor, constant: 0).isActive = true
     }
     
-    func setupHorizontalStacks(tableIndex: Int, cellScaleDataChoice: Int) {
+    func setupHorizontalStacks(tableIndex: Int, cellScaleDataChoice: Int, inLandscape: Bool) {
         
         let scaleArray = setupScaleArray(cellScaleDataChoice: cellScaleDataChoice)
         
@@ -65,32 +65,32 @@ class ScalesTableViewCell: UITableViewCell {
             case 1 :
                 createScaleName(scale: scaleArray[tableIndex], Hstack: horizontalStackView)
             case 2 :
-                createRHLabels(scale: scaleArray[tableIndex], Hstack: horizontalStackView)
+                createRHLabels(scale: scaleArray[tableIndex], Hstack: horizontalStackView, inLandscape: inLandscape)
             case 3 :
-                createLetterLabels(scale: scaleArray[tableIndex], Hstack: horizontalStackView)
+                createLetterLabels(scale: scaleArray[tableIndex], Hstack: horizontalStackView, inLandscape: inLandscape)
             case 4 :
-                createLHLabels(scale: scaleArray[tableIndex], Hstack: horizontalStackView)
+                createLHLabels(scale: scaleArray[tableIndex], Hstack: horizontalStackView, inLandscape: inLandscape)
             default:
                 print ("spacer")
             }
         }
     }
     func setupScaleArray(cellScaleDataChoice: Int) -> [ScaleModel] {
-    
-        switch cellScaleDataChoice {
-    case 0:
-        return cellScaleData.createArray()
-    case 1:
-        return cellScaleData2.createArray()
-    case 2:
-        return cellScaleData3.createArray()
-    case 3:
-        return cellScaleData4.createArray()
-    default:
-        print("default scale Array")
-        return cellScaleData.createArray()
         
-    }
+        switch cellScaleDataChoice {
+        case 0:
+            return cellScaleData.createArray()
+        case 1:
+            return cellScaleData2.createArray()
+        case 2:
+            return cellScaleData3.createArray()
+        case 3:
+            return cellScaleData4.createArray()
+        default:
+            print("default scale Array")
+            return cellScaleData.createArray()
+            
+        }
     }
     
     
@@ -98,7 +98,7 @@ class ScalesTableViewCell: UITableViewCell {
         let label = UILabel()
         label.text = scale.scaleName
         label.textColor = .black
-        label.font = UIFont(name: "Helvetica", size: 20)
+        label.font = UIFont(name: "Helvetica", size: 25)
         label.font = .boldSystemFont(ofSize: 20)
         label.textAlignment = .center
         //                horizontalStackView.distribution = .fill
@@ -106,33 +106,52 @@ class ScalesTableViewCell: UITableViewCell {
         Hstack.addArrangedSubview(label)
     }
     
-    func createRHLabels(scale: ScaleModel, Hstack: UIStackView) {
+    func createRHLabels(scale: ScaleModel, Hstack: UIStackView, inLandscape: Bool) {
         for index2 in 0...scale.scaleFingeringRH.count - 1 {
             let label = UILabel()
             label.textAlignment = .center
             label.font = UIFont(name: "Helvetica", size: 12)
+            if inLandscape == true {
+                label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+            }
+            else {
+                label.font = UIFont.systemFont(ofSize: 12, weight: .medium)
+            }
             label.text = "\(scale.scaleFingeringRH[index2])"
             label.textColor = .black
+            
             Hstack.addArrangedSubview(label)
         }
     }
     
-    func createLetterLabels(scale: ScaleModel, Hstack: UIStackView) {
+    func createLetterLabels(scale: ScaleModel, Hstack: UIStackView, inLandscape: Bool) {
         for index2 in 0...scale.scaleLetters.count - 1 {
             let label = UILabel()
             label.textAlignment = .center
             label.font = UIFont(name: "Helvetica", size: 12)
+            if inLandscape == true {
+                label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+            }
+            else {
+                label.font = UIFont.systemFont(ofSize: 12, weight: .medium)
+            }
             label.text = "\(scale.scaleLetters[index2])"
             label.textColor = .black
             Hstack.addArrangedSubview(label)
         }
     }
     
-    func createLHLabels(scale: ScaleModel, Hstack: UIStackView) {
+    func createLHLabels(scale: ScaleModel, Hstack: UIStackView, inLandscape: Bool) {
         for index2 in 0...scale.scaleFingeringLH.count - 1 {
             let label = UILabel()
             label.textAlignment = .center
             label.font = UIFont(name: "Helvetica", size: 12)
+            if inLandscape == true {
+                label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+            }
+            else {
+                label.font = UIFont.systemFont(ofSize: 12, weight: .medium)
+            }
             label.text = "\(scale.scaleFingeringLH[index2])"
             label.textColor = .black
             Hstack.addArrangedSubview(label)
