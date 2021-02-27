@@ -60,7 +60,7 @@ class NicknamesArray {
         let letter37: Letter = Letter(letterNickname: Constants.GREAT_ELEPHANT_E, letterSwitch: tempSwitch)
         
         //MARK: fill arrays
-//        fill tempArray1 for eases of access to the letters in an array
+        //        fill tempArray1 for eases of access to the letters in an array
         tempArray.append(contentsOf:[letter0, letter1, letter2, letter3, letter4, letter5, letter6, letter7, letter8, letter9, letter10, letter11, letter12, letter13, letter14, letter15, letter16, letter17, letter18, letter19, letter20, letter21, letter22, letter23, letter24, letter25, letter26, letter27, letter28, letter29, letter30, letter31, letter32, letter33, letter34, letter35, letter36, letter37])
         
         
@@ -81,6 +81,27 @@ class NicknamesArray {
         case 4:
             //fill for full deck
             for index in 0...37 {tempArray2.append(tempArray[index])}
+        case 5:
+            //fill for treble cleff only
+            for index in 1...3 {tempArray2.append(tempArray[index])}
+            
+            tempArray2.append(contentsOf: [tempArray[7], tempArray[8], tempArray[11]])
+            
+            for index in 14...19 {tempArray2.append(tempArray[index])}
+            
+            tempArray2.append(contentsOf: [tempArray[23], tempArray[26], tempArray[28], tempArray[30], tempArray[32], tempArray[33], tempArray[35]])
+        case 6:
+            //fill for bass cleff only
+            
+            tempArray2.append(tempArray[0])
+            
+            for index in 4...6 {tempArray2.append(tempArray[index])}
+            
+            tempArray2.append(contentsOf: [tempArray[9], tempArray[10], tempArray[12], tempArray[13]])
+            
+            for index in 20...22 {tempArray2.append(tempArray[index])}
+            
+            tempArray2.append(contentsOf: [tempArray[24], tempArray[25], tempArray[27], tempArray[29], tempArray[31], tempArray[34], tempArray[36], tempArray[37]])
         default:
             for index in 0...37 {tempArray2.append(tempArray[index])}
             print("flashcard array not selected yet, whole array filled")

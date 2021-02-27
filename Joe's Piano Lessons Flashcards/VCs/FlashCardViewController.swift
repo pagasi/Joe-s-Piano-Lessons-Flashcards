@@ -12,6 +12,8 @@ class FlashCardViewController: UIViewController  {
     //MARK: init
     
     @IBOutlet weak var mainStackView: UIStackView!
+    @IBOutlet weak var upperOrLeftStack: UIStackView!
+    @IBOutlet weak var lowerOrRightStack: UIStackView!
     @IBOutlet weak var iDontKnowButton: UIButton!
     @IBOutlet weak var answerOptionsStack: UIStackView!
     @IBOutlet weak var cartoonButton: UIButton!
@@ -86,10 +88,11 @@ class FlashCardViewController: UIViewController  {
         newCard()
         timerFunction()
     }
-    
+    //MARK: willtransition
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
         if UIDevice.current.orientation.isLandscape == true {
             mainStackView.axis = .horizontal
+            mainStackView.distribution = .fillEqually
         } else {
             mainStackView.axis = .vertical
             mainStackView.layoutSubviews()
@@ -207,7 +210,7 @@ class FlashCardViewController: UIViewController  {
         //run the newCard so that apon return to flashcard vc there is a new card showing and one index at 0 in the finalArrayOfIndexes
         newCard()
     }
-    //MARK: methods
+    //MARK: methods / constraints
     
     
     func layoutSetup() {
@@ -222,17 +225,17 @@ class FlashCardViewController: UIViewController  {
         answerOptionsStack.distribution = .fillEqually
         answerOptionsStack.translatesAutoresizingMaskIntoConstraints = false
         answerOptionsStack.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        answerOptionsStack.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        answerOptionsStack.leadingAnchor.constraint(equalTo: lowerOrRightStack.leadingAnchor).isActive = true
         answerOptionsStack.heightAnchor.constraint(equalToConstant: 100).isActive = true
 
         //buttons constraints
-        AButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: -165).isActive = true
-        BButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: -110).isActive = true
-        CButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: -55).isActive = true
-        DButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        EButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 55).isActive = true
-        FButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 110).isActive = true
-        GButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 165).isActive = true
+        AButton.centerXAnchor.constraint(equalTo: lowerOrRightStack.centerXAnchor, constant: -165).isActive = true
+        BButton.centerXAnchor.constraint(equalTo: lowerOrRightStack.centerXAnchor, constant: -110).isActive = true
+        CButton.centerXAnchor.constraint(equalTo: lowerOrRightStack.centerXAnchor, constant: -55).isActive = true
+        DButton.centerXAnchor.constraint(equalTo: lowerOrRightStack.centerXAnchor).isActive = true
+        EButton.centerXAnchor.constraint(equalTo: lowerOrRightStack.centerXAnchor, constant: 55).isActive = true
+        FButton.centerXAnchor.constraint(equalTo: lowerOrRightStack.centerXAnchor, constant: 110).isActive = true
+        GButton.centerXAnchor.constraint(equalTo: lowerOrRightStack.centerXAnchor, constant: 165).isActive = true
         //i don't know button layout
         iDontKnowButton.layer.cornerRadius = 10
         iDontKnowButton.layer.shadowColor = UIColor.black.cgColor

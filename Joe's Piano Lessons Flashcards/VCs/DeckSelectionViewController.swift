@@ -46,11 +46,23 @@ class DeckSelectionViewController: UIViewController {
         return button
     }()
     
+    lazy var trebleOnlyButton: SelectionButton = {
+        let button = SelectionButton(title: "Treble Clef")
+        button.addTarget(self, action: #selector(trebleOnlyButtonPressed), for: .touchUpInside)
+        return button
+    }()
+    
+    lazy var bassOnlyButton: SelectionButton = {
+        let button = SelectionButton(title: "Bass Clef")
+        button.addTarget(self, action: #selector(bassOnlyButtonPressed), for: .touchUpInside)
+        return button
+    }()
+    
     //    MARK: life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let stack = UIStackView(arrangedSubviews: [beginnerDeckButton, level1Button, sec45Button, sec16Button, fullDeckButton])
+        let stack = UIStackView(arrangedSubviews: [beginnerDeckButton, level1Button, sec45Button, sec16Button, trebleOnlyButton, bassOnlyButton, fullDeckButton])
         stack.axis = .vertical
         stack.spacing = 15
         stack.distribution = .fillEqually
@@ -85,6 +97,16 @@ class DeckSelectionViewController: UIViewController {
     
     @objc func fullDeckButtonPressed() {
         buttonSelected = 4
+        goToFlashVC()
+    }
+    
+    @objc func trebleOnlyButtonPressed() {
+        buttonSelected = 5
+        goToFlashVC()
+    }
+    
+    @objc func bassOnlyButtonPressed() {
+        buttonSelected = 6
         goToFlashVC()
     }
     

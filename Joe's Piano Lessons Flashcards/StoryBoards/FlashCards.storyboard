@@ -64,7 +64,7 @@
                                             <stackView opaque="NO" contentMode="center" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Xd7-V7-FEe" userLabel="answer options">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="218"/>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REU-9o-u8A">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REU-9o-u8A" userLabel="IDK Button">
                                                 <rect key="frame" x="157" y="238" width="100" height="30"/>
                                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                 <constraints>
@@ -106,7 +106,9 @@
                         <outlet property="countTimerLabel" destination="b1W-MQ-UU2" id="nwC-pc-GTZ"/>
                         <outlet property="grandStaffUIImage" destination="rsd-ec-SWd" id="lmS-bu-ihj"/>
                         <outlet property="iDontKnowButton" destination="REU-9o-u8A" id="HyD-xo-VY1"/>
+                        <outlet property="lowerOrRightStack" destination="VrZ-sW-0IV" id="O7M-SC-OvV"/>
                         <outlet property="mainStackView" destination="Bl7-Ou-EKr" id="q9g-Ya-MzW"/>
+                        <outlet property="upperOrLeftStack" destination="Wvm-gZ-vMe" id="OQT-I7-VTT"/>
                         <segue destination="gqk-xg-0Er" kind="show" identifier="letterSegueFlashcardVCToCartoonVC" id="siK-2g-4eb"/>
                     </connections>
                 </viewController>
