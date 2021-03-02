@@ -75,6 +75,13 @@ struct Constants {
     static var C3_SECOND_KISSING_COUSIN_C = "C3 Second Kissing Cousin C"
     static var LH_CAT_C = "LH Cat C"
     
+    //MARK: Unicodes
+    static var FLAT_UNICODE = "\u{266D}" //flat
+    static var NATURAL_UNICODE = "\u{266E}" //natural
+    static var SHARP_UNICODE = "\u{266F}" //sharp
+    static var DOUBLE_SHARP_UNICODE = "\u{1D61}" //double sharp
+    static var WHOLE_NOTE_UNICODE = "\u{1D15D}" //whole note but doesn't work?
+    
     //other identifiers
     static var DONE_CARD_NAME = "Done"
 }
