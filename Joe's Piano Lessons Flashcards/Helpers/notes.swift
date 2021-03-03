@@ -74,3 +74,47 @@ import Foundation
 //        mainStackView.layoutSubviews()
 //    }
 //}
+//MARK: timer
+//var timer = Timer()
+//var count: Int = 0
+//@IBOutlet weak var countTimerLabel: UILabel!
+//
+//func timerFunction() {
+//    timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerSelectorFunc), userInfo: nil, repeats: true)
+//}
+//
+//@objc func timerSelectorFunc() {
+//    //        add the visable timer
+//    count += 1
+//    countTimerLabel.text = "\(count)"
+//}
+//MARK: other timer
+
+//var milliseconds:Int = 10 * 100
+
+/*      timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(timerFired), userInfo: nil, repeats: true)
+      RunLoop.main.add(timer!, forMode: .common) */
+
+/*    @objc func timerFired() {
+        
+        //        decrement the counter
+        milliseconds += 1
+        
+        //        update the label
+        let seconds:Double = Double(milliseconds)/1000.0
+        timerLabel.text = String(format: "Time: %.0f", seconds)
+        
+        //        stop the timer when last card is finished (if finalArrayOfIndexes.count > chosenCountDetailView + 1)
+        if finalArrayOfIndexes.count == chosenCountDetailView + 1 {
+            
+            timerLabel.textColor = UIColor.red
+            timer?.invalidate()
+            
+        }
+ 
+        //
+    } */
+//MARK: back navagation code
+//DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+//    self.navigationController!.popViewController(animated: true)
+//}

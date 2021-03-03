@@ -33,6 +33,7 @@ class FlashCardViewController: UIViewController  {
     var score: ScoreLog = ScoreLog(score: 0, date: Date())
     var chosenArrayPassed: Int = 0
     var passingArrayOfLettersSwitchedOff = [Int]()
+    lazy var upperViewConstraint = upperOrLeftStack.widthAnchor.constraint(equalToConstant: 250)
     
     lazy var AButton: AnswerButton = {
         let button = AnswerButton(title: "A")
@@ -92,10 +93,15 @@ class FlashCardViewController: UIViewController  {
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
         if UIDevice.current.orientation.isLandscape == true {
             mainStackView.axis = .horizontal
-            mainStackView.distribution = .fillEqually
+            mainStackView.distribution = .fillProportionally
+            
+            upperViewConstraint.isActive = true
+            
         } else {
             mainStackView.axis = .vertical
-            mainStackView.layoutSubviews()
+            mainStackView.distribution = .fillProportionally
+            lowerOrRightStack.heightAnchor.constraint(equalToConstant: 150).isActive = true
+            upperViewConstraint.isActive = false
         }
         
     }
@@ -337,4 +343,5 @@ class FlashCardViewController: UIViewController  {
         //reset the wrong answer counter to 0
         wrongAnswerCounter = 0
     }
+
 }
