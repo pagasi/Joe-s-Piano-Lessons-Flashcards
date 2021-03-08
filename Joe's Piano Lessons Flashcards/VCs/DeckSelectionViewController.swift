@@ -13,7 +13,26 @@ class DeckSelectionViewController: UIViewController {
     
     @IBOutlet weak var stackView1: UIStackView!
 
+    var mainStack = UIStackView()
+    var stack = UIStackView()
+    var stack2 = UIStackView()
     var buttonSelected: Int = 0
+    var stackXConstraint = NSLayoutConstraint()
+    var stackYConstraint = NSLayoutConstraint()
+    var stack2XConstraint = NSLayoutConstraint()
+    var stack2YConstraint = NSLayoutConstraint()
+    
+//    init(stackXConstraint: NSLayoutConstraint, stackYConstraint: NSLayoutConstraint, stack2XConstraint: NSLayoutConstraint, var stack2YConstraint: NSLayoutConstraint){
+//        self.stackXConstraint = stackXConstraint
+//        self.stackYConstraint = stackYConstraint
+//        self.stack2XConstraint = stack2XConstraint
+//        self.stack2YConstraint = stack2YConstraint
+//    }
+//
+//    required init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
+    
     
     lazy var beginnerDeckButton: SelectionButton = {
         let button = SelectionButton(title: "Beginner Deck")
@@ -62,16 +81,66 @@ class DeckSelectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let stack = UIStackView(arrangedSubviews: [beginnerDeckButton, level1Button, sec45Button, sec16Button, trebleOnlyButton, bassOnlyButton, fullDeckButton])
+        stack = UIStackView(arrangedSubviews: [beginnerDeckButton, level1Button, sec45Button])
+        stack2 = UIStackView(arrangedSubviews: [sec16Button, trebleOnlyButton, bassOnlyButton, fullDeckButton])
+        
+        //stack features
         stack.axis = .vertical
         stack.spacing = 15
         stack.distribution = .fillEqually
-        
+
+        //stack2 features
+        stack2.axis = .vertical
+        stack2.spacing = 15
+        stack2.distribution = .fillEqually
+
         view.addSubview(stack)
+        view.addSubview(stack2)
+        
+        stackConstraints()
+    }
+    
+    func stackConstraints() {
         stack.translatesAutoresizingMaskIntoConstraints = false
+        stack2.translatesAutoresizingMaskIntoConstraints = false
+
         stack.widthAnchor.constraint(equalToConstant: 250).isActive = true
-        stack.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        stack.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        stack2.widthAnchor.constraint(equalToConstant: 250).isActive = true
+
+        stackRotation()
+    }
+    
+    //    MARK: willTransition
+        override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+            
+            stackRotation()
+        }
+    
+    func stackRotation() {
+        //if goes into landscape
+        if UIDevice.current.orientation.isLandscape == true {
+
+            [stackXConstraint, stackYConstraint, stack2XConstraint, stack2YConstraint].forEach {NSLayoutConstraint.deactivate([$0])}
+            
+            stackXConstraint = stack.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor, constant: -140)
+            stackYConstraint = stack.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor)
+            stack2XConstraint = stack2.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor, constant: 140)
+            stack2YConstraint = stack2.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor)
+            
+            [stackXConstraint, stackYConstraint, stack2XConstraint, stack2YConstraint].forEach {NSLayoutConstraint.activate([$0])}
+            //[fortyFiveSecondButton, sixteenSecondButton, beginnerButton, fullDeckButton].forEach {switchHorizontalStack.addArrangedSubview($0)}
+        } else {
+//                mainStack.axis = .vertical
+//                mainStack.widthAnchor.constraint(equalToConstant: 250).isActive = true
+            
+            [stackXConstraint, stackYConstraint, stack2XConstraint, stack2YConstraint].forEach {NSLayoutConstraint.deactivate([$0])}
+            
+            stackYConstraint = stack.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor, constant: -120)
+            stackXConstraint = stack.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor)
+            stack2YConstraint = stack2.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor, constant: 90)
+            stack2XConstraint = stack2.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor)
+            [stackXConstraint, stackYConstraint, stack2XConstraint, stack2YConstraint].forEach {NSLayoutConstraint.activate([$0])}
+        }
     }
     
     //    MARK: @objc funcs

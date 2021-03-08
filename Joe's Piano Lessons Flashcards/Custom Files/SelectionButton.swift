@@ -25,16 +25,17 @@ class SelectionButton: UIButton {
         layer.shadowColor = UIColor.black.cgColor
         layer.masksToBounds = false
 //        clipsToBounds = true
-        heightAnchor.constraint(equalToConstant: 45).isActive = true
+        
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowRadius = 5
         layer.shadowOffset = CGSize(width: 5, height: 5)
         layer.shadowOpacity = 1
         
         
-        translatesAutoresizingMaskIntoConstraints = false
-        heightAnchor.constraint(equalToConstant: 50).isActive = true
-        widthAnchor.constraint(equalToConstant: 100).isActive = true
+//        translatesAutoresizingMaskIntoConstraints = false
+//        heightAnchor.constraint(equalToConstant: 50).isActive = true
+//        widthAnchor.constraint(equalToConstant: 100).isActive = true
+        heightAnchor.constraint(equalToConstant: 45).isActive = true
     }
     
     

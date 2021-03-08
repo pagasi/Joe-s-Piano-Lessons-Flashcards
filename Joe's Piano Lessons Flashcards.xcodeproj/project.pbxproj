@@ -153,8 +153,8 @@
 		6F16AE8C25C1B9BA005ADDFE /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
-				6F16AE4925BEF54C005ADDFE /* Main.storyboard */,
 				6F16AE4E25BEF54F005ADDFE /* LaunchScreen.storyboard */,
+				6F16AE4925BEF54C005ADDFE /* Main.storyboard */,
 				6F7E230F25E186CF005E4A77 /* FlashCards.storyboard */,
 				6F7E231325E18D28005E4A77 /* Scales.storyboard */,
 				6F7E234325E67EBE005E4A77 /* DeckSelection.storyboard */,
