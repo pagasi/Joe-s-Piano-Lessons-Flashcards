@@ -88,21 +88,11 @@ class FlashCardViewController: UIViewController  {
         startUpFlashCards()
         newCard()
         timerFunction()
+        rotationSetup()
     }
     //MARK: willtransition
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
-        if UIDevice.current.orientation.isLandscape == true {
-            mainStackView.axis = .horizontal
-            mainStackView.distribution = .fillProportionally
-            
-            upperViewConstraint.isActive = true
-            
-        } else {
-            mainStackView.axis = .vertical
-            mainStackView.distribution = .fillProportionally
-            lowerOrRightStack.heightAnchor.constraint(equalToConstant: 150).isActive = true
-            upperViewConstraint.isActive = false
-        }
+        rotationSetup()
         
     }
     
@@ -218,6 +208,20 @@ class FlashCardViewController: UIViewController  {
     }
     //MARK: methods / constraints
     
+    func rotationSetup() {
+        if UIDevice.current.orientation.isLandscape == true {
+            mainStackView.axis = .horizontal
+            mainStackView.distribution = .fillProportionally
+            
+            upperViewConstraint.isActive = true
+            
+        } else {
+            mainStackView.axis = .vertical
+            mainStackView.distribution = .fillProportionally
+            lowerOrRightStack.heightAnchor.constraint(equalToConstant: 150).isActive = true
+            upperViewConstraint.isActive = false
+        }
+    }
     
     func layoutSetup() {
         let arrayOfAnswerButtons = [AButton, BButton, CButton, DButton, EButton, FButton, GButton]
