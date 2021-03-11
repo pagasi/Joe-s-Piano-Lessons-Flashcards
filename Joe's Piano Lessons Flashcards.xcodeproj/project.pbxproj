@@ -118,6 +118,7 @@
 				6F16AE5E25BEF99D005ADDFE /* VCs */,
 				6F16AE5125BEF54F005ADDFE /* Info.plist */,
 				6F16AE7625C06883005ADDFE /* Helpers */,
+				6FCB95F925FA4A2E002AA57E /* not used */,
 			);
 			path = "Joe's Piano Lessons Flashcards";
 			sourceTree = "<group>";
@@ -130,8 +131,6 @@
 				6F16AE6325BEF9EE005ADDFE /* NicknamesViewController.swift */,
 				6F16AE5B25BEF5DF005ADDFE /* FlashCardViewController.swift */,
 				6F16AE5F25BEF9D7005ADDFE /* CartoonViewController.swift */,
-				6F16AE6625BEFA01005ADDFE /* AboutViewController.swift */,
-				6F16AE6C25BEFAFF005ADDFE /* SettingsViewController.swift */,
 				6FBBB80325D5D3780000DB0B /* ScalesViewController.swift */,
 				6FBBB85125DC83C70000DB0B /* Scales2ViewController.swift */,
 				6FBBB85625DC8F040000DB0B /* Scales3ViewController.swift */,
@@ -144,7 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				6F16AE7C25C09E95005ADDFE /* notes.swift */,
-				6F16AE7725C0689D005ADDFE /* CacheManager.swift */,
 				6F16AE7325C06261005ADDFE /* Constants.swift */,
 			);
 			path = Helpers;
@@ -191,6 +189,16 @@
 				6F7E234625E69EF4005E4A77 /* DefaultsModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		6FCB95F925FA4A2E002AA57E /* not used */ = {
+			isa = PBXGroup;
+			children = (
+				6F16AE7725C0689D005ADDFE /* CacheManager.swift */,
+				6F16AE6625BEFA01005ADDFE /* AboutViewController.swift */,
+				6F16AE6C25BEFAFF005ADDFE /* SettingsViewController.swift */,
+			);
+			path = "not used";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

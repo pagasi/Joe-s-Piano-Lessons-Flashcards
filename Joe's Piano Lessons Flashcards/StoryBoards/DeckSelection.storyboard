@@ -54,7 +54,7 @@
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="qdG-ro-Mv3">
-                                <rect key="frame" x="10" y="0.0" width="394" height="808"/>
+                                <rect key="frame" x="10" y="0.0" width="394" height="759"/>
                                 <subviews>
                                     <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="6yr-hF-QSg" userLabel="Nickname View">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="280"/>
@@ -84,7 +84,7 @@
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleAspectFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5wn-iz-75G">
-                                        <rect key="frame" x="0.0" y="284" width="394" height="470"/>
+                                        <rect key="frame" x="0.0" y="284" width="394" height="421"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -134,7 +134,7 @@
                                         </prototypes>
                                     </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWU-km-hzr">
-                                        <rect key="frame" x="0.0" y="758" width="394" height="50"/>
+                                        <rect key="frame" x="0.0" y="709" width="394" height="50"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="BiB-iX-TP3"/>
@@ -145,7 +145,7 @@
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="CDa-dR-HCU" kind="show" id="0mh-E4-xXt"/>
+                                            <segue destination="CDa-dR-HCU" kind="show" identifier="goButtonToFlashcardsSegue" id="0mh-E4-xXt"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -175,9 +175,17 @@
                             <constraint firstItem="qdG-ro-Mv3" firstAttribute="bottom" secondItem="nZq-T8-WYJ" secondAttribute="bottom" id="x0g-ed-TsZ"/>
                         </constraints>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Back" id="s0Z-e4-KdR"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Nicknames" largeTitleDisplayMode="always" id="thj-tI-4Id">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="s0Z-e4-KdR"/>
+                        <barButtonItem key="rightBarButtonItem" image="house" catalog="system" id="FXh-k6-J5M">
+                            <connections>
+                                <segue destination="u3b-CR-9hG" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="m15-ug-fcd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="goButton" destination="JWU-km-hzr" id="63Z-94-gTo"/>
                         <outlet property="nicknamesImage" destination="JEo-LM-9D1" id="33b-yy-qNL"/>
@@ -187,7 +195,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sZJ-sy-XHc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1464" y="115"/>
+            <point key="canvasLocation" x="1465" y="117"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="ns0-8r-d2S">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="u3b-CR-9hG" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z6h-sh-dOR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2074" y="71"/>
         </scene>
         <!--FlashCards-->
         <scene sceneID="CKF-Ad-cr9">
@@ -202,6 +218,7 @@
     </scenes>
     <resources>
         <image name="background piano" width="375" height="812"/>
+        <image name="house" catalog="system" width="128" height="106"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

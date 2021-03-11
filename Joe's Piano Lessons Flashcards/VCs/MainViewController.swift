@@ -87,14 +87,14 @@ class MainViewController: UIViewController {
     
     //MARK: methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "quickStartButtonToFlashCardsVCSegue" {
+        if segue.identifier == Constants.QUICK_START_BUTTON_TO_FLASH_CARDSVC_SEGUE {
             let vc = segue.destination as!FlashCardViewController
             
             //retrieve chosenArrayPassed & passingArrayOfLettersSwitchedOff from the defaults
-            let buttonSelectedAndPassed = defaults.object(forKey: "chosenArrayPassed") as? Int ?? 4
+            let buttonSelectedAndPassed = defaults.object(forKey: Constants.CHOSEN_ARRAY_PASSED ) as? Int ?? 4
             
             let ifEmptyArray: [Int] = []
-            let ArrayOfLettersSwitchedOff = defaults.object(forKey: "passingArrayOfLettersSwitchedOff") as? [Int] ?? ifEmptyArray
+            let ArrayOfLettersSwitchedOff = defaults.object(forKey: Constants.PASSING_ARRAY_OF_LETTERS_SWITCHED_OFF) as? [Int] ?? ifEmptyArray
             //pass the selected array to deck selection vc
             vc.chosenArrayPassed = buttonSelectedAndPassed
             //set the arrays of unwanted cards equal in both view controllers

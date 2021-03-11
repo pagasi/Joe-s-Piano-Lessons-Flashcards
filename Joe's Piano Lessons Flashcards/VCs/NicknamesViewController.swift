@@ -34,9 +34,20 @@ class NicknamesViewController: UIViewController  {
         //assign NicknamesViewController as the delegate and data source for the table view in the NicknamesViewController
         nicknamesTableView.delegate = self
         nicknamesTableView.dataSource = self
-
+        
+        checkUserDefaults()
 
     } //end viewDidLoasd
+    
+    //MARK: methods
+    
+   func checkUserDefaults() {
+    let defaultsCheck = defaults.integer(forKey: Constants.CHOSEN_ARRAY_PASSED)
+    if buttonSelectedAndPassed == defaultsCheck {
+        ArrayOfLettersSwitchedOff = defaults.object(forKey: Constants.PASSING_ARRAY_OF_LETTERS_SWITCHED_OFF) as? [Int] ?? []
+        }
+    }
+    
     
     //    MARK: @objc funcs
     //setup switch functions
@@ -74,6 +85,7 @@ class NicknamesViewController: UIViewController  {
     
     //MARK: prepare for segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Constants.GO_BUTTON_TO_FLASHCARDS_SEGUE {
         //for when the GO! button is pressed to start the flashcard run
         //sort the array of letters that are not desired from largest to smallest to prepare to remove these letters from the array of All the cards (if this is not done, when someone removes a lower number such as 0, all the other card indexes shift down one index so that the next card to get removed will be attached to the wrong index.  The wrong card will be removed, or worse, the app crashes
         ArrayOfLettersSwitchedOff.sort(by: >)
@@ -83,10 +95,11 @@ class NicknamesViewController: UIViewController  {
         //set the arrays of unwanted cards equal in both view controllers
         destinationVC.passingArrayOfLettersSwitchedOff = ArrayOfLettersSwitchedOff
         //add chosenArrayPassed & passingArrayOfLettersSwitchedOff to the save
-        defaults.setValue(buttonSelectedAndPassed, forKey: "chosenArrayPassed")
-        defaults.setValue(ArrayOfLettersSwitchedOff, forKey: "passingArrayOfLettersSwitchedOff")
+            defaults.setValue(buttonSelectedAndPassed, forKey: Constants.CHOSEN_ARRAY_PASSED)
+            defaults.setValue(ArrayOfLettersSwitchedOff, forKey: Constants.PASSING_ARRAY_OF_LETTERS_SWITCHED_OFF)
     }
-    
+    }
+        
     func switchTheSwitches() {
         //put all cell switches in their proper position
         for index in 0...letterArray.count - 1 {
@@ -136,7 +149,7 @@ extension NicknamesViewController: UITableViewDelegate, UITableViewDataSource {
         //set the text in each cell to the nicknames of each card
         cell.nicknamesLabel.text = letter.letterNickname
         cell.nicknamesLabel.textColor = .white
-        cell.nicknamesLabel.font = UIFont(name: "Helvetica", size: 18)
+        cell.nicknamesLabel.font = UIFont(name: Constants.HELVETICA_FONT, size: 18)
         cell.nicknamesLabel.textAlignment = .center
         cell.nicknamesLabel.shadowColor = .black
         cell.nicknamesLabel.shadowOffset = CGSize(width: 2, height: 2)

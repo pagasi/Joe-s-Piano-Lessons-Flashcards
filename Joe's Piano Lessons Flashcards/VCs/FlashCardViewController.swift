@@ -22,7 +22,7 @@ class FlashCardViewController: UIViewController  {
     @IBOutlet weak var cardsRemaining: UILabel!
     
 
-    let defaults = UserDefaults.standard
+//    let defaults = UserDefaults.standard
     let flashCardVCInstanceOfNicknamesArray = NicknamesArray()
     var finalArrayOfIndexes = [Int]()
     var chosenCountDetailView = [Letter]()
@@ -193,7 +193,7 @@ class FlashCardViewController: UIViewController  {
     @objc func timerSelectorFunc() {
         //        add the visable timer
         count += 1
-        countTimerLabel.text = "\(count)"
+        countTimerLabel.text = "timer: \(count)"
     }
     
     @IBAction func cartoonButtonPressed(_ sender: Any) {

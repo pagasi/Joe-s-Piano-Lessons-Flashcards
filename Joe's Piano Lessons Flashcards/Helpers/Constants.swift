@@ -9,7 +9,7 @@ import Foundation
 
 struct Constants {
     
-    //VC identifiers
+    //MARK: VC identifiers
     static var MAIN_VC_IDENTIFIER = "mainVC"
     static var NICKNAMES_VC_IDENTIFIER = "nicknamesVC"
     static var FLASHCARDS_VC_IDENTIFIER = "flashcardsVC"
@@ -18,7 +18,7 @@ struct Constants {
     static var ABOUT_VC_IDENTIFIER = "aboutVC"
     static var CUSTOMIZE_VC_IDENTIFIER = "customizeVC"
     
-    //cell identifiers
+    //MARK: cell identifiers
     static var NICKNAMES_CELL_REUSE_IDENTIFIER = "nicknamesCellIdentifier"
     static var SCALES_CELL_IDENTIFIER = "scalesCellIdentifier"
     static var SCALES_CELL_IDENTIFIER2 = "scalesCellIdentifier2"
@@ -26,7 +26,7 @@ struct Constants {
     static var SCALES_CELL_IDENTIFIER4 = "scalesCellIdentifier4"
     
     
-    //segue identifiers
+    //MARK: segue identifiers
     static var DECK_TO_NICKNAMES_VC_SEGUE_IDENTIFIER = "deckToNicknamesSegue"
     static var LETTER_SEGUE_FLASHVC_TO_CARTOONVC_IDENTIFIER = "letterSegueFlashcardVCToCartoonVC"
     static var FLASHCARD_BUTTON_TO_NICKNAMESVC_SEGUE_IDENTIFIER = "flashButtonToNicknamesVCSegue"
@@ -34,8 +34,9 @@ struct Constants {
     static var ABOUT_BUTTON_TO_ABOUTVC_SEGUE_IDENTIFIER = "aboutButtontoAboutVC"
     static var SCALES_BUTTON_TO_SCALESVC_SEGUE_IDENTIFIER = "scalesButtonToScalesVC"
     static var QUICK_START_BUTTON_TO_FLASH_CARDSVC_SEGUE = "quickStartButtonToFlashCardsVCSegue"
+    static var GO_BUTTON_TO_FLASHCARDS_SEGUE = "goButtonToFlashcardsSegue"
     
-    //flashcard strings
+    //MARK: flashcard strings
     static var APPLE_A = "Apple A"//
     static var RH_CAT_C = "RH Cat C"
     static var DANGLING_D = "Dangling D"
@@ -81,6 +82,14 @@ struct Constants {
     static var SHARP_UNICODE = "\u{266F}" //sharp
     static var DOUBLE_SHARP_UNICODE = "\u{1D61}" //double sharp
     static var WHOLE_NOTE_UNICODE = "\u{1D15D}" //whole note but doesn't work?
+    
+    //MARK: defaults
+    static var CHOSEN_ARRAY_PASSED = "chosenArrayPassed"
+    static var PASSING_ARRAY_OF_LETTERS_SWITCHED_OFF = "passingArrayOfLettersSwitchedOff"
+    
+    //MARK: fonts
+    static var HELVETICA_FONT = "Helvetica"
+    
     
     //other identifiers
     static var DONE_CARD_NAME = "Done"
