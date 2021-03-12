@@ -11,6 +11,8 @@ class NicknamesViewController: UIViewController  {
     
     //MARK: init
     
+    @IBOutlet weak var nicknameView: UIView!
+    @IBOutlet weak var mainStackNicknamesVC: UIStackView!
     @IBOutlet weak var goButton: UIButton!
     @IBOutlet weak var nicknamesTableView: UITableView!
     @IBOutlet weak var nicknamesImage: UIImageView!
@@ -21,25 +23,41 @@ class NicknamesViewController: UIViewController  {
     var ArrayOfLettersSwitchedOff = [Int]()
     var buttonSelectedAndPassed: Int = 0
     let defaults = UserDefaults.standard
-   
-    
+
     //MARK:  life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        goButton.layer.cornerRadius = 10
-        goButton.setTitleShadowColor(.black, for: .normal)
-        goButton.titleLabel?.shadowOffset = CGSize(width: 2, height: 2)
+
         //assign NicknamesViewController as the delegate and data source for the table view in the NicknamesViewController
         nicknamesTableView.delegate = self
         nicknamesTableView.dataSource = self
         
+        goButtonSetup()
         checkUserDefaults()
-
+        stackRotationNicknameVC()
     } //end viewDidLoasd
     
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        stackRotationNicknameVC()
+    }
+    
+    
     //MARK: methods
+    
+    func stackRotationNicknameVC(){
+        if UIDevice.current.orientation.isLandscape == true {
+            mainStackNicknamesVC.axis = .horizontal
+        } else {
+            mainStackNicknamesVC.axis = .vertical
+        }
+    }
+    
+    func goButtonSetup() {
+        goButton.layer.cornerRadius = 10
+        goButton.setTitleShadowColor(.black, for: .normal)
+        goButton.titleLabel?.shadowOffset = CGSize(width: 2, height: 2)
+    }
     
    func checkUserDefaults() {
     let defaultsCheck = defaults.integer(forKey: Constants.CHOSEN_ARRAY_PASSED)
@@ -143,6 +161,7 @@ extension NicknamesViewController: UITableViewDelegate, UITableViewDataSource {
         //customize the cellview for rounded corners
         cell.cellView.translatesAutoresizingMaskIntoConstraints = false
         cell.cellView.layer.cornerRadius = 10
+//        cell.cellView.heightAnchor.constraint(equalToConstant: 40.0).isActive = true
 //        cell.cellView.backgroundColor = .clear
         cell.backgroundColor = .clear
         
@@ -153,6 +172,8 @@ extension NicknamesViewController: UITableViewDelegate, UITableViewDataSource {
         cell.nicknamesLabel.textAlignment = .center
         cell.nicknamesLabel.shadowColor = .black
         cell.nicknamesLabel.shadowOffset = CGSize(width: 2, height: 2)
+//        cell.nicknamesLabel.topAnchor.constraint(equalTo: cell.cellView.topAnchor).isActive = true
+//        cell.nicknamesLabel.bottomAnchor.constraint(equalTo: cell.cellView.bottomAnchor).isActive = true
         
         //add switch programmatically so that i can track tag numbers
         let switchView = UISwitch(frame: .zero)

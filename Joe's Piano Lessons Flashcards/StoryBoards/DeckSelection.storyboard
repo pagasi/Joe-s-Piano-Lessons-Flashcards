@@ -53,21 +53,18 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="qdG-ro-Mv3">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="qdG-ro-Mv3">
                                 <rect key="frame" x="10" y="0.0" width="394" height="759"/>
                                 <subviews>
                                     <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="6yr-hF-QSg" userLabel="Nickname View">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="280"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="377.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="JEo-LM-9D1">
-                                                <rect key="frame" x="0.0" y="0.0" width="394" height="280"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="377.5"/>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="JEo-LM-9D1" secondAttribute="height" multiplier="197:140" id="i0I-wl-Uky"/>
-                                                </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a note to display the cartoon" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nc-lU-ePA">
-                                                <rect key="frame" x="64" y="130" width="266" height="20"/>
+                                                <rect key="frame" x="64" y="179" width="266" height="20"/>
                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                                 <color key="textColor" systemColor="systemGrayColor"/>
                                                 <nil key="highlightedColor"/>
@@ -75,91 +72,86 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="JEo-LM-9D1" secondAttribute="trailing" id="4lO-EG-IrO"/>
                                             <constraint firstItem="1nc-lU-ePA" firstAttribute="centerX" secondItem="6yr-hF-QSg" secondAttribute="centerX" id="7z8-iE-YZD"/>
                                             <constraint firstAttribute="bottom" secondItem="JEo-LM-9D1" secondAttribute="bottom" id="Vs4-HM-PUh"/>
                                             <constraint firstItem="1nc-lU-ePA" firstAttribute="centerY" secondItem="6yr-hF-QSg" secondAttribute="centerY" id="Yc4-du-1LF"/>
+                                            <constraint firstAttribute="trailing" secondItem="JEo-LM-9D1" secondAttribute="trailing" id="aQQ-fi-ylZ"/>
                                             <constraint firstItem="JEo-LM-9D1" firstAttribute="leading" secondItem="6yr-hF-QSg" secondAttribute="leading" id="kpu-jP-dwV"/>
                                             <constraint firstItem="JEo-LM-9D1" firstAttribute="top" secondItem="6yr-hF-QSg" secondAttribute="top" id="qit-NS-eL4"/>
                                         </constraints>
                                     </view>
-                                    <tableView clipsSubviews="YES" contentMode="scaleAspectFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5wn-iz-75G">
-                                        <rect key="frame" x="0.0" y="284" width="394" height="421"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="nicknamesCellIdentifier" rowHeight="40" id="6su-7v-EFy" customClass="CustomTableViewCell" customModule="Joe_s_Piano_Lessons_Flashcards" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="394" height="40"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6su-7v-EFy" id="iUr-gl-2L9">
-                                                    <rect key="frame" x="0.0" y="0.0" width="394" height="40"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TV1-SD-emj">
-                                                            <rect key="frame" x="30" y="0.0" width="334" height="40"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="note name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mT7-b0-xTv">
-                                                                    <rect key="frame" x="10" y="9.5" width="314" height="21"/>
-                                                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
-                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <color key="highlightedColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <size key="shadowOffset" width="1" height="1"/>
-                                                                </label>
-                                                            </subviews>
-                                                            <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="40" id="QfY-aQ-tdP"/>
-                                                                <constraint firstItem="mT7-b0-xTv" firstAttribute="centerY" secondItem="TV1-SD-emj" secondAttribute="centerY" id="WeX-lq-DG1"/>
-                                                                <constraint firstItem="mT7-b0-xTv" firstAttribute="leading" secondItem="TV1-SD-emj" secondAttribute="leading" constant="10" id="Yfh-js-IPv"/>
-                                                                <constraint firstAttribute="trailing" secondItem="mT7-b0-xTv" secondAttribute="trailing" constant="10" id="wd2-XC-Ymc"/>
-                                                            </constraints>
-                                                        </view>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstItem="TV1-SD-emj" firstAttribute="leading" secondItem="iUr-gl-2L9" secondAttribute="leadingMargin" constant="10" id="90b-uC-edx"/>
-                                                        <constraint firstItem="TV1-SD-emj" firstAttribute="centerY" secondItem="iUr-gl-2L9" secondAttribute="centerY" id="Dig-zg-h0v"/>
-                                                        <constraint firstAttribute="trailingMargin" secondItem="TV1-SD-emj" secondAttribute="trailing" constant="10" id="LVe-tW-rgj"/>
-                                                    </constraints>
-                                                </tableViewCellContentView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="vS1-GW-FGz">
+                                        <rect key="frame" x="0.0" y="381.5" width="394" height="377.5"/>
+                                        <subviews>
+                                            <tableView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="248" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5wn-iz-75G">
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="323.5"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="nicknamesCellIdentifier" rowHeight="40" id="6su-7v-EFy" customClass="CustomTableViewCell" customModule="Joe_s_Piano_Lessons_Flashcards" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="28" width="394" height="40"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6su-7v-EFy" id="iUr-gl-2L9">
+                                                            <rect key="frame" x="0.0" y="0.0" width="394" height="40"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TV1-SD-emj">
+                                                                    <rect key="frame" x="30" y="0.0" width="334" height="40"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="note name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mT7-b0-xTv">
+                                                                            <rect key="frame" x="10" y="9.5" width="314" height="21"/>
+                                                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <color key="highlightedColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <size key="shadowOffset" width="1" height="1"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="QfY-aQ-tdP"/>
+                                                                        <constraint firstItem="mT7-b0-xTv" firstAttribute="centerY" secondItem="TV1-SD-emj" secondAttribute="centerY" id="WeX-lq-DG1"/>
+                                                                        <constraint firstItem="mT7-b0-xTv" firstAttribute="leading" secondItem="TV1-SD-emj" secondAttribute="leading" constant="10" id="Yfh-js-IPv"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="mT7-b0-xTv" secondAttribute="trailing" constant="10" id="wd2-XC-Ymc"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstItem="TV1-SD-emj" firstAttribute="leading" secondItem="iUr-gl-2L9" secondAttribute="leadingMargin" constant="10" id="90b-uC-edx"/>
+                                                                <constraint firstItem="TV1-SD-emj" firstAttribute="centerY" secondItem="iUr-gl-2L9" secondAttribute="centerY" id="Dig-zg-h0v"/>
+                                                                <constraint firstAttribute="trailingMargin" secondItem="TV1-SD-emj" secondAttribute="trailing" constant="10" id="LVe-tW-rgj"/>
+                                                            </constraints>
+                                                        </tableViewCellContentView>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <connections>
+                                                            <outlet property="cellView" destination="TV1-SD-emj" id="Q6l-8d-QbC"/>
+                                                            <outlet property="nicknamesLabel" destination="mT7-b0-xTv" id="l8I-Ov-fxh"/>
+                                                        </connections>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                            </tableView>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWU-km-hzr">
+                                                <rect key="frame" x="0.0" y="327.5" width="394" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="BiB-iX-TP3"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                                <state key="normal" title="Save and run the deck">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
-                                                    <outlet property="cellView" destination="TV1-SD-emj" id="Q6l-8d-QbC"/>
-                                                    <outlet property="nicknamesLabel" destination="mT7-b0-xTv" id="l8I-Ov-fxh"/>
+                                                    <segue destination="CDa-dR-HCU" kind="show" identifier="goButtonToFlashcardsSegue" id="0mh-E4-xXt"/>
                                                 </connections>
-                                            </tableViewCell>
-                                        </prototypes>
-                                    </tableView>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWU-km-hzr">
-                                        <rect key="frame" x="0.0" y="709" width="394" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="BiB-iX-TP3"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
-                                        <state key="normal" title="Save and run the deck">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="CDa-dR-HCU" kind="show" identifier="goButtonToFlashcardsSegue" id="0mh-E4-xXt"/>
-                                        </connections>
-                                    </button>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="JWU-km-hzr" firstAttribute="leading" secondItem="qdG-ro-Mv3" secondAttribute="leading" id="7RA-Zc-hoN"/>
-                                    <constraint firstItem="6yr-hF-QSg" firstAttribute="leading" secondItem="qdG-ro-Mv3" secondAttribute="leading" id="MMU-up-MHR"/>
-                                    <constraint firstAttribute="trailing" secondItem="5wn-iz-75G" secondAttribute="trailing" id="NdG-gU-323"/>
-                                    <constraint firstItem="JWU-km-hzr" firstAttribute="centerX" secondItem="qdG-ro-Mv3" secondAttribute="centerX" id="SLS-xX-AD4"/>
-                                    <constraint firstAttribute="trailing" secondItem="6yr-hF-QSg" secondAttribute="trailing" id="ZHk-ti-rhr"/>
-                                    <constraint firstItem="5wn-iz-75G" firstAttribute="top" secondItem="6yr-hF-QSg" secondAttribute="bottom" id="loA-o2-uiN"/>
-                                    <constraint firstItem="5wn-iz-75G" firstAttribute="leading" secondItem="qdG-ro-Mv3" secondAttribute="leading" id="pUV-H7-z7u"/>
-                                    <constraint firstAttribute="trailing" secondItem="JWU-km-hzr" secondAttribute="trailing" id="sp3-Y9-FwA"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nZq-T8-WYJ"/>
@@ -188,6 +180,8 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="goButton" destination="JWU-km-hzr" id="63Z-94-gTo"/>
+                        <outlet property="mainStackNicknamesVC" destination="qdG-ro-Mv3" id="oHs-nH-5sr"/>
+                        <outlet property="nicknameView" destination="6yr-hF-QSg" id="oTM-wa-PMc"/>
                         <outlet property="nicknamesImage" destination="JEo-LM-9D1" id="33b-yy-qNL"/>
                         <outlet property="nicknamesTableView" destination="5wn-iz-75G" id="bZP-b1-nci"/>
                         <outlet property="nicknamesViewLabel" destination="1nc-lU-ePA" id="gzM-3f-lgf"/>

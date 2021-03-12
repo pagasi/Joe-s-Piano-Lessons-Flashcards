@@ -11,5 +11,7 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var nicknamesLabel: UILabel!
     @IBOutlet weak var cellView: UIView!
     
-//    }
+    
+
 }
+

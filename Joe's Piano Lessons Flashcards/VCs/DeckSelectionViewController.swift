@@ -81,22 +81,7 @@ class DeckSelectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        stack = UIStackView(arrangedSubviews: [beginnerDeckButton, level1Button, sec45Button])
-        stack2 = UIStackView(arrangedSubviews: [sec16Button, trebleOnlyButton, bassOnlyButton, fullDeckButton])
-        
-        //stack features
-        stack.axis = .vertical
-        stack.spacing = 15
-        stack.distribution = .fillEqually
-
-        //stack2 features
-        stack2.axis = .vertical
-        stack2.spacing = 15
-        stack2.distribution = .fillEqually
-
-        view.addSubview(stack)
-        view.addSubview(stack2)
-        
+        stackSetup()
         stackConstraints()
     }
     
@@ -116,8 +101,29 @@ class DeckSelectionViewController: UIViewController {
             stackRotation()
         }
     
+    
+    //MARK: methods
+    
+    func stackSetup() {
+        stack = UIStackView(arrangedSubviews: [beginnerDeckButton, level1Button, sec45Button])
+        stack2 = UIStackView(arrangedSubviews: [sec16Button, trebleOnlyButton, bassOnlyButton, fullDeckButton])
+        
+        //stack features
+        stack.axis = .vertical
+        stack.spacing = 15
+        stack.distribution = .fillEqually
+
+        //stack2 features
+        stack2.axis = .vertical
+        stack2.spacing = 15
+        stack2.distribution = .fillEqually
+
+        view.addSubview(stack)
+        view.addSubview(stack2)
+    }
+    
     func stackRotation() {
-        //if goes into landscape
+        //if is in or goes into landscape
         if UIDevice.current.orientation.isLandscape == true {
 
             [stackXConstraint, stackYConstraint, stack2XConstraint, stack2YConstraint].forEach {NSLayoutConstraint.deactivate([$0])}
