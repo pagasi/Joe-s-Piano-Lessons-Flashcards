@@ -24,6 +24,7 @@
 		6F16AE8125C1A227005ADDFE /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE8025C1A227005ADDFE /* CustomTableViewCell.swift */; };
 		6F16AE8525C1B285005ADDFE /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE8425C1B285005ADDFE /* Letter.swift */; };
 		6F16AE8925C1B9A3005ADDFE /* NicknamesArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE8825C1B9A3005ADDFE /* NicknamesArray.swift */; };
+		6F4C17442609A2EB005D665F /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F4C17432609A2EB005D665F /* GameKit.framework */; };
 		6F7E230D25E18636005E4A77 /* DeckSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7E230C25E18636005E4A77 /* DeckSelectionViewController.swift */; };
 		6F7E231025E186CF005E4A77 /* FlashCards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F7E230F25E186CF005E4A77 /* FlashCards.storyboard */; };
 		6F7E231425E18D28005E4A77 /* Scales.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F7E231325E18D28005E4A77 /* Scales.storyboard */; };
@@ -61,6 +62,7 @@
 		6F16AE8025C1A227005ADDFE /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		6F16AE8425C1B285005ADDFE /* Letter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letter.swift; sourceTree = "<group>"; };
 		6F16AE8825C1B9A3005ADDFE /* NicknamesArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknamesArray.swift; sourceTree = "<group>"; };
+		6F4C17432609A2EB005D665F /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		6F7E230C25E18636005E4A77 /* DeckSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckSelectionViewController.swift; sourceTree = "<group>"; };
 		6F7E230F25E186CF005E4A77 /* FlashCards.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FlashCards.storyboard; sourceTree = "<group>"; };
 		6F7E231325E18D28005E4A77 /* Scales.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Scales.storyboard; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F4C17442609A2EB005D665F /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +97,7 @@
 			children = (
 				6F16AE4225BEF54C005ADDFE /* Joe's Piano Lessons Flashcards */,
 				6F16AE4125BEF54C005ADDFE /* Products */,
+				6F4C17422609A2EB005D665F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,8 +120,8 @@
 				6F16AE8D25C1B9E8005ADDFE /* Custom Files */,
 				6F16AE8C25C1B9BA005ADDFE /* StoryBoards */,
 				6F16AE5E25BEF99D005ADDFE /* VCs */,
-				6F16AE5125BEF54F005ADDFE /* Info.plist */,
 				6F16AE7625C06883005ADDFE /* Helpers */,
+				6F16AE5125BEF54F005ADDFE /* Info.plist */,
 				6FCB95F925FA4A2E002AA57E /* not used */,
 			);
 			path = "Joe's Piano Lessons Flashcards";
@@ -189,6 +193,14 @@
 				6F7E234625E69EF4005E4A77 /* DefaultsModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		6F4C17422609A2EB005D665F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F4C17432609A2EB005D665F /* GameKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		6FCB95F925FA4A2E002AA57E /* not used */ = {
@@ -453,6 +465,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.01;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.joespianolessons.Joe-s-Piano-Lessons-Flashcards";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -472,6 +485,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.01;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.joespianolessons.Joe-s-Piano-Lessons-Flashcards";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

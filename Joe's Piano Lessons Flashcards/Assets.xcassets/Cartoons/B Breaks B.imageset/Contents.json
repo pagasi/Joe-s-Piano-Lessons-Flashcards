@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "B Breaks B.png",
+      "filename" : "Breaks B 1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "B Breaks B@2x.png",
+      "filename" : "Breaks B 1@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "B Breaks B@3x.png",
+      "filename" : "Breaks B 1@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

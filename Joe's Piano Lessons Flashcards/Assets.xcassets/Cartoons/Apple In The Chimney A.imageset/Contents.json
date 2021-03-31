@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Apple In The Chimney A.png",
+      "filename" : "Apple chimney A 1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Apple In The Chimney A@2x.png",
+      "filename" : "Apple chimney A 1@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Apple In The Chimney A@3x.png",
+      "filename" : "Apple chimney A 1@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

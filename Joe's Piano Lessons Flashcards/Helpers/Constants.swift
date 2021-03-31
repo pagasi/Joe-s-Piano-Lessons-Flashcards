@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Constants {
     
@@ -93,4 +94,5 @@ struct Constants {
     
     //other identifiers
     static var DONE_CARD_NAME = "Done"
+    static var PLAY_SF = UIImage(systemName: "play.fill")
 }

@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "High Diver D.png",
+      "filename" : "Diver D.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "High Diver D@2x.png",
+      "filename" : "Diver D@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "High Diver D@3x.png",
+      "filename" : "Diver D@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

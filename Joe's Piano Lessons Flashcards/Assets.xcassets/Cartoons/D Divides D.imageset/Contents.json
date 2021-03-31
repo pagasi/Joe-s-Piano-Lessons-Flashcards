@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "D Divides D.png",
+      "filename" : "D Divides.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "D Divides D@2x.png",
+      "filename" : "D Divides@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "D Divides D@3x.png",
+      "filename" : "D Divides@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "LH Elephant E.png",
+      "filename" : "LH Elephant E 1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "LH Elephant E@2x.png",
+      "filename" : "LH Elephant E 1@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "LH Elephant E@3x.png",
+      "filename" : "LH Elephant E 1@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
