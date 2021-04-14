@@ -11,6 +11,7 @@ import UIKit
 class MainViewController: UIViewController {
     //MARK: INIT
     @IBOutlet weak var stackView1: UIStackView!
+    @IBOutlet weak var infobutton: UIButton!
     
     let defaults = UserDefaults.standard
     
@@ -61,6 +62,12 @@ class MainViewController: UIViewController {
         stack.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
 
     }
+    //MARK: IBActions
+    @IBAction func infobuttonpressed(_ sender: Any) {
+        
+        performSegue(withIdentifier: Constants.ABOUT_BUTTON_TO_ABOUTVC_SEGUE_IDENTIFIER, sender: self)
+    }
+    
     //MARK: @objc funcs
     @objc func flashButtonPressed() {
         performSegue(withIdentifier: Constants.FLASHCARD_BUTTON_TO_NICKNAMESVC_SEGUE_IDENTIFIER, sender: self)

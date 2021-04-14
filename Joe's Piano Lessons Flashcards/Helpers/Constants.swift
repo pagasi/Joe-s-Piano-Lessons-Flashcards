@@ -68,13 +68,13 @@ struct Constants {
     static var GOODIE_TWO_SHOES_G = "Goodie Two Shoes G"
     static var GREAT_DIVER_D = "Great Diver D"
     static var GREAT_ELEPHANT_E = "Great Elephant E"
-    static var GREAT_SECOND_KISSING_COUSIN_C = "Great Second Kissing Cousin C"
+    static var GREAT_SECOND_KISSING_COUSIN_C = "Great Second Cousin C"
     static var HIGH_DIVER_D = "High Diver D"
-    static var HIGH_KISSING_COUSIN_C = "High Kissing Cousin C"
+    static var HIGH_KISSING_COUSIN_C = "High Cousin C"
     static var LH_ELEPHANT_E = "LH Elephant E"
-    static var LOW_KISSING_COUSIN_C = "Low Kissing Cousin C"
+    static var LOW_KISSING_COUSIN_C = "Low Cousin C"
     static var TREBLE_G = "Treble G"
-    static var C3_SECOND_KISSING_COUSIN_C = "C3 Second Kissing Cousin C"
+    static var C3_SECOND_KISSING_COUSIN_C = "C3 Second Cousin C"
     static var LH_CAT_C = "LH Cat C"
     
     //MARK: Unicodes

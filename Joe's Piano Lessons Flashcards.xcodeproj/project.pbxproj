@@ -139,6 +139,7 @@
 				6FBBB85125DC83C70000DB0B /* Scales2ViewController.swift */,
 				6FBBB85625DC8F040000DB0B /* Scales3ViewController.swift */,
 				6FBBB85925DC8F110000DB0B /* Scales4ViewController.swift */,
+				6F16AE6625BEFA01005ADDFE /* AboutViewController.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -207,7 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				6F16AE7725C0689D005ADDFE /* CacheManager.swift */,
-				6F16AE6625BEFA01005ADDFE /* AboutViewController.swift */,
 				6F16AE6C25BEFAFF005ADDFE /* SettingsViewController.swift */,
 			);
 			path = "not used";
@@ -465,7 +465,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.01;
+				MARKETING_VERSION = 1.02;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.joespianolessons.Joe-s-Piano-Lessons-Flashcards";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -485,7 +485,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.01;
+				MARKETING_VERSION = 1.02;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.joespianolessons.Joe-s-Piano-Lessons-Flashcards";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

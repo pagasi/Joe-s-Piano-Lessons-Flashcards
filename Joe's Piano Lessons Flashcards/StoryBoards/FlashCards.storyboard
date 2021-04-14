@@ -36,7 +36,7 @@
                                                         <color key="textColor" systemColor="systemGrayColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1W-MQ-UU2">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="timer: 0:00" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1W-MQ-UU2">
                                                         <rect key="frame" x="197.5" y="15.5" width="177.5" height="29"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -116,7 +116,7 @@
             </objects>
             <point key="canvasLocation" x="2222" y="115"/>
         </scene>
-        <!--Cartoon-->
+        <!--Hint-->
         <scene sceneID="Zea-Hk-LPr">
             <objects>
                 <viewController storyboardIdentifier="cartoonVC" id="gqk-xg-0Er" customClass="CartoonViewController" customModule="Joe_s_Piano_Lessons_Flashcards" customModuleProvider="target" sceneMemberID="viewController">
@@ -147,9 +147,7 @@
                             <constraint firstItem="BSl-uw-OHt" firstAttribute="leading" secondItem="Aai-hQ-HHX" secondAttribute="leading" id="vwz-CD-Jot"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Cartoon" id="Dj2-ui-goT">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="gAd-Xq-2mb"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Hint" id="Dj2-ui-goT"/>
                     <connections>
                         <outlet property="cartoonImage" destination="VVG-IT-Wcx" id="MiI-V9-2WW"/>
                     </connections>

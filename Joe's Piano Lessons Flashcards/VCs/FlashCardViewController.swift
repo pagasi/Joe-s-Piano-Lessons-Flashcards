@@ -30,10 +30,12 @@ class FlashCardViewController: UIViewController  {
     var finished = false
     var timer = Timer()
     var count: Int = 0
+    var countMinutes: Int = 0
     var score: ScoreLog = ScoreLog(score: 0, date: Date())
     var chosenArrayPassed: Int = 0
     var passingArrayOfLettersSwitchedOff = [Int]()
     lazy var upperViewConstraint = upperOrLeftStack.widthAnchor.constraint(equalToConstant: 250)
+    
     
     lazy var AButton: AnswerButton = {
         let button = AnswerButton(title: "A")
@@ -183,7 +185,17 @@ class FlashCardViewController: UIViewController  {
     @objc func timerSelectorFunc() {
         //        add the visable timer
         count += 1
-        countTimerLabel.text = "timer: \(count)"
+        
+        if count > 59 {
+            
+            countMinutes += 1
+            count = 0
+        }
+        if count < 10 {
+            countTimerLabel.text = "timer: \(countMinutes):0\(count)"
+        } else {
+        countTimerLabel.text = "timer: \(countMinutes):\(count)"
+        }
     }
     
     @IBAction func cartoonButtonPressed(_ sender: Any) {
