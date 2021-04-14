@@ -97,7 +97,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Flash Cards" largeTitleDisplayMode="always" id="Gsn-Lo-5hl">
-                        <barButtonItem key="backBarButtonItem" title=" " id="K5F-Da-mot"/>
+                        <barButtonItem key="backBarButtonItem" title="Back" id="XAK-km-zJ9"/>
                     </navigationItem>
                     <connections>
                         <outlet property="answerOptionsStack" destination="Xd7-V7-FEe" id="bsB-ia-5ey"/>
@@ -147,7 +147,9 @@
                             <constraint firstItem="BSl-uw-OHt" firstAttribute="leading" secondItem="Aai-hQ-HHX" secondAttribute="leading" id="vwz-CD-Jot"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Hint" id="Dj2-ui-goT"/>
+                    <navigationItem key="navigationItem" title="Hint" largeTitleDisplayMode="always" id="Dj2-ui-goT">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="7Ju-mO-b97"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="cartoonImage" destination="VVG-IT-Wcx" id="MiI-V9-2WW"/>
                     </connections>
