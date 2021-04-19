@@ -13,16 +13,21 @@ class AboutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+//        add privacy policy
         aboutLabel.text = """
         Joe's Piano Lessons Flash Cards
         Privacy Policy and Terms and Conditions
 
 
-        Introduction
+
+        Introduction:
         
         By using Joe's Piano Lessons Flash Cards, you agree to our Terms of Use and our Privacy Policy. I invite you to fully read this page and make sure you understand its content prior to using Joe's Piano Lessons Flash Cards.
 
-        Joe's Piano Lessons Flashcards: Terms of Use & Privacy Policy
+
+
+        Terms of Use & Privacy Policy:
 
         Whitney Naquin operates the website and the Joe's Piano Lessons Flash Cards mobile application (name on the App Store subject to change for search and discovery purposes).
 
@@ -31,17 +36,20 @@ class AboutViewController: UIViewController {
         Please read this section carefully since it limits the liability of Joe's Piano Lessons Flash Cards. By downloading Joe's Piano Lessons Flash Cards, your use of the app is at your own discretion and risk. Joe's Piano Lessons Flash Cards makes no claims or promises with respect to the quality, the accuracy or reliability of the app, its safety or security, or its content.
 
 
-        Data
+
+        Data:
 
         Joe's Piano Lessons Flash Cards does not collect any data from the user using a third party service.
 
 
-        I have a question about my data
+
+        I have a question about my data:
 
         If you have a question about this privacy and how your data is collected, used and stored when you use Joe's Piano Lessons Flash Cards, please feel free to email me at jugglinpagasi2@yahoo.com with the subject line "Data Question" and let me know how I can help you.
 
 
-        Changes and Updates
+
+        Changes and Updates:
 
         If Joe's Piano Lessons Flash Cards makes changes to Terms and Conditions or Privacy Policy, these changes will be posted on this page in a timely manner. We reserve the right to modify these terms & conditions and/or privacy policy at any time, so please review it frequently (at least on every app update).
         """
@@ -50,7 +58,7 @@ class AboutViewController: UIViewController {
     
 
 
-    // MARK: - Nothing to see here
+
 
 
 

@@ -11,7 +11,6 @@ class NicknamesViewController: UIViewController  {
     
     //MARK: init
     
-    @IBOutlet weak var nicknameView: UIView!
     @IBOutlet weak var mainStackNicknamesVC: UIStackView!
     @IBOutlet weak var goButton: UIButton!
     @IBOutlet weak var nicknamesTableView: UITableView!
@@ -33,19 +32,22 @@ class NicknamesViewController: UIViewController  {
         nicknamesTableView.delegate = self
         nicknamesTableView.dataSource = self
         
+//        run the viewdidload functions
         goButtonSetup()
         checkUserDefaults()
         stackRotationNicknameVC()
     } //end viewDidLoasd
     
+//    handle device orientation for the View controller if the device rotates
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
         stackRotationNicknameVC()
     }
     
     
     //MARK: methods
-    
+//    handle device rotations
     func stackRotationNicknameVC(){
+//        check the new orientation of the device and impliment the stack orientation needed
         if UIDevice.current.orientation.isLandscape == true {
             mainStackNicknamesVC.axis = .horizontal
         } else {
@@ -53,12 +55,14 @@ class NicknamesViewController: UIViewController  {
         }
     }
     
+//    setup the go button
     func goButtonSetup() {
         goButton.layer.cornerRadius = 10
         goButton.setTitleShadowColor(.black, for: .normal)
         goButton.titleLabel?.shadowOffset = CGSize(width: 2, height: 2)
     }
     
+//    check if the user is selecting the same deck they used last time so that the same letters they chose manually last time can be provided now
    func checkUserDefaults() {
     let defaultsCheck = defaults.integer(forKey: Constants.CHOSEN_ARRAY_PASSED)
     if buttonSelectedAndPassed == defaultsCheck {
@@ -68,37 +72,40 @@ class NicknamesViewController: UIViewController  {
     
     
     //    MARK: @objc funcs
-    //setup switch functions
-    @objc func switchAllOn() {
-        ArrayOfLettersSwitchedOff = []
-        switchTheSwitches()
-    }
-    //MARK: FIX ME
-    @objc func switchAllOff() {
+    
+    
+    
+    //  MARK: implement in future version
+    //functions suggested by wife, need implimenting in future versions
+//    implement a master switch
+//
+//    @objc func switchAllOn() {
+//        ArrayOfLettersSwitchedOff = []
+//        switchTheSwitches()
+//    }
+//    @objc func switchAllOff() {
 //        ArrayOfLettersSwitchedOff = letterArray
-        switchTheSwitches()
-    }
+//        switchTheSwitches()
+//    }
 
-    
-    
-    
+//    when a switch is flipped, handle the array organizing
     @objc func switchDidChange(_ sender: UISwitch){
         //track which switch is being flipped
-        print("sender is \(sender.tag)")
+//        print("sender is \(sender.tag)")
         
-        //check if the flipped switch is switched on now.  if so check if that card is currently in the "dont use these cards" list
+        //check if the flipped switch is switched on now.  if so check if that card is currently in the "dont use these cards(ArrayOfLettersSwitchedOff)" list
         if sender.isOn == true && ArrayOfLettersSwitchedOff.contains(sender.tag) == true {
             //find the index of the card in the "array of letters switched off"
             if let i = ArrayOfLettersSwitchedOff.firstIndex(of: sender.tag) {
                 //remove that card from the array of letters switched off
                 ArrayOfLettersSwitchedOff.remove(at: i)
             }
-        }// end if
-        //check if the flipped switch is off now.  if so make sure that card wasn't already removed from the "don't use these cards array"
+        }// end if sender.isOn == true
+        //check if the flipped switch is off now.  if so make sure that card wasn't already removed from the "don't use these cards array(ArrayOfLettersSwitchedOff)"
         if sender.isOn == false && ArrayOfLettersSwitchedOff.contains(sender.tag) == false {
             //add the selected card to the "don't use these cards array"
             ArrayOfLettersSwitchedOff.append(sender.tag)
-        } // end if
+        } // end if sender.isOn == false
     } // end objc
     
     //MARK: prepare for segue
@@ -117,7 +124,7 @@ class NicknamesViewController: UIViewController  {
             defaults.setValue(ArrayOfLettersSwitchedOff, forKey: Constants.PASSING_ARRAY_OF_LETTERS_SWITCHED_OFF)
     }
     }
-        
+//        handle matching the arrays to the switches and adjust the switches to match the array as needed
     func switchTheSwitches() {
         //put all cell switches in their proper position
         for index in 0...letterArray.count - 1 {
@@ -137,7 +144,7 @@ extension NicknamesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //create an instance of the class that runs the method to create the list of all the cards
         let NicknamesVCInstanceOfNicknamesArray = NicknamesArray()
-        //create the array of all cards
+        //create the array of all cards using the user's selected deck
         let letterArray = NicknamesVCInstanceOfNicknamesArray.createArray(chosenArray: buttonSelectedAndPassed)
         //set the class property letterArray as a list of all the cards as well so that it can be used in other methods
         self.letterArray = letterArray
@@ -151,18 +158,17 @@ extension NicknamesViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        handle the switches so that they match the chosen arrays
         switchTheSwitches()
-        //pull the data from the "array of all cards" for each cell
+        //pull the data from the array of user's chosen deck for each cell
         let letter = letterArray[indexPath.row]
         
         //assign pulled data to the appropriate cell and its parts
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.NICKNAMES_CELL_REUSE_IDENTIFIER) as! CustomTableViewCell
         
-        //customize the cellview for rounded corners
+        //customize the cellview
         cell.cellView.translatesAutoresizingMaskIntoConstraints = false
         cell.cellView.layer.cornerRadius = 10
-//        cell.cellView.heightAnchor.constraint(equalToConstant: 40.0).isActive = true
-//        cell.cellView.backgroundColor = .clear
         cell.backgroundColor = .clear
         
         //set the text in each cell to the nicknames of each card
@@ -172,8 +178,6 @@ extension NicknamesViewController: UITableViewDelegate, UITableViewDataSource {
         cell.nicknamesLabel.textAlignment = .center
         cell.nicknamesLabel.shadowColor = .black
         cell.nicknamesLabel.shadowOffset = CGSize(width: 2, height: 2)
-//        cell.nicknamesLabel.topAnchor.constraint(equalTo: cell.cellView.topAnchor).isActive = true
-//        cell.nicknamesLabel.bottomAnchor.constraint(equalTo: cell.cellView.bottomAnchor).isActive = true
         
         //add switch programmatically so that i can track tag numbers
         let switchView = UISwitch(frame: .zero)

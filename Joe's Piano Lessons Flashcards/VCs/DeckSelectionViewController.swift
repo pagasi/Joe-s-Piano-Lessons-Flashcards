@@ -10,8 +10,6 @@ import UIKit
 class DeckSelectionViewController: UIViewController {
 
     //    MARK: init
-    
-    @IBOutlet weak var stackView1: UIStackView!
 
     var mainStack = UIStackView()
     var stack = UIStackView()
@@ -22,18 +20,7 @@ class DeckSelectionViewController: UIViewController {
     var stack2XConstraint = NSLayoutConstraint()
     var stack2YConstraint = NSLayoutConstraint()
     
-//    init(stackXConstraint: NSLayoutConstraint, stackYConstraint: NSLayoutConstraint, stack2XConstraint: NSLayoutConstraint, var stack2YConstraint: NSLayoutConstraint){
-//        self.stackXConstraint = stackXConstraint
-//        self.stackYConstraint = stackYConstraint
-//        self.stack2XConstraint = stack2XConstraint
-//        self.stack2YConstraint = stack2YConstraint
-//    }
-//
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-    
-    
+//  setup buttons for deck selection view controller
     lazy var beginnerDeckButton: SelectionButton = {
         let button = SelectionButton(title: "Beginner Deck")
         button.addTarget(self, action: #selector(levelBButtonPressed), for: .touchUpInside)
@@ -85,25 +72,27 @@ class DeckSelectionViewController: UIViewController {
         stackConstraints()
     }
     
+//    run constriants for the stacks
     func stackConstraints() {
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack2.translatesAutoresizingMaskIntoConstraints = false
 
         stack.widthAnchor.constraint(equalToConstant: 250).isActive = true
         stack2.widthAnchor.constraint(equalToConstant: 250).isActive = true
-
+        
+//  handle device's orientation
         stackRotation()
     }
     
     //    MARK: willTransition
         override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
-            
+//            handle device's orientation before transitioning to new view controller
             stackRotation()
         }
     
     
     //MARK: methods
-    
+//    setup the stacks to handle orientation change by adding the buttons to two seperate stacks which can be put into the mainstack and switched from vertical to horizontal views
     func stackSetup() {
         stack = UIStackView(arrangedSubviews: [beginnerDeckButton, level1Button, sec45Button])
         stack2 = UIStackView(arrangedSubviews: [sec16Button, trebleOnlyButton, bassOnlyButton, fullDeckButton])
@@ -122,12 +111,15 @@ class DeckSelectionViewController: UIViewController {
         view.addSubview(stack2)
     }
     
+//    function to handle device orientation change
     func stackRotation() {
-        //if is in or goes into landscape
+        // check if the device is in or goes into landscape
         if UIDevice.current.orientation.isLandscape == true {
-
+            
+// clean out previous constraints to setup new ones
             [stackXConstraint, stackYConstraint, stack2XConstraint, stack2YConstraint].forEach {NSLayoutConstraint.deactivate([$0])}
             
+//            setup constraints for landscape view
             stackXConstraint = stack.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor, constant: -140)
             stackYConstraint = stack.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor)
             stack2XConstraint = stack2.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor, constant: 140)
@@ -136,11 +128,11 @@ class DeckSelectionViewController: UIViewController {
             [stackXConstraint, stackYConstraint, stack2XConstraint, stack2YConstraint].forEach {NSLayoutConstraint.activate([$0])}
             //[fortyFiveSecondButton, sixteenSecondButton, beginnerButton, fullDeckButton].forEach {switchHorizontalStack.addArrangedSubview($0)}
         } else {
-//                mainStack.axis = .vertical
-//                mainStack.widthAnchor.constraint(equalToConstant: 250).isActive = true
-            
+//          if the check says that the device is portrait or goes into portrait
+//          clean out previous constraints to make room for portrait constraints
             [stackXConstraint, stackYConstraint, stack2XConstraint, stack2YConstraint].forEach {NSLayoutConstraint.deactivate([$0])}
             
+//            setup new portrait mode constraints
             stackYConstraint = stack.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor, constant: -120)
             stackXConstraint = stack.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor)
             stack2YConstraint = stack2.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor, constant: 90)
@@ -150,49 +142,51 @@ class DeckSelectionViewController: UIViewController {
     }
     
     //    MARK: @objc funcs
+//    if any button is pressed, set the buttonSelected to pass forward in the prepare for segue, and then segue to nicknames vc
     @objc func levelBButtonPressed() {
         buttonSelected = 0
-        performSegue(withIdentifier: Constants.DECK_TO_NICKNAMES_VC_SEGUE_IDENTIFIER, sender: self)
+        goToNicknamesVC()
     }
     
     @objc func level1ButtonPressed() {
         buttonSelected = 1
-        goToFlashVC()
+        goToNicknamesVC()
     }
     
     @objc func sec45ButtonPressed() {
         buttonSelected = 2
-        goToFlashVC()
+        goToNicknamesVC()
     }
     
     @objc func sec16ButtonPressed() {
         buttonSelected = 3
-        goToFlashVC()
+        goToNicknamesVC()
     }
     
     @objc func fullDeckButtonPressed() {
         buttonSelected = 4
-        goToFlashVC()
+        goToNicknamesVC()
     }
     
     @objc func trebleOnlyButtonPressed() {
         buttonSelected = 5
-        goToFlashVC()
+        goToNicknamesVC()
     }
     
     @objc func bassOnlyButtonPressed() {
         buttonSelected = 6
-        goToFlashVC()
+        goToNicknamesVC()
     }
     
 //    MARK: segue
+//    pass the button selected forward to the nicknames vc
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)  {
         //pass to segue
         let newVC = segue.destination as! NicknamesViewController
         newVC.buttonSelectedAndPassed = buttonSelected
     }
-    
-    func goToFlashVC() {
+//    segue to nicknames VC
+    func goToNicknamesVC() {
         performSegue(withIdentifier: Constants.DECK_TO_NICKNAMES_VC_SEGUE_IDENTIFIER, sender: self)
     }
 }

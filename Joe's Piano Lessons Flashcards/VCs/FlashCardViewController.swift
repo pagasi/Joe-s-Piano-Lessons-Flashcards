@@ -34,9 +34,10 @@ class FlashCardViewController: UIViewController  {
     var score: ScoreLog = ScoreLog(score: 0, date: Date())
     var chosenArrayPassed: Int = 0
     var passingArrayOfLettersSwitchedOff = [Int]()
+    
     lazy var upperViewConstraint = upperOrLeftStack.widthAnchor.constraint(equalToConstant: 250)
     
-    
+//    create the answer buttons
     lazy var AButton: AnswerButton = {
         let button = AnswerButton(title: "A")
         button.addTarget(self, action: #selector(AButtonPressed), for: .touchUpInside)
@@ -86,6 +87,7 @@ class FlashCardViewController: UIViewController  {
         
         //setup answerOptionStack with buttons
         layoutSetup()
+        
         // every time screen loads create object with flashcard data
         startUpFlashCards()
         newCard()
@@ -93,6 +95,7 @@ class FlashCardViewController: UIViewController  {
         rotationSetup()
     }
     //MARK: willtransition
+//    handle device orientation
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
         rotationSetup()
         
@@ -107,7 +110,7 @@ class FlashCardViewController: UIViewController  {
             //get the last letter in the name of the most recently displayed flashcard and see if it matches the chosen answer
             let lastLetter = chosenCountDetailView[finalArrayOfIndexes.last!].letterNickname.last!
             if lastLetter == "A" {
-                //if they were correct, get them a new card
+                //if they were correct, get a new card
                 newCard()
             } else {
                 //otherwise run the wrong answer method
@@ -207,24 +210,29 @@ class FlashCardViewController: UIViewController  {
     }
     
     //MARK: prepare for segue
+//    prepare to segue to the cartoon VC
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         //clean the screen up
         screenClean()
+        
         //change the cartoonVC image to the missed card's image
         let destinationVC = segue.destination as! CartoonViewController
         destinationVC.passingVar = chosenCountDetailView[finalArrayOfIndexes.last!].letterNickname
+        
         //add the card that was not correctly answered back into the deck so it comes back up later
         finalArrayOfIndexes.removeLast()
+        
         //run the newCard so that apon return to flashcard vc there is a new card showing and one index at 0 in the finalArrayOfIndexes
         newCard()
     }
     //MARK: methods / constraints
     
+//    handle device orientation
     func rotationSetup() {
         if UIDevice.current.orientation.isLandscape == true {
             mainStackView.axis = .horizontal
             mainStackView.distribution = .fillProportionally
-            
             upperViewConstraint.isActive = true
             
         } else {
@@ -234,7 +242,7 @@ class FlashCardViewController: UIViewController  {
             upperViewConstraint.isActive = false
         }
     }
-    
+//    layout the answerbuttons and constrain them
     func layoutSetup() {
         let arrayOfAnswerButtons = [AButton, BButton, CButton, DButton, EButton, FButton, GButton]
         
@@ -284,13 +292,13 @@ class FlashCardViewController: UIViewController  {
     func startUpFlashCards() {
         chosenCountDetailView = flashCardVCInstanceOfNicknamesArray.createArray(chosenArray: chosenArrayPassed)
         
-        //code to sift out the unwanted flashcards for the flashcardVC
+        //code to filter out the flashcards manualy removed with switches on the Nicknames VC from the user's selected deck on the deckSelection VC
         if passingArrayOfLettersSwitchedOff.count > 0 {
             for index in 0...passingArrayOfLettersSwitchedOff.count - 1{
                 chosenCountDetailView.remove(at: passingArrayOfLettersSwitchedOff[index])
             } // end loop
         }
-        print(chosenCountDetailView)
+//        print(chosenCountDetailView)
 
     } //end start up flashcards func
     
@@ -318,17 +326,14 @@ class FlashCardViewController: UIViewController  {
             
             //update or set the cardsRemaining text
             cardsRemaining.text = "\(chosenCountDetailView.count - finalArrayOfIndexes.count) / \(chosenCountDetailView.count)"
-            
-            
-            
-            
+
         } else {
             //            MARK: game over cleanup
             // if all the cards have been displayed, clean up properties, invalidate timer, capture score, and lock all the buttons by marking finished as true
             finalArrayOfIndexes = []
             grandStaffUIImage.image = UIImage(named: Constants.DONE_CARD_NAME)
             timer.invalidate()
-            //            capture the score for high score page
+            //            capture the score for future high score page
             score.score = count
             finished = true
         }

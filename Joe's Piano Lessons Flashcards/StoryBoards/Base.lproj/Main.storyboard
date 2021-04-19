@@ -20,9 +20,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y91-v9-LTc">
-                                <rect key="frame" x="340" y="728" width="20" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y91-v9-LTc">
+                                <rect key="frame" x="374" y="734" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="TT1-c0-UO6"/>
+                                    <constraint firstAttribute="width" constant="20" id="W2l-HH-DZI"/>
+                                </constraints>
                                 <state key="normal" image="info.circle.fill" catalog="system"/>
                                 <connections>
                                     <action selector="infobuttonpressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N48-xk-pSt"/>
@@ -31,8 +34,10 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y91-v9-LTc" secondAttribute="trailing" constant="20" id="5qG-gx-mgd"/>
                             <constraint firstItem="G8H-fx-9Q8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="B6u-dY-iQt"/>
                             <constraint firstAttribute="bottom" secondItem="G8H-fx-9Q8" secondAttribute="bottom" id="Ck2-Ia-OdI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="y91-v9-LTc" secondAttribute="bottom" constant="20" id="Eu1-ZK-V4V"/>
                             <constraint firstItem="G8H-fx-9Q8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Tgh-u9-FDQ"/>
                             <constraint firstAttribute="trailing" secondItem="G8H-fx-9Q8" secondAttribute="trailing" id="Ws6-yr-cKB"/>
                         </constraints>
@@ -91,11 +96,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1287"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Gjx-lQ-C3c">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="0.50436108729999996" colorSpace="custom" customColorSpace="sRGB"/>
-                            </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Vf-OS-Gza">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1267"/>
                                 <subviews>
@@ -103,8 +103,8 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1375"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7pr-tB-A6x">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="1375"/>
-                                                <mutableString key="text">Joe's Piano Lessons Flash Cards - Privacy Policy and Terms and Conditions
+                                                <rect key="frame" x="20" y="0.0" width="374" height="1375"/>
+                                                <string key="text">Joe's Piano Lessons Flash Cards - Privacy Policy and Terms and Conditions
 
 
 Introduction
@@ -132,18 +132,18 @@ If you have a question about this privacy and how your data is collected, used a
 
 Changes and Updates
 
-If Joe's Piano Lessons Flash Cards makes changes to Terms and Conditions or Privacy Policy, these changes will be posted on this page in a timely manner. We reserve the right to modify these terms &amp; conditions and/or privacy policy at any time, so please review it frequently (at least on every app update).</mutableString>
+If Joe's Piano Lessons Flash Cards makes changes to Terms and Conditions or Privacy Policy, these changes will be posted on this page in a timely manner. We reserve the right to modify these terms &amp; conditions and/or privacy policy at any time, so please review it frequently (at least on every app update).</string>
                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                                 <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="0.50436108729999996" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1375" id="cfP-uv-sZj"/>
-                                            <constraint firstItem="7pr-tB-A6x" firstAttribute="leading" secondItem="VaF-F7-IQy" secondAttribute="leading" id="f8e-5o-l8m"/>
+                                            <constraint firstItem="7pr-tB-A6x" firstAttribute="leading" secondItem="VaF-F7-IQy" secondAttribute="leading" constant="20" id="f8e-5o-l8m"/>
                                             <constraint firstItem="7pr-tB-A6x" firstAttribute="top" secondItem="VaF-F7-IQy" secondAttribute="top" id="gFN-uZ-4Ra"/>
-                                            <constraint firstAttribute="trailing" secondItem="7pr-tB-A6x" secondAttribute="trailing" id="oCZ-U3-JOm"/>
+                                            <constraint firstAttribute="trailing" secondItem="7pr-tB-A6x" secondAttribute="trailing" constant="20" id="oCZ-U3-JOm"/>
                                             <constraint firstAttribute="bottom" secondItem="7pr-tB-A6x" secondAttribute="bottom" id="tUa-nw-Ysm"/>
                                         </constraints>
                                     </view>
@@ -176,7 +176,7 @@ If Joe's Piano Lessons Flash Cards makes changes to Terms and Conditions or Priv
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EKe-b5-Wgr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="59" y="942"/>
+            <point key="canvasLocation" x="30" y="1101"/>
         </scene>
         <!--Settings-->
         <scene sceneID="1er-bp-rIo">

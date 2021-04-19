@@ -17,10 +17,7 @@
 		6F16AE6025BEF9D7005ADDFE /* CartoonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE5F25BEF9D7005ADDFE /* CartoonViewController.swift */; };
 		6F16AE6425BEF9EE005ADDFE /* NicknamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE6325BEF9EE005ADDFE /* NicknamesViewController.swift */; };
 		6F16AE6725BEFA01005ADDFE /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE6625BEFA01005ADDFE /* AboutViewController.swift */; };
-		6F16AE6D25BEFAFF005ADDFE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE6C25BEFAFF005ADDFE /* SettingsViewController.swift */; };
 		6F16AE7425C06261005ADDFE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE7325C06261005ADDFE /* Constants.swift */; };
-		6F16AE7825C0689D005ADDFE /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE7725C0689D005ADDFE /* CacheManager.swift */; };
-		6F16AE7D25C09E95005ADDFE /* notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE7C25C09E95005ADDFE /* notes.swift */; };
 		6F16AE8125C1A227005ADDFE /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE8025C1A227005ADDFE /* CustomTableViewCell.swift */; };
 		6F16AE8525C1B285005ADDFE /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE8425C1B285005ADDFE /* Letter.swift */; };
 		6F16AE8925C1B9A3005ADDFE /* NicknamesArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE8825C1B9A3005ADDFE /* NicknamesArray.swift */; };
@@ -55,10 +52,7 @@
 		6F16AE5F25BEF9D7005ADDFE /* CartoonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartoonViewController.swift; sourceTree = "<group>"; };
 		6F16AE6325BEF9EE005ADDFE /* NicknamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknamesViewController.swift; sourceTree = "<group>"; };
 		6F16AE6625BEFA01005ADDFE /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		6F16AE6C25BEFAFF005ADDFE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		6F16AE7325C06261005ADDFE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		6F16AE7725C0689D005ADDFE /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
-		6F16AE7C25C09E95005ADDFE /* notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notes.swift; sourceTree = "<group>"; };
 		6F16AE8025C1A227005ADDFE /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		6F16AE8425C1B285005ADDFE /* Letter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letter.swift; sourceTree = "<group>"; };
 		6F16AE8825C1B9A3005ADDFE /* NicknamesArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknamesArray.swift; sourceTree = "<group>"; };
@@ -122,7 +116,6 @@
 				6F16AE5E25BEF99D005ADDFE /* VCs */,
 				6F16AE7625C06883005ADDFE /* Helpers */,
 				6F16AE5125BEF54F005ADDFE /* Info.plist */,
-				6FCB95F925FA4A2E002AA57E /* not used */,
 			);
 			path = "Joe's Piano Lessons Flashcards";
 			sourceTree = "<group>";
@@ -147,7 +140,6 @@
 		6F16AE7625C06883005ADDFE /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				6F16AE7C25C09E95005ADDFE /* notes.swift */,
 				6F16AE7325C06261005ADDFE /* Constants.swift */,
 			);
 			path = Helpers;
@@ -202,15 +194,6 @@
 				6F4C17432609A2EB005D665F /* GameKit.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		6FCB95F925FA4A2E002AA57E /* not used */ = {
-			isa = PBXGroup;
-			children = (
-				6F16AE7725C0689D005ADDFE /* CacheManager.swift */,
-				6F16AE6C25BEFAFF005ADDFE /* SettingsViewController.swift */,
-			);
-			path = "not used";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,14 +274,11 @@
 				6F7E230D25E18636005E4A77 /* DeckSelectionViewController.swift in Sources */,
 				6F16AE4425BEF54C005ADDFE /* AppDelegate.swift in Sources */,
 				6FBBB7D625D2B6A40000DB0B /* SelectionButton.swift in Sources */,
-				6F16AE6D25BEFAFF005ADDFE /* SettingsViewController.swift in Sources */,
-				6F16AE7D25C09E95005ADDFE /* notes.swift in Sources */,
 				6F16AE6425BEF9EE005ADDFE /* NicknamesViewController.swift in Sources */,
 				6F16AE4625BEF54C005ADDFE /* SceneDelegate.swift in Sources */,
 				6F16AE7425C06261005ADDFE /* Constants.swift in Sources */,
 				6FBBB84B25DB01AF0000DB0B /* ScaleData.swift in Sources */,
 				6F16AE8525C1B285005ADDFE /* Letter.swift in Sources */,
-				6F16AE7825C0689D005ADDFE /* CacheManager.swift in Sources */,
 				6F16AE5925BEF574005ADDFE /* MainViewController.swift in Sources */,
 				6FBBB7FF25D40B020000DB0B /* ScoreLog.swift in Sources */,
 				6FBBB85225DC83C70000DB0B /* Scales2ViewController.swift in Sources */,

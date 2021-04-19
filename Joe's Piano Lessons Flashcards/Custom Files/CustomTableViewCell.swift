@@ -11,7 +11,7 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var nicknamesLabel: UILabel!
     @IBOutlet weak var cellView: UIView!
     
-    
+//    This class provides a custom UITableCiewCell for the Nicknames View Controller's tableview
 
 }
 

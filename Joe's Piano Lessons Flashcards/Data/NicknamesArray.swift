@@ -10,6 +10,8 @@ import UIKit
 class NicknamesArray {
     var tempSwitch: UISwitch = UISwitch()
     
+//   createArray is a func that returns the deck requested by the user or all letters if none was selected.  these will be displayed on the nicknames View Controller to either edit the deck further or run the deck
+    
     func createArray(chosenArray:Int) -> [Letter]{
         var tempArray: [Letter] = []
         var tempArray2: [Letter] = []
@@ -60,11 +62,11 @@ class NicknamesArray {
         let letter37: Letter = Letter(letterNickname: Constants.GREAT_ELEPHANT_E, letterSwitch: tempSwitch)
         
         //MARK: fill arrays
-        //        fill tempArray1 for eases of access to the letters in an array
+        //        fill tempArray1 for ease of access to the letters in an array
         tempArray.append(contentsOf:[letter0, letter1, letter2, letter3, letter4, letter5, letter6, letter7, letter8, letter9, letter10, letter11, letter12, letter13, letter14, letter15, letter16, letter17, letter18, letter19, letter20, letter21, letter22, letter23, letter24, letter25, letter26, letter27, letter28, letter29, letter30, letter31, letter32, letter33, letter34, letter35, letter36, letter37])
         
         
-        //        fill and return the approriate letters in tempArray2
+        //        fill and return the approriate letters in tempArray2 depending on deck selected by user
         switch chosenArray {
         case 0:
             //fill for FF level B
@@ -104,7 +106,7 @@ class NicknamesArray {
             tempArray2.append(contentsOf: [tempArray[24], tempArray[25], tempArray[27], tempArray[29], tempArray[31], tempArray[34], tempArray[36], tempArray[37]])
         default:
             for index in 0...37 {tempArray2.append(tempArray[index])}
-            print("flashcard array not selected yet, whole array filled")
+//            print("flashcard array not selected yet, whole array filled")
         }
         
         return tempArray2

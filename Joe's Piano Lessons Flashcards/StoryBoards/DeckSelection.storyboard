@@ -181,7 +181,6 @@
                     <connections>
                         <outlet property="goButton" destination="JWU-km-hzr" id="63Z-94-gTo"/>
                         <outlet property="mainStackNicknamesVC" destination="qdG-ro-Mv3" id="oHs-nH-5sr"/>
-                        <outlet property="nicknameView" destination="6yr-hF-QSg" id="oTM-wa-PMc"/>
                         <outlet property="nicknamesImage" destination="JEo-LM-9D1" id="33b-yy-qNL"/>
                         <outlet property="nicknamesTableView" destination="5wn-iz-75G" id="bZP-b1-nci"/>
                         <outlet property="nicknamesViewLabel" destination="1nc-lU-ePA" id="gzM-3f-lgf"/>

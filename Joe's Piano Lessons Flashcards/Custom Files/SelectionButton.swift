@@ -7,6 +7,7 @@
 
 import UIKit
 
+// SelectionButton class provides the configuration for buttons on the Main VC and DeckSelection VC
 class SelectionButton: UIButton {
 
 //    override init(frame: CGRect) {
@@ -18,7 +19,7 @@ class SelectionButton: UIButton {
         backgroundColor = .systemBlue
         layer.opacity = 1
         setTitle(title, for: .normal)
-        titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
         setTitleColor(.black, for: .normal)
         layer.borderWidth = 2
         layer.cornerRadius = 10

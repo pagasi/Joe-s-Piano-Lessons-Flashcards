@@ -6,10 +6,9 @@
 //
 
 import UIKit
-
+// the AnswerButton class provides configurations for the buttons that give the answers during a flashcard run
 class AnswerButton: UIButton {
 
-        //MARK:  needs to be set for answer buttons on flashcards
         init(title: String) {
             super.init(frame: .zero)
             

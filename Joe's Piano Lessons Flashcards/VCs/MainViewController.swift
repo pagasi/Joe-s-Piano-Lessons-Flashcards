@@ -10,11 +10,12 @@ import UIKit
 
 class MainViewController: UIViewController {
     //MARK: INIT
-    @IBOutlet weak var stackView1: UIStackView!
+
     @IBOutlet weak var infobutton: UIButton!
     
     let defaults = UserDefaults.standard
     
+//    setup the buttons for the mainscreen
     lazy var quickStartButton: SelectionButton = {
         let button = SelectionButton(title: "Flashcards (redo last deck)")
 //        button.heightAnchor.constraint(equalToConstant: 500).isActive = true
@@ -40,17 +41,12 @@ class MainViewController: UIViewController {
 //        button.addTarget(self, action: #selector(settingsButtonPressed), for: .touchUpInside)
 //        return button
 //    }()
-//    
-//    lazy var aboutButton: SelectionButton = {
-//        let button = SelectionButton(title: "About Joe's Piano Lessons")
-//        button.addTarget(self, action: #selector(aboutButtonPressed), for: .touchUpInside)
-//        return button
-//    }()
+
     //MARK: life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let stack = UIStackView(arrangedSubviews: [quickStartButton, flashButton, scalesButton, /*aboutButton, settingsButton*/])
+//        setup the stack to contain the buttons, add it to the View, and setup constraints
+        let stack = UIStackView(arrangedSubviews: [quickStartButton, flashButton, scalesButton, /*settingsButton*/])
         stack.axis = .vertical
         stack.spacing = 15
         stack.distribution = .fillEqually
@@ -63,23 +59,25 @@ class MainViewController: UIViewController {
 
     }
     //MARK: IBActions
+//    if info button is pressed, segue to the AboutViewControler
     @IBAction func infobuttonpressed(_ sender: Any) {
         
         performSegue(withIdentifier: Constants.ABOUT_BUTTON_TO_ABOUTVC_SEGUE_IDENTIFIER, sender: self)
     }
     
     //MARK: @objc funcs
+//    if the flashbutton is pressed, segue to the nicknames view controller
     @objc func flashButtonPressed() {
         performSegue(withIdentifier: Constants.FLASHCARD_BUTTON_TO_NICKNAMESVC_SEGUE_IDENTIFIER, sender: self)
     }
-    
+//    if the quickstart button is pressed, segue to the flash card view controller to start a run
     @objc func quickStartButtonPressed() {
         performSegue(withIdentifier: Constants.QUICK_START_BUTTON_TO_FLASH_CARDSVC_SEGUE, sender: self)
         //insert code to setup userDefaults
         
         
     }
-    
+//    if the scales button is pressed, segue to the scales tab bar view controller
     @objc func scalesButtonPressed() {
         performSegue(withIdentifier: Constants.SCALES_BUTTON_TO_SCALESVC_SEGUE_IDENTIFIER, sender: self)
     }
@@ -87,12 +85,10 @@ class MainViewController: UIViewController {
     //    @objc func settingsButtonPressed() {
     //        performSegue(withIdentifier: Constants.SETTINGS_BUTTON_TO_SETTINGSVC_SEGUE_IDENTIFIER, sender: self)
     //    }
-//
-//    @objc func aboutButtonPressed() {
-//        performSegue(withIdentifier: Constants.ABOUT_BUTTON_TO_ABOUTVC_SEGUE_IDENTIFIER, sender: self)
-//    }
+
     
     //MARK: methods
+//    check if the user has selected to go to the flash card view controller with the quickstart button.  If so, pull the last deck used from the userdefaults
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constants.QUICK_START_BUTTON_TO_FLASH_CARDSVC_SEGUE {
             let vc = segue.destination as!FlashCardViewController
@@ -109,12 +105,3 @@ class MainViewController: UIViewController {
         }
     }
 }
-
-
-
-//MARK: Notes
-
-
-
-
-
