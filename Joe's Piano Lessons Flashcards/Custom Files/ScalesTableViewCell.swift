@@ -84,7 +84,7 @@ class ScalesTableViewCell: UITableViewCell {
             case 4 :
                 createLHLabels(scale: scaleArray[tableIndex], Hstack: horizontalStackView, inLandscape: inLandscape)
             default:
-                print ("They made me do it.")
+                break
             }
         }
     }

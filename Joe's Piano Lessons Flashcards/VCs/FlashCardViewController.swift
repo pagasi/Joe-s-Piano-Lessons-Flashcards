@@ -316,7 +316,7 @@ class FlashCardViewController: UIViewController  {
             var randomNumber = Int.random(in: 0...chosenCountDetailView.count - 1)
             //check of that card has already been done
             while finalArrayOfIndexes.contains(randomNumber) == true {
-                print("duplicate")
+//                print("duplicate")
                 randomNumber = Int.random(in: 0...chosenCountDetailView.count - 1)
             }
             //add this card to the list of used cards

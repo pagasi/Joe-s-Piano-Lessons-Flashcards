@@ -100,10 +100,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1267"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VaF-F7-IQy">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1375"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7pr-tB-A6x">
-                                                <rect key="frame" x="20" y="0.0" width="374" height="1375"/>
+                                                <rect key="frame" x="35" y="0.0" width="344" height="1500"/>
                                                 <string key="text">Joe's Piano Lessons Flash Cards - Privacy Policy and Terms and Conditions
 
 
@@ -140,10 +140,10 @@ If Joe's Piano Lessons Flash Cards makes changes to Terms and Conditions or Priv
                                         </subviews>
                                         <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="0.50436108729999996" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1375" id="cfP-uv-sZj"/>
-                                            <constraint firstItem="7pr-tB-A6x" firstAttribute="leading" secondItem="VaF-F7-IQy" secondAttribute="leading" constant="20" id="f8e-5o-l8m"/>
+                                            <constraint firstAttribute="height" constant="1500" id="cfP-uv-sZj"/>
+                                            <constraint firstItem="7pr-tB-A6x" firstAttribute="leading" secondItem="VaF-F7-IQy" secondAttribute="leading" constant="35" id="f8e-5o-l8m"/>
                                             <constraint firstItem="7pr-tB-A6x" firstAttribute="top" secondItem="VaF-F7-IQy" secondAttribute="top" id="gFN-uZ-4Ra"/>
-                                            <constraint firstAttribute="trailing" secondItem="7pr-tB-A6x" secondAttribute="trailing" constant="20" id="oCZ-U3-JOm"/>
+                                            <constraint firstAttribute="trailing" secondItem="7pr-tB-A6x" secondAttribute="trailing" constant="35" id="oCZ-U3-JOm"/>
                                             <constraint firstAttribute="bottom" secondItem="7pr-tB-A6x" secondAttribute="bottom" id="tUa-nw-Ysm"/>
                                         </constraints>
                                     </view>
