@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F12D65D27CFFECA006D1888 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F12D65C27CFFECA006D1888 /* SettingsViewController.swift */; };
 		6F16AE4425BEF54C005ADDFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE4325BEF54C005ADDFE /* AppDelegate.swift */; };
 		6F16AE4625BEF54C005ADDFE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE4525BEF54C005ADDFE /* SceneDelegate.swift */; };
 		6F16AE4B25BEF54C005ADDFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F16AE4925BEF54C005ADDFE /* Main.storyboard */; };
@@ -21,7 +22,6 @@
 		6F16AE8125C1A227005ADDFE /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE8025C1A227005ADDFE /* CustomTableViewCell.swift */; };
 		6F16AE8525C1B285005ADDFE /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE8425C1B285005ADDFE /* Letter.swift */; };
 		6F16AE8925C1B9A3005ADDFE /* NicknamesArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16AE8825C1B9A3005ADDFE /* NicknamesArray.swift */; };
-		6F4C17442609A2EB005D665F /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F4C17432609A2EB005D665F /* GameKit.framework */; };
 		6F7E230D25E18636005E4A77 /* DeckSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7E230C25E18636005E4A77 /* DeckSelectionViewController.swift */; };
 		6F7E231025E186CF005E4A77 /* FlashCards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F7E230F25E186CF005E4A77 /* FlashCards.storyboard */; };
 		6F7E231425E18D28005E4A77 /* Scales.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F7E231325E18D28005E4A77 /* Scales.storyboard */; };
@@ -40,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F12D65C27CFFECA006D1888 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		6F16AE4025BEF54C005ADDFE /* Joe's Piano Lessons Flashcards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Joe's Piano Lessons Flashcards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F16AE4325BEF54C005ADDFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F16AE4525BEF54C005ADDFE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,7 +80,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F4C17442609A2EB005D665F /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +133,7 @@
 				6FBBB85625DC8F040000DB0B /* Scales3ViewController.swift */,
 				6FBBB85925DC8F110000DB0B /* Scales4ViewController.swift */,
 				6F16AE6625BEFA01005ADDFE /* AboutViewController.swift */,
+				6F12D65C27CFFECA006D1888 /* SettingsViewController.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -292,6 +293,7 @@
 				6F7E234725E69EF4005E4A77 /* DefaultsModel.swift in Sources */,
 				6FBBB80F25D6BDCB0000DB0B /* AnswerButton.swift in Sources */,
 				6FBBB84825DB013F0000DB0B /* ScaleModel.swift in Sources */,
+				6F12D65D27CFFECA006D1888 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

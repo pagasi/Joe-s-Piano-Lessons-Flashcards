@@ -37,6 +37,7 @@ class ScalesTableViewCell: UITableViewCell {
         if setupComplete == true {
 //            clean the subviews of the mainstack then remove the mainstack to prepare for the next cell in the deque
             for _ in 0...5 {
+//                as each loop deletes the 0 position in the array, the position 0 becomes what used to be position 1 until there are no more positions to delete
                 mainStack.subviews[0].removeFromSuperview()
             }
         }

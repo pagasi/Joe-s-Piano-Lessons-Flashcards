@@ -13,6 +13,8 @@ class MainViewController: UIViewController {
 
     @IBOutlet weak var infobutton: UIButton!
     
+    @IBOutlet weak var settingsButton: UIButton!
+    
     let defaults = UserDefaults.standard
     
 //    setup the buttons for the mainscreen
@@ -64,6 +66,13 @@ class MainViewController: UIViewController {
         
         performSegue(withIdentifier: Constants.ABOUT_BUTTON_TO_ABOUTVC_SEGUE_IDENTIFIER, sender: self)
     }
+    
+    //    if settings button is pressed, segue to the SettingsViewControler
+    @IBAction func settingsButtonPressed(_ sender: Any) {
+        
+        performSegue(withIdentifier: Constants.SETTINGS_BUTTON_TO_SETTINGSVC_SEGUE_IDENTIFIER, sender: self)
+    }
+
     
     //MARK: @objc funcs
 //    if the flashbutton is pressed, segue to the nicknames view controller
