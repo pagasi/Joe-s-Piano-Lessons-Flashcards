@@ -64,10 +64,18 @@ class NicknamesViewController: UIViewController  {
     
 //    check if the user is selecting the same deck they used last time so that the same letters they chose manually last time can be provided now
    func checkUserDefaults() {
-    let defaultsCheck = defaults.integer(forKey: Constants.CHOSEN_ARRAY_PASSED)
-    if buttonSelectedAndPassed == defaultsCheck {
+       
+       
+       let userSelected = defaults.integer(forKey: Constants.USER_SELECTED)
+    let defaultsCheck1 = defaults.integer(forKey: Constants.CHOSEN_ARRAY_PASSED)
+    let defaultsCheck2 = defaults.integer(forKey: Constants.CHOSEN_ARRAY_PASSED2)
+       
+    if userSelected == 1 && buttonSelectedAndPassed == defaultsCheck1 {
         ArrayOfLettersSwitchedOff = defaults.object(forKey: Constants.PASSING_ARRAY_OF_LETTERS_SWITCHED_OFF) as? [Int] ?? []
         }
+    if userSelected == 2 && buttonSelectedAndPassed == defaultsCheck2 {
+           ArrayOfLettersSwitchedOff = defaults.object(forKey: Constants.PASSING_ARRAY_OF_LETTERS_SWITCHED_OFF2) as? [Int] ?? []
+           }
     }
     
     
@@ -120,8 +128,17 @@ class NicknamesViewController: UIViewController  {
         //set the arrays of unwanted cards equal in both view controllers
         destinationVC.passingArrayOfLettersSwitchedOff = ArrayOfLettersSwitchedOff
         //add chosenArrayPassed & passingArrayOfLettersSwitchedOff to the save
-            defaults.setValue(buttonSelectedAndPassed, forKey: Constants.CHOSEN_ARRAY_PASSED)
-            defaults.setValue(ArrayOfLettersSwitchedOff, forKey: Constants.PASSING_ARRAY_OF_LETTERS_SWITCHED_OFF)
+            let userSelected = defaults.integer(forKey: Constants.USER_SELECTED)
+            if userSelected == 2 {
+            
+            defaults.setValue(buttonSelectedAndPassed, forKey: Constants.CHOSEN_ARRAY_PASSED2)
+            defaults.setValue(ArrayOfLettersSwitchedOff, forKey: Constants.PASSING_ARRAY_OF_LETTERS_SWITCHED_OFF2)
+//                print(userSelected)
+            } else {
+                defaults.setValue(buttonSelectedAndPassed, forKey: Constants.CHOSEN_ARRAY_PASSED)
+                defaults.setValue(ArrayOfLettersSwitchedOff, forKey: Constants.PASSING_ARRAY_OF_LETTERS_SWITCHED_OFF)
+//                print(userSelected)
+            }
     }
     }
 //        handle matching the arrays to the switches and adjust the switches to match the array as needed

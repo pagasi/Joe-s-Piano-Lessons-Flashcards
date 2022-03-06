@@ -227,6 +227,9 @@ If Joe's Piano Lessons Flash Cards makes changes to Terms and Conditions or Priv
                     <navigationItem key="navigationItem" title="Settings" id="0BU-gA-84x">
                         <barButtonItem key="backBarButtonItem" title=" " id="41I-Cs-GNl"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="userSwitch" destination="KyZ-Af-Ic5" id="dvo-ac-779"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lsa-7Y-9un" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

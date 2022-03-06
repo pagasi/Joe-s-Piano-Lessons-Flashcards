@@ -11,8 +11,16 @@ class ScalesViewController: UIViewController {
     
 //    set scale data to Major Scales one octave
     let VCInstanceOfScaleData = ScaleData()
-    var theArrayForVC2: [ScaleModel] = []
+    var theArrayForVC1: [ScaleModel] = []
     var inLandscape = UIDevice.current.orientation.isLandscape
+    
+//    lazy var cMajorButton: UIButton = {
+//        let button = UIButton()
+//
+//        button.addTarget(self, action: #selector(levelBButtonPressed), for: .touchUpInside)
+//        return button
+//    }()
+
     
 //    create table programattically
     let scaleTableView: UITableView = {
@@ -39,7 +47,7 @@ class ScalesViewController: UIViewController {
         scaleTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         scaleTableView.backgroundColor = .white
         
-        theArrayForVC2 = VCInstanceOfScaleData.createArray()
+        theArrayForVC1 = VCInstanceOfScaleData.createArray()
     }
 }
 
@@ -47,7 +55,7 @@ class ScalesViewController: UIViewController {
 
 extension ScalesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return theArrayForVC2.count
+        return theArrayForVC1.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

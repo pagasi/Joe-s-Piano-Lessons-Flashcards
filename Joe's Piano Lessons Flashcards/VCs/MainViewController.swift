@@ -102,15 +102,32 @@ class MainViewController: UIViewController {
         if segue.identifier == Constants.QUICK_START_BUTTON_TO_FLASH_CARDSVC_SEGUE {
             let vc = segue.destination as!FlashCardViewController
             
+            //check which user is active
+            let userCheck = defaults.integer(forKey: Constants.USER_SELECTED)
+            //impliment user 2 defaults
+            if userCheck == 2 {
             //retrieve chosenArrayPassed & passingArrayOfLettersSwitchedOff from the defaults
-            let buttonSelectedAndPassed = defaults.object(forKey: Constants.CHOSEN_ARRAY_PASSED ) as? Int ?? 4
+            let buttonSelectedAndPassed = defaults.object(forKey: Constants.CHOSEN_ARRAY_PASSED2 ) as? Int ?? 4
             
             let ifEmptyArray: [Int] = []
-            let ArrayOfLettersSwitchedOff = defaults.object(forKey: Constants.PASSING_ARRAY_OF_LETTERS_SWITCHED_OFF) as? [Int] ?? ifEmptyArray
+            let ArrayOfLettersSwitchedOff = defaults.object(forKey: Constants.PASSING_ARRAY_OF_LETTERS_SWITCHED_OFF2) as? [Int] ?? ifEmptyArray
             //pass the selected array to deck selection vc
             vc.chosenArrayPassed = buttonSelectedAndPassed
             //set the arrays of unwanted cards equal in both view controllers
             vc.passingArrayOfLettersSwitchedOff = ArrayOfLettersSwitchedOff
+            } else {
+                //implement user 1 defaults
+                
+                //retrieve chosenArrayPassed & passingArrayOfLettersSwitchedOff from the defaults
+                let buttonSelectedAndPassed = defaults.object(forKey: Constants.CHOSEN_ARRAY_PASSED ) as? Int ?? 4
+                
+                let ifEmptyArray: [Int] = []
+                let ArrayOfLettersSwitchedOff = defaults.object(forKey: Constants.PASSING_ARRAY_OF_LETTERS_SWITCHED_OFF) as? [Int] ?? ifEmptyArray
+                //pass the selected array to deck selection vc
+                vc.chosenArrayPassed = buttonSelectedAndPassed
+                //set the arrays of unwanted cards equal in both view controllers
+                vc.passingArrayOfLettersSwitchedOff = ArrayOfLettersSwitchedOff
+            }
         }
     }
 }
