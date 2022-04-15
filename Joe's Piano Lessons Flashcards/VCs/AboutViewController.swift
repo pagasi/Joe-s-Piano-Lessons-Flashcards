@@ -19,8 +19,8 @@ class AboutViewController: UIViewController {
         Joe's Piano Lessons Flash Cards
         Privacy Policy and Terms and Conditions
 
-        version 1.02
-        April 15th 2022
+        version 2.0
+        April 2022
         -Adds the ability to use two users through a settings button on the main screen to keep seperate decks for each user.
         -Fixes the bug that allows buttons to go off the screen on smaller phone sizes.
 
