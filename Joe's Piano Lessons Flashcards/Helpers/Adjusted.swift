@@ -15,7 +15,7 @@ class Device {
     // Base width in point, use iPhone 6
     static let base: CGFloat = 414
     static var ratio: CGFloat {
-//        print (UIScreen.main.bounds.width)
+        //        print (UIScreen.main.bounds.width)
         if UIDevice.current.model == "iPad" {
             return 1
         } else {

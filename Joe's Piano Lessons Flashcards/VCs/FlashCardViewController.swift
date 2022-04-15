@@ -21,8 +21,8 @@ class FlashCardViewController: UIViewController  {
     @IBOutlet weak var grandStaffUIImage: UIImageView!
     @IBOutlet weak var cardsRemaining: UILabel!
     
-
-//    let defaults = UserDefaults.standard
+    
+    //    let defaults = UserDefaults.standard
     let flashCardVCInstanceOfNicknamesArray = NicknamesArray()
     var finalArrayOfIndexes = [Int]()
     var chosenCountDetailView = [Letter]()
@@ -37,7 +37,7 @@ class FlashCardViewController: UIViewController  {
     
     lazy var upperViewConstraint = upperOrLeftStack.widthAnchor.constraint(equalToConstant: 250)
     
-//    create the answer buttons
+    //    create the answer buttons
     lazy var AButton: AnswerButton = {
         let button = AnswerButton(title: "A")
         button.addTarget(self, action: #selector(AButtonPressed), for: .touchUpInside)
@@ -95,7 +95,7 @@ class FlashCardViewController: UIViewController  {
         rotationSetup()
     }
     //MARK: willtransition
-//    handle device orientation
+    //    handle device orientation
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
         rotationSetup()
         
@@ -197,7 +197,7 @@ class FlashCardViewController: UIViewController  {
         if count < 10 {
             countTimerLabel.text = "timer: \(countMinutes):0\(count)"
         } else {
-        countTimerLabel.text = "timer: \(countMinutes):\(count)"
+            countTimerLabel.text = "timer: \(countMinutes):\(count)"
         }
     }
     
@@ -210,7 +210,7 @@ class FlashCardViewController: UIViewController  {
     }
     
     //MARK: prepare for segue
-//    prepare to segue to the cartoon VC
+    //    prepare to segue to the cartoon VC
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         //clean the screen up
@@ -228,7 +228,7 @@ class FlashCardViewController: UIViewController  {
     }
     //MARK: methods / constraints
     
-//    handle device orientation
+    //    handle device orientation
     func rotationSetup() {
         if UIDevice.current.orientation.isLandscape == true {
             mainStackView.axis = .horizontal
@@ -242,13 +242,13 @@ class FlashCardViewController: UIViewController  {
             upperViewConstraint.isActive = false
         }
     }
-//    layout the answerbuttons and constrain them
+    //    layout the answerbuttons and constrain them
     func layoutSetup() {
         let arrayOfAnswerButtons = [AButton, BButton, CButton, DButton, EButton, FButton, GButton]
         
         //add buttons to answerOptionsStack
         for index in 0...6 {
-        answerOptionsStack.addSubview(arrayOfAnswerButtons[index])
+            answerOptionsStack.addSubview(arrayOfAnswerButtons[index])
         }
         //answerOptionsStack constraints
         answerOptionsStack.axis = .horizontal
@@ -257,7 +257,7 @@ class FlashCardViewController: UIViewController  {
         answerOptionsStack.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         answerOptionsStack.leadingAnchor.constraint(equalTo: lowerOrRightStack.leadingAnchor).isActive = true
         answerOptionsStack.heightAnchor.constraint(equalToConstant: 100).isActive = true
-
+        
         //buttons constraints
         AButton.centerXAnchor.constraint(equalTo: lowerOrRightStack.centerXAnchor, constant: -165.adjusted).isActive = true
         BButton.centerXAnchor.constraint(equalTo: lowerOrRightStack.centerXAnchor, constant: -110.adjusted).isActive = true
@@ -272,7 +272,7 @@ class FlashCardViewController: UIViewController  {
         iDontKnowButton.layer.shadowRadius = 5
         iDontKnowButton.layer.shadowOffset = CGSize(width: 5, height: 5)
         iDontKnowButton.layer.shadowOpacity = 1
-
+        
         
         //grand staff shadow
         grandStaffUIImage.clipsToBounds = false
@@ -288,7 +288,7 @@ class FlashCardViewController: UIViewController  {
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerSelectorFunc), userInfo: nil, repeats: true)
     }
     
-
+    
     
     func startUpFlashCards() {
         chosenCountDetailView = flashCardVCInstanceOfNicknamesArray.createArray(chosenArray: chosenArrayPassed)
@@ -299,8 +299,8 @@ class FlashCardViewController: UIViewController  {
                 chosenCountDetailView.remove(at: passingArrayOfLettersSwitchedOff[index])
             } // end loop
         }
-//        print(chosenCountDetailView)
-
+        //        print(chosenCountDetailView)
+        
     } //end start up flashcards func
     
     
@@ -317,7 +317,7 @@ class FlashCardViewController: UIViewController  {
             var randomNumber = Int.random(in: 0...chosenCountDetailView.count - 1)
             //check of that card has already been done
             while finalArrayOfIndexes.contains(randomNumber) == true {
-//                print("duplicate")
+                //                print("duplicate")
                 randomNumber = Int.random(in: 0...chosenCountDetailView.count - 1)
             }
             //add this card to the list of used cards
@@ -327,7 +327,7 @@ class FlashCardViewController: UIViewController  {
             
             //update or set the cardsRemaining text
             cardsRemaining.text = "\(chosenCountDetailView.count - finalArrayOfIndexes.count) / \(chosenCountDetailView.count)"
-
+            
         } else {
             //            MARK: game over cleanup
             // if all the cards have been displayed, clean up properties, invalidate timer, capture score, and lock all the buttons by marking finished as true
@@ -365,5 +365,5 @@ class FlashCardViewController: UIViewController  {
         //reset the wrong answer counter to 0
         wrongAnswerCounter = 0
     }
-
+    
 }
