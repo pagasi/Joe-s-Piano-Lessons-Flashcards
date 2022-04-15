@@ -259,20 +259,21 @@ class FlashCardViewController: UIViewController  {
         answerOptionsStack.heightAnchor.constraint(equalToConstant: 100).isActive = true
 
         //buttons constraints
-        AButton.centerXAnchor.constraint(equalTo: lowerOrRightStack.centerXAnchor, constant: -165).isActive = true
-        BButton.centerXAnchor.constraint(equalTo: lowerOrRightStack.centerXAnchor, constant: -110).isActive = true
-        CButton.centerXAnchor.constraint(equalTo: lowerOrRightStack.centerXAnchor, constant: -55).isActive = true
+        AButton.centerXAnchor.constraint(equalTo: lowerOrRightStack.centerXAnchor, constant: -165.adjusted).isActive = true
+        BButton.centerXAnchor.constraint(equalTo: lowerOrRightStack.centerXAnchor, constant: -110.adjusted).isActive = true
+        CButton.centerXAnchor.constraint(equalTo: lowerOrRightStack.centerXAnchor, constant: -55.adjusted).isActive = true
         DButton.centerXAnchor.constraint(equalTo: lowerOrRightStack.centerXAnchor).isActive = true
-        EButton.centerXAnchor.constraint(equalTo: lowerOrRightStack.centerXAnchor, constant: 55).isActive = true
-        FButton.centerXAnchor.constraint(equalTo: lowerOrRightStack.centerXAnchor, constant: 110).isActive = true
-        GButton.centerXAnchor.constraint(equalTo: lowerOrRightStack.centerXAnchor, constant: 165).isActive = true
+        EButton.centerXAnchor.constraint(equalTo: lowerOrRightStack.centerXAnchor, constant: 55.adjusted).isActive = true
+        FButton.centerXAnchor.constraint(equalTo: lowerOrRightStack.centerXAnchor, constant: 110.adjusted).isActive = true
+        GButton.centerXAnchor.constraint(equalTo: lowerOrRightStack.centerXAnchor, constant: 165.adjusted).isActive = true
         //i don't know button layout
         iDontKnowButton.layer.cornerRadius = 10
         iDontKnowButton.layer.shadowColor = UIColor.black.cgColor
         iDontKnowButton.layer.shadowRadius = 5
         iDontKnowButton.layer.shadowOffset = CGSize(width: 5, height: 5)
         iDontKnowButton.layer.shadowOpacity = 1
-   
+
+        
         //grand staff shadow
         grandStaffUIImage.clipsToBounds = false
         grandStaffUIImage.layer.shadowColor = UIColor.black.cgColor

@@ -23,8 +23,11 @@ class AnswerButton: UIButton {
             layer.shadowOpacity = 1
         
             translatesAutoresizingMaskIntoConstraints = false
-            heightAnchor.constraint(equalToConstant: 50).isActive = true
-            widthAnchor.constraint(equalToConstant: 40).isActive = true
+            
+            
+            
+            heightAnchor.constraint(equalToConstant: 50.adjusted).isActive = true
+            widthAnchor.constraint(equalToConstant: 40.adjusted).isActive = true
         }
         
         

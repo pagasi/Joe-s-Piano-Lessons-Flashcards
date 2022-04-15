@@ -90,6 +90,8 @@ struct Constants {
     static var PASSING_ARRAY_OF_LETTERS_SWITCHED_OFF = "passingArrayOfLettersSwitchedOff"
     static var PASSING_ARRAY_OF_LETTERS_SWITCHED_OFF2 = "passingArrayOfLettersSwitchedOff2"
     static var USER_SELECTED = "userSelected"
+    static var USER_NAME1 = "userName1"
+    static var USER_NAME2 = "userName2"
     
     //MARK: fonts
     static var HELVETICA_FONT = "Helvetica"

@@ -27,6 +27,7 @@
 		6F7E231425E18D28005E4A77 /* Scales.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F7E231325E18D28005E4A77 /* Scales.storyboard */; };
 		6F7E234425E67EBE005E4A77 /* DeckSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F7E234325E67EBE005E4A77 /* DeckSelection.storyboard */; };
 		6F7E234725E69EF4005E4A77 /* DefaultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7E234625E69EF4005E4A77 /* DefaultsModel.swift */; };
+		6F9221FB2804B8C200FA7E28 /* Adjusted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9221FA2804B8C200FA7E28 /* Adjusted.swift */; };
 		6FBBB7D625D2B6A40000DB0B /* SelectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBBB7D525D2B6A40000DB0B /* SelectionButton.swift */; };
 		6FBBB7FF25D40B020000DB0B /* ScoreLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBBB7FE25D40B020000DB0B /* ScoreLog.swift */; };
 		6FBBB80425D5D3790000DB0B /* ScalesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBBB80325D5D3780000DB0B /* ScalesViewController.swift */; };
@@ -63,6 +64,7 @@
 		6F7E231325E18D28005E4A77 /* Scales.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Scales.storyboard; sourceTree = "<group>"; };
 		6F7E234325E67EBE005E4A77 /* DeckSelection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DeckSelection.storyboard; sourceTree = "<group>"; };
 		6F7E234625E69EF4005E4A77 /* DefaultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsModel.swift; sourceTree = "<group>"; };
+		6F9221FA2804B8C200FA7E28 /* Adjusted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adjusted.swift; sourceTree = "<group>"; };
 		6FBBB7D525D2B6A40000DB0B /* SelectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionButton.swift; sourceTree = "<group>"; };
 		6FBBB7FE25D40B020000DB0B /* ScoreLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreLog.swift; sourceTree = "<group>"; };
 		6FBBB80325D5D3780000DB0B /* ScalesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalesViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				6F16AE7325C06261005ADDFE /* Constants.swift */,
+				6F9221FA2804B8C200FA7E28 /* Adjusted.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				6FBBB80F25D6BDCB0000DB0B /* AnswerButton.swift in Sources */,
 				6FBBB84825DB013F0000DB0B /* ScaleModel.swift in Sources */,
 				6F12D65D27CFFECA006D1888 /* SettingsViewController.swift in Sources */,
+				6F9221FB2804B8C200FA7E28 /* Adjusted.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

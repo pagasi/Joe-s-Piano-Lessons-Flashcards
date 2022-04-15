@@ -38,6 +38,16 @@ class MainViewController: UIViewController {
         return button
     }()
     
+    lazy var usernameLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = UIColor.systemBlue
+        label.textAlignment = .center
+        label.font = .boldSystemFont(ofSize: 30.0)
+        label.shadowColor = UIColor.black
+        label.shadowOffset = CGSize(width: 1, height: 1)
+        
+        return label
+    }()
 //    lazy var settingsButton: SelectionButton = {
 //        let button = SelectionButton(title: "Settings")
 //        button.addTarget(self, action: #selector(settingsButtonPressed), for: .touchUpInside)
@@ -45,10 +55,24 @@ class MainViewController: UIViewController {
 //    }()
 
     //MARK: life cycle
+    
+    override func viewWillAppear(_ animated: Bool) {
+        usernameLabel.text = {
+            var activeUserName = ""
+            let activeUser = defaults.integer(forKey: Constants.USER_SELECTED)
+            if activeUser == 2 {
+                activeUserName = defaults.string(forKey: Constants.USER_NAME2) ?? ""
+            } else if activeUser == 1 {
+                activeUserName = defaults.string(forKey: Constants.USER_NAME1) ?? ""
+            }
+            return activeUserName
+        }()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        setup the stack to contain the buttons, add it to the View, and setup constraints
-        let stack = UIStackView(arrangedSubviews: [quickStartButton, flashButton, scalesButton, /*settingsButton*/])
+//        setup the stack to contain the label and buttons, add it to the View, and setup constraints
+        let stack = UIStackView(arrangedSubviews: [usernameLabel, quickStartButton, flashButton, scalesButton /*settingsButton*/])
         stack.axis = .vertical
         stack.spacing = 15
         stack.distribution = .fillEqually
@@ -59,6 +83,11 @@ class MainViewController: UIViewController {
         stack.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         stack.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
 
+//        print(UIScreen.main.bounds.width)
+//        print(view.bounds.size)
+//        print(view.bounds.width)
+//        print(UIDevice.description())
+        
     }
     //MARK: IBActions
 //    if info button is pressed, segue to the AboutViewControler
