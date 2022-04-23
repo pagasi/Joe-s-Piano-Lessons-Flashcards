@@ -19,6 +19,11 @@ class AboutViewController: UIViewController {
         Joe's Piano Lessons Flash Cards
         Privacy Policy and Terms and Conditions
 
+        
+        version 2.1
+        April 2022
+        -fixed bug that wouldn't allow user 1's name to appear on the main screen if no user was actively selected on the switch
+        
         version 2.0
         April 2022
         -Adds the ability to use two users through a settings button on the main screen to keep seperate decks for each user.

@@ -16,10 +16,20 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var userSwitch: UISegmentedControl!
     
+    @IBOutlet weak var settingbackgroundimage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        //set constraints for background image
+        settingbackgroundimage.translatesAutoresizingMaskIntoConstraints = false
+        settingbackgroundimage.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        settingbackgroundimage.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        settingbackgroundimage.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        settingbackgroundimage.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        
         //set the names for the users if they are saved
         savedUser1Name = defaults.string(forKey: Constants.USER_NAME1) ?? "User 1"
         savedUser2Name = defaults.string(forKey: Constants.USER_NAME2) ?? "User 2"
