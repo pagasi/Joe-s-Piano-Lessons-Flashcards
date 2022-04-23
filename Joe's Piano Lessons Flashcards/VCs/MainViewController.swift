@@ -60,11 +60,15 @@ class MainViewController: UIViewController {
         usernameLabel.text = {
             var activeUserName = ""
             let activeUser = defaults.integer(forKey: Constants.USER_SELECTED)
+            let user1name = defaults.string(forKey: Constants.USER_NAME1)
             if activeUser == 2 {
                 activeUserName = defaults.string(forKey: Constants.USER_NAME2) ?? ""
             } else if activeUser == 1 {
                 activeUserName = defaults.string(forKey: Constants.USER_NAME1) ?? ""
+            } else if activeUser == 0 && user1name != nil {
+                activeUserName = user1name ?? ""
             }
+            
             return activeUserName
         }()
     }
