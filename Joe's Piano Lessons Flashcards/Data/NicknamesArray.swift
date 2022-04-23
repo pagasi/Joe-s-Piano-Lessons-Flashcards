@@ -69,8 +69,9 @@ class NicknamesArray {
         //        fill and return the approriate letters in tempArray2 depending on deck selected by user
         switch chosenArray {
         case 0:
-            //fill for FF level B
+            //fill for FF level B and C
             for index in 0...14 {tempArray2.append(tempArray[index])}
+            tempArray2.append(contentsOf: [tempArray[19], tempArray[20], tempArray[22]])
         case 1:
             //fill for FF level 1
             for index in 0...22 {tempArray2.append(tempArray[index])}
@@ -104,6 +105,9 @@ class NicknamesArray {
             for index in 20...22 {tempArray2.append(tempArray[index])}
             
             tempArray2.append(contentsOf: [tempArray[24], tempArray[25], tempArray[27], tempArray[29], tempArray[31], tempArray[34], tempArray[36], tempArray[37]])
+        case 7:
+            //fill for primer
+            tempArray2.append(contentsOf: [tempArray[0], tempArray[1], tempArray[8], tempArray[9], tempArray[2], tempArray[3], tempArray[7], tempArray[5], tempArray[4], tempArray[6], tempArray[12], tempArray[19], tempArray[10], tempArray[11], tempArray[13]])
         default:
             for index in 0...37 {tempArray2.append(tempArray[index])}
 //            print("flashcard array not selected yet, whole array filled")

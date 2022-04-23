@@ -22,11 +22,17 @@ class DeckSelectionViewController: UIViewController {
     
 //  setup buttons for deck selection view controller
     lazy var beginnerDeckButton: SelectionButton = {
-        let button = SelectionButton(title: "Beginner Deck")
+        let button = SelectionButton(title: "Level B and C Deck")
         button.addTarget(self, action: #selector(levelBButtonPressed), for: .touchUpInside)
         return button
     }()
     
+    lazy var primerDeckButton: SelectionButton = {
+        let button = SelectionButton(title: "Primer Deck")
+        button.addTarget(self, action: #selector(primerButtonPressed), for: .touchUpInside)
+        return button
+    }()
+        
     lazy var level1Button: SelectionButton = {
         let button = SelectionButton(title: "Level 1 Deck")
         var buttonSelected = 0
@@ -94,7 +100,7 @@ class DeckSelectionViewController: UIViewController {
     //MARK: methods
 //    setup the stacks to handle orientation change by adding the buttons to two seperate stacks which can be put into the mainstack and switched from vertical to horizontal views
     func stackSetup() {
-        stack = UIStackView(arrangedSubviews: [beginnerDeckButton, level1Button, sec45Button])
+        stack = UIStackView(arrangedSubviews: [beginnerDeckButton, primerDeckButton, level1Button, sec45Button])
         stack2 = UIStackView(arrangedSubviews: [sec16Button, trebleOnlyButton, bassOnlyButton, fullDeckButton])
         
         //stack features
@@ -133,9 +139,9 @@ class DeckSelectionViewController: UIViewController {
             [stackXConstraint, stackYConstraint, stack2XConstraint, stack2YConstraint].forEach {NSLayoutConstraint.deactivate([$0])}
             
 //            setup new portrait mode constraints
-            stackYConstraint = stack.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor, constant: -120)
+            stackYConstraint = stack.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor, constant: -130)
             stackXConstraint = stack.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor)
-            stack2YConstraint = stack2.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor, constant: 90)
+            stack2YConstraint = stack2.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor, constant: 110)
             stack2XConstraint = stack2.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor)
             [stackXConstraint, stackYConstraint, stack2XConstraint, stack2YConstraint].forEach {NSLayoutConstraint.activate([$0])}
         }
@@ -145,6 +151,11 @@ class DeckSelectionViewController: UIViewController {
 //    if any button is pressed, set the buttonSelected to pass forward in the prepare for segue, and then segue to nicknames vc
     @objc func levelBButtonPressed() {
         buttonSelected = 0
+        goToNicknamesVC()
+    }
+    
+    @objc func primerButtonPressed() {
+        buttonSelected = 7
         goToNicknamesVC()
     }
     
