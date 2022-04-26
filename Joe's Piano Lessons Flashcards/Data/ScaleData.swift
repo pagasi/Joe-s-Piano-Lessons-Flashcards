@@ -185,7 +185,7 @@ class ScaleData3 {
 }
 //MARK: ScaleData4: min 2 oct
 class ScaleData4 {
-    let cMinorScaleHarmonic: ScaleModel = ScaleModel(scaleName: "C Minor Harmonic (related to E\(Constants.FLAT_UNICODE) Maj)", scaleFingeringRH: [1,2,3,1,2,3,4,1,2,3,1,2,3,4,5], scaleFingeringLH: [5,4,3,2,1,3,2,1,4,3,2,1,3,2,1], scaleLetters: ["C","D","E\(Constants.FLAT_UNICODE)","F","G","A\(Constants.FLAT_UNICODE)","B\(Constants.NATURAL_UNICODE)","C","D","E\(Constants.FLAT_UNICODE)","F","G","A\(Constants.FLAT_UNICODE)","B\(Constants.NATURAL_UNICODE)","C"])
+    let cMinorScaleHarmonic: ScaleModel = ScaleModel(scaleName: "c Minor Harmonic (related to E\(Constants.FLAT_UNICODE) Maj)", scaleFingeringRH: [1,2,3,1,2,3,4,1,2,3,1,2,3,4,5], scaleFingeringLH: [5,4,3,2,1,3,2,1,4,3,2,1,3,2,1], scaleLetters: ["C","D","E\(Constants.FLAT_UNICODE)","F","G","A\(Constants.FLAT_UNICODE)","B\(Constants.NATURAL_UNICODE)","C","D","E\(Constants.FLAT_UNICODE)","F","G","A\(Constants.FLAT_UNICODE)","B\(Constants.NATURAL_UNICODE)","C"])
 
     let cMinorScaleMelodicAscending: ScaleModel = ScaleModel(scaleName: "c Minor Melodic Ascending", scaleFingeringRH: [1,2,3,1,2,3,4,1,2,3,1,2,3,4,5], scaleFingeringLH: [5,4,3,2,1,3,2,1,4,3,2,1,3,2,1], scaleLetters: ["C","D","E\(Constants.FLAT_UNICODE)","F","G","A\(Constants.NATURAL_UNICODE)","B\(Constants.NATURAL_UNICODE)","C","D","E\(Constants.FLAT_UNICODE)","F","G","A\(Constants.NATURAL_UNICODE)","B\(Constants.NATURAL_UNICODE)","C"])
     

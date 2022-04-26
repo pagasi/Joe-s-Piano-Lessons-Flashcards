@@ -87,10 +87,10 @@ class MainViewController: UIViewController {
         stack.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         stack.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         
-        //        print(UIScreen.main.bounds.width)
-        //        print(view.bounds.size)
-        //        print(view.bounds.width)
-        //        print(UIDevice.description())
+                print(UIScreen.main.bounds.width)
+                print(view.bounds.size)
+                print(view.bounds.width)
+                print(UIDevice.description())
         
     }
     //MARK: IBActions
