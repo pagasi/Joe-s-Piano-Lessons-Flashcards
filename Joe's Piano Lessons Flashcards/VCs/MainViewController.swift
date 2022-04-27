@@ -89,8 +89,7 @@ class MainViewController: UIViewController {
         
                 print(UIScreen.main.bounds.width)
                 print(view.bounds.size)
-                print(view.bounds.width)
-                print(UIDevice.description())
+                print(UIDevice.current.model)
         
     }
     //MARK: IBActions

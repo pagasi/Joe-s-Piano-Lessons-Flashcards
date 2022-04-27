@@ -182,7 +182,7 @@ extension ScalesViewController: UITableViewDelegate, UITableViewDataSource {
 extension ScalesViewController {
 
 //MARK: scroll button objc funcs
-@objc private func cButtonPressed() {
+    @objc func cButtonPressed() {
     scaleTableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
 }
 
@@ -249,46 +249,10 @@ func shortcutStackSetup() {
     //stack features
     stack.axis = .vertical
     
-    //SE 1st gen, 5C, 5S, 5
-    if UIScreen.main.bounds.width == 320 || UIScreen.main.bounds.width == 568 {
-    stack.spacing = -10
-        yAxisvariable = -16
-    }
+    let spacingAndYAxisVariableArray = stack.adjustForPhone()
     
-    //13 mini, 12 mini, 11 pro, XS, X, SE 2nd, 8, 7, 6s, 6
-    else if UIScreen.main.bounds.width == 375 || UIScreen.main.bounds.width == 812 || UIScreen.main.bounds.width == 667 {
-        stack.spacing = -10
-        yAxisvariable = -28
-    }
-    //13, 13 pro, 12, 12 pro
-    else if UIScreen.main.bounds.width == 390 || UIScreen.main.bounds.width == 844 {
-        stack.spacing = -10
-        yAxisvariable = -28
-    }
-    
-    //13 pro max, 12 pro max, 11 pro max, 11, XR, XS Max, 8 plus
-    else if UIScreen.main.bounds.width == 414 || UIScreen.main.bounds.width == 896 || UIScreen.main.bounds.width == 428 || UIScreen.main.bounds.width == 926 {
-        stack.spacing = -10
-        yAxisvariable = 0
-    }
-    //7 plus, 6s plus, 6 plus
-        else if UIScreen.main.bounds.width == 476 || UIScreen.main.bounds.width == 847 {
-            stack.spacing = -10
-            yAxisvariable = -32
-        }
-        
-        
-    //if screen is an ipad
-     else if UIDevice.current.model == "iPad" {
-        stack.spacing = 5
-        yAxisvariable = -25
-    }
-    //catch all, mini, future phones, etc
-    else {
-        stack.spacing = -10
-        yAxisvariable = -16
-    }
-    
+    stack.spacing = spacingAndYAxisVariableArray[0]
+    yAxisvariable = spacingAndYAxisVariableArray[1]
 //        stack.distribution = .fillProportionally
     
     view.addSubview(stack)
