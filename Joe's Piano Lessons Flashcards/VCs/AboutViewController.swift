@@ -15,7 +15,6 @@ class AboutViewController: UIViewController {
 
         
 //        add privacy policy
-        aboutLabel.
         aboutLabel.text = """
         Joe's Piano Lessons Flash Cards
         Privacy Policy and Terms and Conditions
