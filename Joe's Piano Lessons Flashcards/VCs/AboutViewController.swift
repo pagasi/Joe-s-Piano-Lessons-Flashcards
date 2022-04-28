@@ -15,14 +15,20 @@ class AboutViewController: UIViewController {
 
         
 //        add privacy policy
+        aboutLabel.
         aboutLabel.text = """
         Joe's Piano Lessons Flash Cards
         Privacy Policy and Terms and Conditions
 
+        version 3.0
+        April 2022
+        -changes the "beginner" deck to two decks: "B&C" and "Primer"
+        -adds scrolling buttons for scales
+        -fixes bug that would lose saved deck information for user 1
         
         version 2.1
         April 2022
-        -fixed bug that wouldn't allow user 1's name to appear on the main screen if no user was actively selected on the switch
+        -fixes bug that wouldn't allow user 1's name to appear on the main screen if no user was actively selected on the switch
         
         version 2.0
         April 2022

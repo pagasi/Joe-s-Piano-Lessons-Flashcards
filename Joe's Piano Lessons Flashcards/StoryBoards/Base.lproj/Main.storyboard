@@ -109,17 +109,17 @@
             <objects>
                 <viewController storyboardIdentifier="aboutVC" id="Gkj-qN-A1N" customClass="AboutViewController" customModule="Joe_s_Piano_Lessons_Flashcards" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tyf-dw-iJq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1676"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="2176"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Vf-OS-Gza">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="1656"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Vf-OS-Gza">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="2250"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VaF-F7-IQy">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1750"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="2250"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7pr-tB-A6x">
-                                                <rect key="frame" x="35" y="0.0" width="344" height="1750"/>
+                                                <rect key="frame" x="35" y="0.0" width="344" height="2250"/>
                                                 <string key="text">Joe's Piano Lessons Flash Cards - Privacy Policy and Terms and Conditions
 
 
@@ -156,7 +156,7 @@ If Joe's Piano Lessons Flash Cards makes changes to Terms and Conditions or Priv
                                         </subviews>
                                         <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="0.50436108729999996" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1750" id="cfP-uv-sZj"/>
+                                            <constraint firstAttribute="height" constant="2250" id="cfP-uv-sZj"/>
                                             <constraint firstItem="7pr-tB-A6x" firstAttribute="leading" secondItem="VaF-F7-IQy" secondAttribute="leading" constant="35" id="f8e-5o-l8m"/>
                                             <constraint firstItem="7pr-tB-A6x" firstAttribute="top" secondItem="VaF-F7-IQy" secondAttribute="top" id="gFN-uZ-4Ra"/>
                                             <constraint firstAttribute="trailing" secondItem="7pr-tB-A6x" secondAttribute="trailing" constant="35" id="oCZ-U3-JOm"/>
@@ -185,7 +185,7 @@ If Joe's Piano Lessons Flash Cards makes changes to Terms and Conditions or Priv
                     <navigationItem key="navigationItem" title="Privacy Policy" id="yoj-R4-9as">
                         <barButtonItem key="backBarButtonItem" title=" " id="mg4-VG-tIK"/>
                     </navigationItem>
-                    <size key="freeformSize" width="414" height="1750"/>
+                    <size key="freeformSize" width="414" height="2250"/>
                     <connections>
                         <outlet property="aboutLabel" destination="7pr-tB-A6x" id="CHY-qL-hv3"/>
                     </connections>
