@@ -148,7 +148,7 @@ class MainViewController: UIViewController {
                 //set the arrays of unwanted cards equal in both view controllers
                 vc.passingArrayOfLettersSwitchedOff = ArrayOfLettersSwitchedOff
             } else {
-                //implement user 1 defaults
+                //implement user 0 defaults
                 
                 //retrieve chosenArrayPassed & passingArrayOfLettersSwitchedOff from the defaults
                 let buttonSelectedAndPassed = defaults.object(forKey: Constants.CHOSEN_ARRAY_PASSED ) as? Int ?? 4

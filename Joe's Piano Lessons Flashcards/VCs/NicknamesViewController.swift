@@ -70,7 +70,7 @@ class NicknamesViewController: UIViewController  {
     let defaultsCheck1 = defaults.integer(forKey: Constants.CHOSEN_ARRAY_PASSED)
     let defaultsCheck2 = defaults.integer(forKey: Constants.CHOSEN_ARRAY_PASSED2)
        
-    if userSelected == 1 && buttonSelectedAndPassed == defaultsCheck1 {
+    if userSelected == 0 && buttonSelectedAndPassed == defaultsCheck1 {
         ArrayOfLettersSwitchedOff = defaults.object(forKey: Constants.PASSING_ARRAY_OF_LETTERS_SWITCHED_OFF) as? [Int] ?? []
         }
     if userSelected == 2 && buttonSelectedAndPassed == defaultsCheck2 {

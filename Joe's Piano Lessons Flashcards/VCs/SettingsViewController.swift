@@ -17,7 +17,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var userSwitch: UISegmentedControl!
     
     @IBOutlet weak var settingbackgroundimage: UIImageView!
-    
+    //MARK: lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -47,7 +47,10 @@ class SettingsViewController: UIViewController {
     
     //MARK: methods
     
-    //popup code
+    
+    
+    
+    //MARK: popup code
     func showAlert() {
         let alert = UIAlertController(title: "Change user name", message: "type a new user name", preferredStyle: .alert)
         
@@ -97,7 +100,7 @@ class SettingsViewController: UIViewController {
         case 0:
 //            print("switch to user 1")
             //set userdefaults to user 1
-            defaults.setValue(1, forKey: Constants.USER_SELECTED)
+            defaults.setValue(0, forKey: Constants.USER_SELECTED)
             
         case 1:
 //            print("switch to user 2")
