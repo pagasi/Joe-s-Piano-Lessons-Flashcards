@@ -19,6 +19,12 @@ class AboutViewController: UIViewController {
         Joe's Piano Lessons Flash Cards
         Privacy Policy and Terms and Conditions
 
+        version 3.1
+        August 2022
+        -adds adult deck
+        -removes b breaks from primer deck
+        -fixes black background on scroll bar
+        
         version 3.0
         April 2022
         -changes the "beginner" deck to two decks: "B&C" and "Primer"
