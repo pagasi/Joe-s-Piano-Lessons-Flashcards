@@ -107,7 +107,11 @@ class NicknamesArray {
             tempArray2.append(contentsOf: [tempArray[24], tempArray[25], tempArray[27], tempArray[29], tempArray[31], tempArray[34], tempArray[36], tempArray[37]])
         case 7:
             //fill for primer
-            tempArray2.append(contentsOf: [tempArray[0], tempArray[1], tempArray[8], tempArray[9], tempArray[2], tempArray[3], tempArray[7], tempArray[5], tempArray[4], tempArray[6], tempArray[12], tempArray[19], tempArray[10], tempArray[11], tempArray[13]])
+            tempArray2.append(contentsOf: [tempArray[0], tempArray[1], tempArray[8], tempArray[9], tempArray[2], tempArray[3], tempArray[7], tempArray[5], tempArray[4], tempArray[6], tempArray[12], tempArray[10], tempArray[11], tempArray[13]])
+        case 8:
+            //fill for adult
+            tempArray2.append(contentsOf: [tempArray[5], tempArray[0],tempArray[1],tempArray[2],tempArray[3],tempArray[4],tempArray[7],tempArray[8],tempArray[6],tempArray[9],tempArray[10],tempArray[11],tempArray[13],tempArray[12],tempArray[24],tempArray[23],tempArray[15],tempArray[16],tempArray[17],tempArray[18],tempArray[20],tempArray[21],tempArray[22],tempArray[14],tempArray[19],tempArray[25],tempArray[26],tempArray[27]])
+            
         default:
             for index in 0...37 {tempArray2.append(tempArray[index])}
 //            print("flashcard array not selected yet, whole array filled")

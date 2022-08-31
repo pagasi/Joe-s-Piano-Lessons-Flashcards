@@ -248,7 +248,7 @@ func shortcutStackSetup() {
     
     //stack features
     stack.axis = .vertical
-    
+    stack.backgroundColor = .white
     let spacingAndYAxisVariableArray = stack.adjustForPhone()
     
     stack.spacing = spacingAndYAxisVariableArray[0]

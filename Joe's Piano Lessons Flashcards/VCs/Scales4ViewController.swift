@@ -247,6 +247,7 @@ extension Scales4ViewController {
         
         //stack features
         stack.axis = .vertical
+        stack.backgroundColor = .white
         
         let spacingAndYAxisVariableArray = stack.adjustForPhone()
         

@@ -40,6 +40,13 @@ class DeckSelectionViewController: UIViewController {
         return button
     }()
     
+    lazy var adultButton: SelectionButton = {
+        let button = SelectionButton(title: "Adult Deck")
+        var buttonSelected = 8
+        button.addTarget(self, action: #selector(adultButtonPressed), for: .touchUpInside)
+        return button
+    }()
+    
     lazy var sec45Button: SelectionButton = {
         let button = SelectionButton(title: "45 Second Deck")
         button.addTarget(self, action: #selector(sec45ButtonPressed), for: .touchUpInside)
@@ -100,17 +107,17 @@ class DeckSelectionViewController: UIViewController {
     //MARK: methods
 //    setup the stacks to handle orientation change by adding the buttons to two seperate stacks which can be put into the mainstack and switched from vertical to horizontal views
     func stackSetup() {
-        stack = UIStackView(arrangedSubviews: [beginnerDeckButton, primerDeckButton, level1Button, sec45Button])
+        stack = UIStackView(arrangedSubviews: [beginnerDeckButton, primerDeckButton, level1Button, adultButton, sec45Button])
         stack2 = UIStackView(arrangedSubviews: [sec16Button, trebleOnlyButton, bassOnlyButton, fullDeckButton])
         
         //stack features
         stack.axis = .vertical
-        stack.spacing = 15
+        stack.spacing = 8
         stack.distribution = .fillEqually
 
         //stack2 features
         stack2.axis = .vertical
-        stack2.spacing = 15
+        stack2.spacing = 8
         stack2.distribution = .fillEqually
 
         view.addSubview(stack)
@@ -161,6 +168,11 @@ class DeckSelectionViewController: UIViewController {
     
     @objc func level1ButtonPressed() {
         buttonSelected = 1
+        goToNicknamesVC()
+    }
+    
+    @objc func adultButtonPressed() {
+        buttonSelected = 8
         goToNicknamesVC()
     }
     

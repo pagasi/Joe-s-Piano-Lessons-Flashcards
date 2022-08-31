@@ -12,12 +12,14 @@ class ScrollButton: UIButton {
 
     var rowNumber: Int = 0
     
+    
     init(title: String) {
         super.init(frame: .zero)
         setTitle(title, for: .normal)
         titleLabel?.font = UIFont.systemFont(ofSize: 15.adjusted)
         setTitleColor(.black, for: .normal)
         layer.masksToBounds = false
+        backgroundColor = .white
     }
     
     
